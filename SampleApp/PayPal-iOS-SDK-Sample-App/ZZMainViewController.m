@@ -6,6 +6,7 @@
 //
 
 #import "ZZMainViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 #warning "Enter your credentials"
 #define kPayPalClientId @"YOUR CLIENT ID HERE"
@@ -14,6 +15,7 @@
 @interface ZZMainViewController ()
 
 @property(nonatomic, strong, readwrite) IBOutlet UIButton *payButton;
+@property(nonatomic, strong, readwrite) IBOutlet UIView *successView;
 
 @end
 
@@ -25,6 +27,8 @@
   self.acceptCreditCards = YES;
   self.environment = PayPalEnvironmentNoNetwork;
   // Do any additional setup after loading the view, typically from a nib.
+
+  self.successView.hidden = YES;
 
   NSLog(@"PayPal iOS SDK version: %@", [PayPalPaymentViewController libraryVersion]);
 }
@@ -39,7 +43,7 @@
   [self.payButton setBackgroundImage:payBackgroundImageHighlighted forState:UIControlStateHighlighted];
   [self.payButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
   [self.payButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateHighlighted];
-
+  
   // Optimization: Prepare for display of the payment UI by getting network work done early
   [PayPalPaymentViewController setEnvironment:self.environment];
   [PayPalPaymentViewController prepareForPaymentUsingClientId:kPayPalClientId];
@@ -53,6 +57,10 @@
 #pragma mark - Pay action
 
 - (IBAction)pay {
+
+  // Remove our last completed payment, just for demo purposes.
+  self.completedPayment = nil;
+  
   PayPalPayment *payment = [[PayPalPayment alloc] init];
   payment.amount = [[NSDecimalNumber alloc] initWithString:@"9.95"];
   payment.currencyCode = @"USD";
@@ -89,24 +97,24 @@
 
 - (void)sendCompletedPaymentToServer:(PayPalPayment *)completedPayment {
   // TODO: Send completedPayment.confirmation to server
-  NSLog(@"Sending proof of payment to server...\n%@", completedPayment.confirmation);
-
-  [[[UIAlertView alloc] initWithTitle:@"Success!"
-                              message:[NSString stringWithFormat:@"Proof of payment: %@. Now we should send it to the server for confirmation and fulfillment.", completedPayment.confirmation]
-                             delegate:nil
-                    cancelButtonTitle:@"OK"
-                    otherButtonTitles:nil]
-   show];
+  NSLog(@"Here is your proof of payment:\n\n%@\n\nSend this to your server for confirmation and fulfillment.", completedPayment.confirmation);
 }
 
 #pragma mark - PayPalPaymentDelegate methods
 
 - (void)payPalPaymentDidComplete:(PayPalPayment *)completedPayment {
+  NSLog(@"PayPal Payment Success!");
+  self.completedPayment = completedPayment;
+  self.successView.hidden = NO;
+  
   [self sendCompletedPaymentToServer:completedPayment]; // Payment was processed successfully; send to server for verification and fulfillment
   [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)payPalPaymentDidCancel {
+  NSLog(@"PayPal Payment Canceled");
+  self.completedPayment = nil;
+  self.successView.hidden = YES;
   [self dismissViewControllerAnimated:YES completion:nil];
 }
 

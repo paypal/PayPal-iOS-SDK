@@ -6,12 +6,14 @@
 //
 
 #import "ZZFlipsideViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface ZZFlipsideViewController ()
 
 @property(nonatomic, strong, readwrite) IBOutlet UISegmentedControl *environmentSegmentedControl;
 @property(nonatomic, strong, readwrite) IBOutlet UISwitch *acceptCreditCardsSwitch;
-
+@property(nonatomic, strong, readwrite) IBOutlet UITextView *proofOfPaymentTextView;
+@property(nonatomic, strong, readwrite) IBOutlet UILabel *proofOfPaymentLabel;
 @end
 
 @implementation ZZFlipsideViewController
@@ -23,7 +25,7 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  // Do any additional setup after loading the view, typically from a nib.
+  
 }
 
 - (void)logEnvironment {
@@ -40,6 +42,17 @@
     self.environmentSegmentedControl.selectedSegmentIndex = 0;
   }
   self.acceptCreditCardsSwitch.on = self.delegate.acceptCreditCards;
+
+  if ([self.delegate completedPayment]) {
+    NSLog(@"%@", [self.delegate completedPayment]);
+    self.proofOfPaymentTextView.text = [[NSString stringWithFormat:@"%@", [self.delegate completedPayment]] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    
+    
+  } else {
+    self.proofOfPaymentTextView.hidden = YES;
+    self.proofOfPaymentLabel.hidden = YES;
+  }
+  self.proofOfPaymentTextView.layer.cornerRadius = 8.0f;
 }
 
 - (void)didReceiveMemoryWarning {

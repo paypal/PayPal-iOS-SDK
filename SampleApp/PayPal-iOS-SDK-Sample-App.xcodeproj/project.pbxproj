@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D48B18616EE8F0800C83CD2 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D48B18416EE8F0800C83CD2 /* check.png */; };
+		2D48B18716EE8F0800C83CD2 /* check@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D48B18516EE8F0800C83CD2 /* check@2x.png */; };
 		849BE6EC16D4352100E03EEC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849BE6EB16D4352100E03EEC /* UIKit.framework */; };
 		849BE6EE16D4352100E03EEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849BE6ED16D4352100E03EEC /* Foundation.framework */; };
 		849BE6F016D4352100E03EEC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849BE6EF16D4352100E03EEC /* CoreGraphics.framework */; };
@@ -40,6 +42,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D48B18416EE8F0800C83CD2 /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
+		2D48B18516EE8F0800C83CD2 /* check@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check@2x.png"; sourceTree = "<group>"; };
 		849BE6E816D4352100E03EEC /* PayPal-iOS-SDK-Sample-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PayPal-iOS-SDK-Sample-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		849BE6EB16D4352100E03EEC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		849BE6ED16D4352100E03EEC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -178,6 +182,8 @@
 		849BE71416D4389D00E03EEC /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				2D48B18416EE8F0800C83CD2 /* check.png */,
+				2D48B18516EE8F0800C83CD2 /* check@2x.png */,
 				849BE72216D43F5E00E03EEC /* ios_sample_icon.png */,
 				849BE72416D43F7F00E03EEC /* ios_sample_icon@2x.png */,
 				849BE74A16D443EC00E03EEC /* button_secondary_selected.png */,
@@ -263,6 +269,8 @@
 				849BE74F16D443EC00E03EEC /* button_secondary_selected@2x.png in Resources */,
 				849BE75016D443EC00E03EEC /* button_secondary.png in Resources */,
 				849BE75116D443EC00E03EEC /* button_secondary@2x.png in Resources */,
+				2D48B18616EE8F0800C83CD2 /* check.png in Resources */,
+				2D48B18716EE8F0800C83CD2 /* check@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

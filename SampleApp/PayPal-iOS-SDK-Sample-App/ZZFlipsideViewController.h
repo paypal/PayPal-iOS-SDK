@@ -17,6 +17,7 @@
 - (void)setAcceptCreditCards:(BOOL)processCreditCards;
 
 @property(nonatomic, strong, readwrite) NSString *environment;
+@property(nonatomic, strong, readwrite) PayPalPayment *completedPayment;
 
 @end
 

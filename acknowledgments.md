@@ -1,7 +1,7 @@
 Summary
 -------
 
-libPayPalMobile for iOS uses code from the following libraries:
+The PayPal iOS SDK uses code from the following libraries:
 
   * Willow Garage's [OpenCV](http://opencv.willowgarage.com/wiki/)
   * [Eigen](http://eigen.tuxfamily.org)
