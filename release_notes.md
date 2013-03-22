@@ -1,6 +1,15 @@
 PayPal iOS SDK release notes
 ============================
 
+1.0.3
+-----
+
+* Update card.io library to 3.0.9.
+    * Fixes [issue #10](https://github.com/paypal/PayPal-iOS-SDK/issues/10) in which the scanned card image obscured manual entry fields on iPad in landscape.
+* Add `PayPalPayment` convenience contructor.
+* Fix small bugs.
+* Add BSD license.
+
 1.0.2
 -----
 

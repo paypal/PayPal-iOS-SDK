@@ -1,7 +1,7 @@
 //
 //  PayPalPayment.h
 //
-//  Version 1.0.2
+//  Version 1.0.3
 //
 //  Copyright (c) 2013, PayPal
 //  All rights reserved.
@@ -35,6 +35,11 @@
 
 @interface PayPalPayment : NSObject <NSCopying>
 
+// Convenience constructor. See below for details on the parameters.
++ (PayPalPayment *)paymentWithAmount:(NSDecimalNumber *)amount
+                        currencyCode:(NSString *)currencyCode
+                    shortDescription:(NSString *)shortDescription;
+
 
 #pragma mark - Required properties
 
@@ -44,7 +49,7 @@
 // Amount in the given currency to process. Must be positive.
 @property(nonatomic, copy, readwrite) NSDecimalNumber *amount;
 
-// Description of the transaction, for display to user. Should fit on one line.
+// Description of the transaction, for display to the user. Should fit on one line.
 @property(nonatomic, copy, readwrite) NSString *shortDescription;
 
 
