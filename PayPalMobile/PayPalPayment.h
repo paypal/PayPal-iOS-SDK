@@ -1,7 +1,7 @@
 //
 //  PayPalPayment.h
 //
-//  Version 1.0.4
+//  Version 1.0.5
 //
 //  Copyright (c) 2013, PayPal
 //  All rights reserved.

@@ -1,7 +1,7 @@
 //
 //  PayPalPaymentViewController.h
 //
-//  Version 1.0.4
+//  Version 1.0.5
 //
 //  Copyright (c) 2013, PayPal
 //  All rights reserved.
@@ -123,6 +123,40 @@ extern NSString *const PayPalEnvironmentNoNetwork;
 
 // If set to YES, PayPalPaymentViewController will only support paying with PayPal, not with credit cards.
 @property(nonatomic, assign, readwrite) BOOL hideCreditCardButton;
+
+// Normally, the SDK blurs the screen when the app is backgrounded,
+// to obscure credit card or PayPal account details in the iOS-saved screenshot.
+// If your app already does its own blurring upon backgrounding, you might choose to disable this.
+// Defaults to NO.
+@property(nonatomic, assign, readwrite) BOOL disableBlurWhenBackgrounding;
+
+// Although irrelevant to most apps, if your app needs to know where the user is within
+// the payment flow, you can check this property.
+// (You can use key-value observing of this 'state' property to watch for changes.)
+// 
+// For example, perhaps your app would like to dismiss the PayPalPaymentViewController
+// if the user is taking a very long time to complete the payment flow but in the meantime
+// the item they are ordering has gone out of stock.
+//
+// - The state is intially set to PayPalPaymentViewControllerStateUnsent.
+// - When the user taps the final payment confirmation button, the state changes to
+//   PayPalPaymentViewControllerStateInProgress.
+// - If the payment goes through successfully, the state changes to
+//   PayPalPaymentViewControllerStateSuccessful (while the final "Payment Complete" screen is presented).
+// - If the payment fails, the state changes back to PayPalPaymentViewControllerStateUnsent (while
+//   an appropriate error message is displayed).
+//
+// When the state is:
+// - PayPalPaymentViewControllerStateUnsent, you MAY safely dismiss the PayPalPaymentViewController.
+// - PayPalPaymentViewControllerStateInProgress, do NOT dismiss the PayPalPaymentViewController.
+// - PayPalPaymentViewControllerStateSuccessful, do NOT dismiss the PayPalPaymentViewController UNTIL your
+//   payPalPaymentDidComplete: delegate method has been called.
+typedef NS_ENUM(NSInteger, PayPalPaymentViewControllerState) {
+  PayPalPaymentViewControllerStateUnsent = 0,
+  PayPalPaymentViewControllerStateInProgress = 1,
+  PayPalPaymentViewControllerStateSuccessful = 2,
+};
+@property(nonatomic, assign, readonly) PayPalPaymentViewControllerState state;
 
 // The SDK version that you are using; follows http://semver.org/.
 // Please be sure to include the library version in any tech support requests.

@@ -1,6 +1,16 @@
 PayPal iOS SDK release notes
 ============================
 
+1.0.5
+-----
+
+* Fix [issue #18](https://github.com/paypal/PayPal-iOS-SDK/issues/18).
+* New properties of `PayPalPaymentViewController`:
+   * `disableBlurWhenBackgrounding` - blur screen when app is backgrounded, for security purposes. Enabled by default.
+   * `state` - for optional key-value-observing.
+* Update card.io library to 3.1.1.
+* Fix small bugs.
+
 1.0.4
 -----
 
