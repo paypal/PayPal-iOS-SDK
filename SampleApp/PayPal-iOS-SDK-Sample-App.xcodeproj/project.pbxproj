@@ -39,6 +39,7 @@
 		849BE74F16D443EC00E03EEC /* button_secondary_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 849BE74B16D443EC00E03EEC /* button_secondary_selected@2x.png */; };
 		849BE75016D443EC00E03EEC /* button_secondary.png in Resources */ = {isa = PBXBuildFile; fileRef = 849BE74C16D443EC00E03EEC /* button_secondary.png */; };
 		849BE75116D443EC00E03EEC /* button_secondary@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 849BE74D16D443EC00E03EEC /* button_secondary@2x.png */; };
+		D5463464178F5A2800A2D5F6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5463463178F5A2800A2D5F6 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +84,7 @@
 		849BE74B16D443EC00E03EEC /* button_secondary_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_secondary_selected@2x.png"; sourceTree = "<group>"; };
 		849BE74C16D443EC00E03EEC /* button_secondary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_secondary.png; sourceTree = "<group>"; };
 		849BE74D16D443EC00E03EEC /* button_secondary@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_secondary@2x.png"; sourceTree = "<group>"; };
+		D5463463178F5A2800A2D5F6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5463464178F5A2800A2D5F6 /* SystemConfiguration.framework in Frameworks */,
 				849BE6EC16D4352100E03EEC /* UIKit.framework in Frameworks */,
 				849BE6EE16D4352100E03EEC /* Foundation.framework in Frameworks */,
 				849BE6F016D4352100E03EEC /* CoreGraphics.framework in Frameworks */,
@@ -113,6 +116,7 @@
 		849BE6DF16D4352000E03EEC = {
 			isa = PBXGroup;
 			children = (
+				D5463463178F5A2800A2D5F6 /* SystemConfiguration.framework */,
 				849BE72B16D4402000E03EEC /* PayPalMobile */,
 				849BE6F116D4352100E03EEC /* PayPal-iOS-SDK-Sample-App */,
 				849BE6EA16D4352100E03EEC /* Frameworks */,
@@ -388,7 +392,7 @@
 					"\"$(SRCROOT)/../PayPalMobile\"",
 				);
 				OTHER_LDFLAGS = (
-					"-lstdc++",
+					"-lc++",
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -408,7 +412,7 @@
 					"\"$(SRCROOT)/../PayPalMobile\"",
 				);
 				OTHER_LDFLAGS = (
-					"-lstdc++",
+					"-lc++",
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";

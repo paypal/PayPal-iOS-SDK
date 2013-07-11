@@ -1,7 +1,7 @@
 //
 //  PayPalPaymentViewController.h
 //
-//  Version 1.0.5
+//  Version 1.1.0
 //
 //  Copyright (c) 2013, PayPal
 //  All rights reserved.
@@ -85,8 +85,13 @@ extern NSString *const PayPalEnvironmentNoNetwork;
 //
 // payerId is a unique identifier for the user who is paying, such as a customer number
 // or email address. Do not use hardware based identifiers. If you do not have a payerId,
-// you MAY pass nil. However, without a payerId, PayPalPaymentViewController will not
-// "remember" credit cards for easier subsequent payments.
+// you MAY pass nil.
+//
+// If payerId is nil, then PayPalPaymentViewController will treat the user as a one-time "guest":
+// - if the user logs in to their PayPal account, then at the completion of their
+//   transaction they will be logged out; a subsequent payment will require a fresh login.
+// - if the user pays with a credit card, that credit card information will not be "remembered"
+//   for subsequent payments.
 - (id)initWithClientId:(NSString *)clientId
          receiverEmail:(NSString *)payPalAccountEmailAddress
                payerId:(NSString *)payerId
@@ -95,6 +100,20 @@ extern NSString *const PayPalEnvironmentNoNetwork;
 
 // Delegate access
 @property(nonatomic, unsafe_unretained, readwrite) id<PayPalPaymentDelegate> paymentDelegate;
+
+// The preferred language for all strings appearing in the user interface.
+// If not set, or if set to nil, defaults to the device's current language setting.
+//
+// Can be specified as a language code ("en", "fr", "zh-Hans", etc.) or as a locale ("en_AU", "fr_FR", "zh-Hant_HK", etc.).
+// If the library does not contain localized strings for a specified locale, then will fall back to the language. E.g., "es_CO" -> "es".
+// If the library does not contain localized strings for a specified language, then will fall back to American English.
+//
+// If you specify only a language code, and that code matches the device's currently preferred language,
+// then the library will attempt to use the device's current region as well.
+// E.g., specifying "en" on a device set to "English" and "United Kingdom" will result in "en_GB".
+//
+// These localizations are currently included: da,de,en,en_AU,en_GB,en_SV,en_U5,es,fr,he,it,ja,nb,nl,pl,pt,ru,sv,tr,zh-Hans,zh-Hant_HK,zh-Hant_TW.
+@property(nonatomic, copy, readwrite) NSString *languageOrLocale;
 
 // Use to change the environment -- see the PayPalEnvironment constants above.
 //

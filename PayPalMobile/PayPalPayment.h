@@ -1,7 +1,7 @@
 //
 //  PayPalPayment.h
 //
-//  Version 1.0.5
+//  Version 1.1.0
 //
 //  Copyright (c) 2013, PayPal
 //  All rights reserved.
@@ -58,7 +58,7 @@
 // Can this payment be processed?
 // A payment might not be processable if, for example:
 // - the amount is non-positive,
-// - the currency is invalid [NOTE: at this time, only USD is supported],
+// - the currency is invalid,
 // - the amount includes more decimal fraction digits than the currency allows,
 // - there's no description, or
 // - the payment has already been processed.
