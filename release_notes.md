@@ -1,6 +1,13 @@
 PayPal iOS SDK release notes
 ============================
 
+1.1.1
+-----
+
+* Additional localizations: es_MX, pt_BR
+* Update card.io library to 3.2.1
+* Fix small bugs.
+
 1.1.0
 -----
 

@@ -1,7 +1,7 @@
 //
 //  PayPalPaymentViewController.h
 //
-//  Version 1.1.0
+//  Version 1.1.1
 //
 //  Copyright (c) 2013, PayPal
 //  All rights reserved.
@@ -92,7 +92,7 @@ extern NSString *const PayPalEnvironmentNoNetwork;
 //   transaction they will be logged out; a subsequent payment will require a fresh login.
 // - if the user pays with a credit card, that credit card information will not be "remembered"
 //   for subsequent payments.
-- (id)initWithClientId:(NSString *)clientId
+- (instancetype)initWithClientId:(NSString *)clientId
          receiverEmail:(NSString *)payPalAccountEmailAddress
                payerId:(NSString *)payerId
                payment:(PayPalPayment *)payment
@@ -112,7 +112,8 @@ extern NSString *const PayPalEnvironmentNoNetwork;
 // then the library will attempt to use the device's current region as well.
 // E.g., specifying "en" on a device set to "English" and "United Kingdom" will result in "en_GB".
 //
-// These localizations are currently included: da,de,en,en_AU,en_GB,en_SV,en_U5,es,fr,he,it,ja,nb,nl,pl,pt,ru,sv,tr,zh-Hans,zh-Hant_HK,zh-Hant_TW.
+// These localizations are currently included:
+// da,de,en,en_AU,en_GB,en_SV,en_U5,es,es_MX,fr,he,it,ja,nb,nl,pl,pt,pt_BR,ru,sv,tr,zh-Hans,zh-Hant_HK,zh-Hant_TW.
 @property(nonatomic, copy, readwrite) NSString *languageOrLocale;
 
 // Use to change the environment -- see the PayPalEnvironment constants above.

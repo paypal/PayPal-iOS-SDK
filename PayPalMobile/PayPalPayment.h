@@ -1,7 +1,7 @@
 //
 //  PayPalPayment.h
 //
-//  Version 1.1.0
+//  Version 1.1.1
 //
 //  Copyright (c) 2013, PayPal
 //  All rights reserved.
@@ -49,7 +49,9 @@
 // Amount in the given currency to process. Must be positive.
 @property(nonatomic, copy, readwrite) NSDecimalNumber *amount;
 
-// Description of the transaction, for display to the user. Should fit on one line.
+// A short description of the transaction, for display to the user.
+// The description will be truncated for display, if necessary;
+// limiting it to about 20 characters should prevent truncation in most cases.
 @property(nonatomic, copy, readwrite) NSString *shortDescription;
 
 
