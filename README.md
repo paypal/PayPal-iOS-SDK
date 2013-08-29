@@ -9,25 +9,23 @@ For an introduction, see the
 
 ![Screen shots of the iOS SDK UI](https://raw.github.com/paypal/PayPal-iOS-SDK/screenshots/sdk-screens.jpg)
 
+### Table of Contents
 
-### A note about older libraries
+- [Overview](#overview)
+- [Integration](#integration)
+  - [Requirements](#requirements)
+  - [Initial Setup](#initial-setup)
+  - [Credentials](#credentials)
+  - [Sample Code](#sample-code)
+- [Testing](#testing)
+- [International Support](#international-support)
+  - [Localizations](#localizations)
+  - [Currencies](#currencies)
+- [Hints & Tips](#hints-&-tips)
+- [Older Libraries](#older-libraries)
 
-PayPal is replacing the [Mobile Payments Libraries (MPL)](https://developer.paypal.com/webapps/developer/docs/classic/mobile/gs_MPL/)
-with the PayPal iOS/Android SDK. The PayPal iOS/Android SDK is currently available in the US,
-with more country support coming soon. US developers should upgrade now for more features
-and a better mobile experience. Non-US developers can continue to use MPL for the time
-being. Issues related to MPL should be filed in the [sdk-packages repo](https://github.com/paypal/sdk-packages/).
-
-Developers with existing Express Checkout integrations or who want additional
-features such as authorization and capture, may wish to use [Mobile Express Checkout](https://developer.paypal.com/webapps/developer/docs/classic/mobile/gs_MEC/)
-in a webview.
-
-
-Integration
------------
-
-
-### Overview
+Overview
+--------
 
 * The PayPal iOS SDK...
     1. Takes care of the UI to gather payment information from the user.
@@ -38,6 +36,8 @@ Integration
     2. [Sends proof of payment to your servers for verification](https://developer.paypal.com/webapps/developer/docs/integration/mobile/verify-mobile-payment/).
     3. Provides the user their goods or services.
 
+Integration
+-----------
 
 ### Requirements
 
@@ -47,7 +47,7 @@ Integration
 * iPhone and iPad of all sizes and resolutions
 
 
-### Initial setup
+### Initial Setup
 
 1. Clone or download the SDK, which consists of header files, license acknowledgements, release notes, and a static library. It also includes a sample app.
 2. Add the `PayPalMobile` directory (containing several .h files and libPayPalMobile.a) to your Xcode project. We recommend checking "Copy items..." and selecting "Create groups...".
@@ -203,17 +203,43 @@ Take note of these two identifiers:
     }
     ```
 
-
-### Testing
+Testing
+-------
 
 During development and testing, use `+setEnvironment:` to avoid moving real money around. See the header files
 for more information.
 
+International Support
+---------------------
 
-### Hints & Tips
+### Localizations
+
+The SDK has built-in translations for many languages and locales. See the header files for a complete list.
+
+### Currencies
+
+The SDK supports multiple currencies. See [the REST API country and currency documentation](https://developer.paypal.com/webapps/developer/docs/integration/direct/rest_api_payment_country_currency_support/) for a complete, up-to-date list.
+
+Note that currency support differs for credit card versus PayPal payments. Unless you disable credit card acceptance (via the `PayPalPaymentViewController.hideCreditCardButton` property), **we recommend limiting transactions to currencies supported by both payment types.** Currently these are: USD, GBP, CAD, EUR, JPY.
+
+If your app initiates a transaction with a currency that turns out to be unsupported for the user's selected payment type, then the SDK will display an error to the user and write a message to the console log.
+
+Hints & Tips
+------------
 
   - **Avoid fraud!** Be sure to [verify the proof of payment](https://developer.paypal.com/webapps/developer/docs/integration/mobile/verify-mobile-payment/).
   - Mobile networks are unreliable. Save the proof of payment to make sure it eventually reaches your server.
   - The header files are thoroughly documented; refer to them as needed for extra details about any given property or parameter.
-  - The SDK posts an `NSNotification` as soon as a payment is processed; this happens before the UI is dismissed. This
-    is a good opportunity for user experience optimization. See the header files for details.
+
+Older Libraries
+---------------
+
+PayPal is replacing the [Mobile Payments Libraries (MPL)](https://developer.paypal.com/webapps/developer/docs/classic/mobile/gs_MPL/)
+with the PayPal iOS/Android SDK. The PayPal iOS/Android SDK is currently available in the US,
+with more country support coming soon. US developers should upgrade now for more features
+and a better mobile experience. Non-US developers can continue to use MPL for the time
+being. Issues related to MPL should be filed in the [sdk-packages repo](https://github.com/paypal/sdk-packages/).
+
+Developers with existing Express Checkout integrations or who want additional
+features such as authorization and capture, may wish to use [Mobile Express Checkout](https://developer.paypal.com/webapps/developer/docs/classic/mobile/gs_MEC/)
+in a webview.

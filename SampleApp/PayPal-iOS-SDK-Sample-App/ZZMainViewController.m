@@ -114,6 +114,18 @@
                                                                                                      payment:payment
                                                                                                     delegate:self];
   paymentViewController.hideCreditCardButton = !self.acceptCreditCards;
+  
+  // Setting the languageOrLocale property is optional.
+  //
+  // If you do not set languageOrLocale, then the PayPalPaymentViewController will present
+  // its user interface according to the device's current language setting.
+  //
+  // Setting languageOrLocale to a particular language (e.g., @"es" for Spanish) or
+  // locale (e.g., @"es_MX" for Mexican Spanish) forces the PayPalPaymentViewController
+  // to use that language/locale.
+  //
+  // For full details, including a list of available languages and locales, see PayPalPaymentViewController.h.
+  paymentViewController.languageOrLocale = @"en";
 
   [self presentViewController:paymentViewController animated:YES completion:nil];
 }

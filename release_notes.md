@@ -1,6 +1,16 @@
 PayPal iOS SDK release notes
 ============================
 
+1.2.0
+-----
+
+* Support all currencies that are currently accepted by the REST APIs. See [README](README.md) for details.
+* Eliminate the final "Complete" screen.
+   * Your app's payPalPaymentDidComplete: method will now be called as soon as the payment has completed.
+   * The PayPalTransactionDidSucceedNotification is no longer necessary and has been deprecated.
+* Additional localization: ko (Korean)
+* Update card.io library to 3.2.3
+
 1.1.1
 -----
 

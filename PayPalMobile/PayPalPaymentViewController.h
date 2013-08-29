@@ -1,7 +1,7 @@
 //
 //  PayPalPaymentViewController.h
 //
-//  Version 1.1.1
+//  Version 1.2.0
 //
 //  Copyright (c) 2013, PayPal
 //  All rights reserved.
@@ -52,16 +52,8 @@
 
 @end
 
-// This notification corresponds to the -payPalPaymentDidComplete: method above, with one key
-// difference. The delegate method is called when the UI completes; this notification
-// is posted as soon as the payment has completed, which can occur before the UI completes.
-// For example, the UI may contain a summary or receipt view. You MAY use this notification
-// to do background network processing while the UI completes.
-// You MUST NOT dismiss the modal view controller from this notification; that MUST be
-// done in the delegate method.
-//
-// The notification's object is the completed PayPalPayment, same as the delegate method.
-extern NSString *const PayPalTransactionDidSucceedNotification;
+// This notification is no longer necessary and has been deprecated.
+extern NSString *const PayPalTransactionDidSucceedNotification __attribute__((deprecated("use payPalPaymentDidComplete: method instead")));
 
 // PayPalPaymentViewController can operate in different environments to facilitate development:
 //
@@ -113,7 +105,7 @@ extern NSString *const PayPalEnvironmentNoNetwork;
 // E.g., specifying "en" on a device set to "English" and "United Kingdom" will result in "en_GB".
 //
 // These localizations are currently included:
-// da,de,en,en_AU,en_GB,en_SV,en_U5,es,es_MX,fr,he,it,ja,nb,nl,pl,pt,pt_BR,ru,sv,tr,zh-Hans,zh-Hant_HK,zh-Hant_TW.
+// da,de,en,en_AU,en_GB,en_SV,en_U5,es,es_MX,fr,he,it,ja,ko,nb,nl,pl,pt,pt_BR,ru,sv,tr,zh-Hans,zh-Hant_HK,zh-Hant_TW.
 @property(nonatomic, copy, readwrite) NSString *languageOrLocale;
 
 // Use to change the environment -- see the PayPalEnvironment constants above.
