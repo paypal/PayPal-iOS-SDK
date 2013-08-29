@@ -154,9 +154,10 @@ extern NSString *const PayPalEnvironmentNoNetwork;
 // - When the user taps the final payment confirmation button, the state changes to
 //   PayPalPaymentViewControllerStateInProgress.
 // - If the payment goes through successfully, the state changes to
-//   PayPalPaymentViewControllerStateSuccessful (while the final "Payment Complete" screen is presented).
-// - If the payment fails, the state changes back to PayPalPaymentViewControllerStateUnsent (while
-//   an appropriate error message is displayed).
+//   PayPalPaymentViewControllerStateSuccessful, and your app's payPalPaymentDidComplete:
+//   method is called.
+// - If the payment fails, the state changes back to PayPalPaymentViewControllerStateUnsent
+//   (while an appropriate error message is displayed to the user).
 //
 // When the state is:
 // - PayPalPaymentViewControllerStateUnsent, you MAY safely dismiss the PayPalPaymentViewController.
