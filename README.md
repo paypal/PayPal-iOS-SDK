@@ -1,6 +1,14 @@
 PayPal iOS SDK
 ==============
 
+### This is a pre-release version
+
+This is a preview of the iOS 7 update of the PayPal iOS SDK. The library was built with a developer preview of Xcode.
+
+Technically, Apple might not allow an app using this library into the App Store. A full release is forthcoming once Apple officially releases iOS 7 and Xcode 5.
+
+---
+
 The PayPal iOS SDK provides a software library that makes it easy for iOS developers
 to accept both credit cards and PayPal directly within native mobile apps.
 

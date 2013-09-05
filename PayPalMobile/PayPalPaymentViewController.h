@@ -1,7 +1,7 @@
 //
 //  PayPalPaymentViewController.h
 //
-//  Version 1.2.0
+//  Version 1.3.0-beta
 //
 //  Copyright (c) 2013, PayPal
 //  All rights reserved.
@@ -105,7 +105,7 @@ extern NSString *const PayPalEnvironmentNoNetwork;
 // E.g., specifying "en" on a device set to "English" and "United Kingdom" will result in "en_GB".
 //
 // These localizations are currently included:
-// da,de,en,en_AU,en_GB,en_SV,en_U5,es,es_MX,fr,he,it,ja,ko,nb,nl,pl,pt,pt_BR,ru,sv,tr,zh-Hans,zh-Hant_HK,zh-Hant_TW.
+// da,de,en,en_AU,en_GB,en_SV,es,es_MX,fr,he,it,ja,ko,nb,nl,pl,pt,pt_BR,ru,sv,tr,zh-Hans,zh-Hant_HK,zh-Hant_TW.
 @property(nonatomic, copy, readwrite) NSString *languageOrLocale;
 
 // Use to change the environment -- see the PayPalEnvironment constants above.
