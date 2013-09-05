@@ -1,3 +1,11 @@
+---
+
+##### iOS 7 Pre-Release
+
+Check out the [1.3.0-beta pre-release](https://github.com/paypal/PayPal-iOS-SDK/releases/tag/1.3.0-beta) for iOS 7 support and UI enhancements.
+
+---
+
 PayPal iOS SDK
 ==============
 
