@@ -24,6 +24,7 @@ PayPal iOS SDK release notes
 * Update the required C++ Standard Library from `libstdc++` to `libc++`
    * NOTE: this will probably require a corresponding change to your app's `Other Linker Flags`, from `-lstdc++` to `-lc++`.
    * (If you still need `libstdc++` for a component other than card.io, you should be able to specify BOTH `-lstdc++` AND `-lc++`.)
+* Add a new dependency: include SystemConfiguration.framework in your app's required libraries.
 * Add translations of all strings into ~20 languages, in addition to American English.
    * Translation choice is controlled by a new `languageOrLocale` property of `PayPalPaymentViewController`.
    * NOTE: Default language, if not set by your app, will now be based upon the device's current language setting.
