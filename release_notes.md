@@ -1,8 +1,14 @@
 PayPal iOS SDK release notes
 ============================
 
+1.3.2-beta
+----------
+
+* Better reposting of 1.3.1-beta
+
 1.3.1-beta
 ----------
+
 * Fix [issue #39](https://github.com/paypal/PayPal-iOS-SDK/issues/39).
 
 1.3.0-beta
