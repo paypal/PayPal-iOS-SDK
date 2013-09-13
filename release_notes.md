@@ -1,6 +1,19 @@
 PayPal iOS SDK release notes
 ============================
 
+1.3.1-beta
+----------
+* Fix [issue #39](https://github.com/paypal/PayPal-iOS-SDK/issues/39).
+
+1.3.0-beta
+----------
+
+* Add support for iOS 7.
+    * Library built with Xcode 5 DP 5.
+    * The SDK is still compatible with iOS 5 and 6, as well as Xcode 4.
+* Update UI across all supported versions of iOS.
+    * The confirm view has been merged into the payment selection view.
+
 1.2.0
 -----
 

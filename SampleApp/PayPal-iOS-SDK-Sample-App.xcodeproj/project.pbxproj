@@ -116,7 +116,6 @@
 		849BE6DF16D4352000E03EEC = {
 			isa = PBXGroup;
 			children = (
-				D5463463178F5A2800A2D5F6 /* SystemConfiguration.framework */,
 				849BE72B16D4402000E03EEC /* PayPalMobile */,
 				849BE6F116D4352100E03EEC /* PayPal-iOS-SDK-Sample-App */,
 				849BE6EA16D4352100E03EEC /* Frameworks */,
@@ -136,18 +135,19 @@
 			isa = PBXGroup;
 			children = (
 				849BE72E16D440B100E03EEC /* AudioToolbox.framework */,
+				849BE72C16D4407D00E03EEC /* AVFoundation.framework */,
 				849BE72F16D440B100E03EEC /* CoreMedia.framework */,
+				849BE6EF16D4352100E03EEC /* CoreGraphics.framework */,
 				849BE73016D440B100E03EEC /* CoreVideo.framework */,
 				849BE73116D440B100E03EEC /* libxml2.dylib */,
+				849BE6ED16D4352100E03EEC /* Foundation.framework */,
 				849BE73216D440B100E03EEC /* MessageUI.framework */,
 				849BE73316D440B200E03EEC /* MobileCoreServices.framework */,
 				849BE73416D440B200E03EEC /* OpenGLES.framework */,
 				849BE73516D440B200E03EEC /* QuartzCore.framework */,
 				849BE73616D440B200E03EEC /* Security.framework */,
-				849BE72C16D4407D00E03EEC /* AVFoundation.framework */,
+				D5463463178F5A2800A2D5F6 /* SystemConfiguration.framework */,
 				849BE6EB16D4352100E03EEC /* UIKit.framework */,
-				849BE6ED16D4352100E03EEC /* Foundation.framework */,
-				849BE6EF16D4352100E03EEC /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
