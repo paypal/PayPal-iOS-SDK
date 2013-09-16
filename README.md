@@ -1,13 +1,13 @@
----
-
-##### iOS 7 Pre-Release
-
-Check out the [1.3.2-beta pre-release](https://github.com/paypal/PayPal-iOS-SDK/releases/tag/1.3.2-beta) for iOS 7 support and UI enhancements.
-
----
-
 PayPal iOS SDK
 ==============
+
+### This is a pre-release version
+
+This is a preview of the iOS 7 update of the PayPal iOS SDK. The library was built with a developer preview of Xcode.
+
+Technically, Apple might not allow an app using this library into the App Store. A full release is forthcoming once Apple officially releases iOS 7 and Xcode 5.
+
+---
 
 The PayPal iOS SDK provides a software library that makes it easy for iOS developers
 to accept both credit cards and PayPal directly within native mobile apps.
@@ -71,7 +71,6 @@ Integration
   * `OpenGLES.framework`
   * `QuartzCore.framework`
   * `Security.framework`
-  * `SystemConfiguration.framework`
   * `UIKit.framework`
 5. Add the open source license acknowledgments from acknowledgments.md to [your app's acknowledgments](http://stackoverflow.com/questions/3966116/where-to-put-open-source-credit-information-for-an-iphone-app).
 

@@ -1,6 +1,32 @@
 PayPal iOS SDK release notes
 ============================
 
+1.3.3
+-----
+
+* Official release for iOS 7, built with Xcode 5 GM seed.
+* Modify header comments to support Xcode 5 Quick Help.
+* Update card.io library to 3.2.4.
+
+1.3.2-beta
+----------
+
+* Better reposting of 1.3.1-beta
+
+1.3.1-beta
+----------
+
+* Fix [issue #39](https://github.com/paypal/PayPal-iOS-SDK/issues/39).
+
+1.3.0-beta
+----------
+
+* Add support for iOS 7.
+    * Library built with Xcode 5 DP 5.
+    * The SDK is still compatible with iOS 5 and 6, as well as Xcode 4.
+* Update UI across all supported versions of iOS.
+    * The confirm view has been merged into the payment selection view.
+
 1.2.0
 -----
 
@@ -24,6 +50,7 @@ PayPal iOS SDK release notes
 * Update the required C++ Standard Library from `libstdc++` to `libc++`
    * NOTE: this will probably require a corresponding change to your app's `Other Linker Flags`, from `-lstdc++` to `-lc++`.
    * (If you still need `libstdc++` for a component other than card.io, you should be able to specify BOTH `-lstdc++` AND `-lc++`.)
+* Add a new dependency: include SystemConfiguration.framework in your app's required libraries.
 * Add translations of all strings into ~20 languages, in addition to American English.
    * Translation choice is controlled by a new `languageOrLocale` property of `PayPalPaymentViewController`.
    * NOTE: Default language, if not set by your app, will now be based upon the device's current language setting.
