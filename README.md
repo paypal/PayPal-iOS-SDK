@@ -41,8 +41,8 @@ Integration
 
 ### Requirements
 
-* Xcode 4.5+ and iOS SDK 6.0+
-* iOS 5.0+ target deployment
+* Xcode 5+
+* iOS 6+ target deployment
 * armv7 and armv7s devices and the simulator (not armv6)
 * iPhone and iPad of all sizes and resolutions
 
