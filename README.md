@@ -63,6 +63,7 @@ Integration
   * `OpenGLES.framework`
   * `QuartzCore.framework`
   * `Security.framework`
+  * `SystemConfiguration.framework`
   * `UIKit.framework`
 5. Add the open source license acknowledgments from acknowledgments.md to [your app's acknowledgments](http://stackoverflow.com/questions/3966116/where-to-put-open-source-credit-information-for-an-iphone-app).
 

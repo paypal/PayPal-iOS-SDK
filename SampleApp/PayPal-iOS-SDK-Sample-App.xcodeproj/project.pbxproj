@@ -116,7 +116,6 @@
 		849BE6DF16D4352000E03EEC = {
 			isa = PBXGroup;
 			children = (
-				D5463463178F5A2800A2D5F6 /* SystemConfiguration.framework */,
 				849BE72B16D4402000E03EEC /* PayPalMobile */,
 				849BE6F116D4352100E03EEC /* PayPal-iOS-SDK-Sample-App */,
 				849BE6EA16D4352100E03EEC /* Frameworks */,
@@ -135,6 +134,7 @@
 		849BE6EA16D4352100E03EEC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D5463463178F5A2800A2D5F6 /* SystemConfiguration.framework */,
 				849BE72E16D440B100E03EEC /* AudioToolbox.framework */,
 				849BE72F16D440B100E03EEC /* CoreMedia.framework */,
 				849BE73016D440B100E03EEC /* CoreVideo.framework */,
