@@ -1,6 +1,11 @@
 PayPal iOS SDK release notes
 ============================
 
+1.3.4
+-----
+
+* Fix [Issue #46: Back text overlaps Cancel text](https://github.com/paypal/PayPal-iOS-SDK/issues/46).
+
 1.3.3
 -----
 

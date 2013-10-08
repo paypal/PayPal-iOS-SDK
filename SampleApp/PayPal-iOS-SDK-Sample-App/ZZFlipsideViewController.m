@@ -112,4 +112,8 @@
   [self.delegate flipsideViewControllerDidFinish:self];
 }
 
+- (BOOL)prefersStatusBarHidden {
+  return YES;
+}
+
 @end

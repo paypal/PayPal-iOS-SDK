@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <scenes>
         <!--Main View Controller-->
@@ -9,10 +9,10 @@
             <objects>
                 <viewController id="2" customClass="ZZMainViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8">
-                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackOpaque" id="13">
+                            <navigationBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" id="13">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
@@ -26,29 +26,24 @@
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="58w-1d-IUE">
-                                <rect key="frame" x="244" y="480" width="280" height="44"/>
+                                <rect key="frame" x="244" y="490" width="280" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Buy a T-Shirt">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="pay" destination="2" eventType="touchUpInside" id="9oL-CN-p9p"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="This is an example app demonstrating use of the PayPal iOS library." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Em1-CV-AEt">
-                                <rect key="frame" x="20" y="937" width="728" height="47"/>
+                                <rect key="frame" x="20" y="957" width="728" height="47"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.50715438180000005" green="0.50715438180000005" blue="0.50715438180000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view opaque="NO" contentMode="scaleToFill" id="gnk-gO-asr">
-                                <rect key="frame" x="244" y="377" width="280" height="78"/>
+                                <rect key="frame" x="244" y="385" width="280" height="78"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="check.png" id="3XM-0x-hhb">
@@ -68,6 +63,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="payButton" destination="58w-1d-IUE" id="nJL-S6-5kj"/>
                         <outlet property="successView" destination="gnk-gO-asr" id="05H-59-83e"/>
@@ -85,11 +81,11 @@
             <objects>
                 <viewController id="5" customClass="ZZFlipsideViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9">
-                        <rect key="frame" x="0.0" y="20" width="320" height="832"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackOpaque" id="17">
-                                <rect key="frame" x="0.0" y="788" width="320" height="44"/>
+                            <navigationBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" id="17">
+                                <rect key="frame" x="0.0" y="808" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="SDK Settings" id="18">
                                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="19">
@@ -101,7 +97,7 @@
                                 </items>
                             </navigationBar>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="KRd-iK-SCZ">
-                                <rect key="frame" x="20" y="20" width="280" height="44"/>
+                                <rect key="frame" x="20" y="27" width="280" height="29"/>
                                 <segments>
                                     <segment title="Mock"/>
                                     <segment title="Sandbox"/>
@@ -112,7 +108,7 @@
                                 </connections>
                             </segmentedControl>
                             <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="HOZ-ZV-yX2">
-                                <rect key="frame" x="222" y="79" width="79" height="27"/>
+                                <rect key="frame" x="250" y="79" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="processCreditCardsChanged:" destination="5" eventType="valueChanged" id="m6A-op-xmI"/>
@@ -158,30 +154,8 @@
     <resources>
         <image name="check.png" width="84" height="75"/>
     </resources>
-    <classes>
-        <class className="ZZFlipsideViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ZZFlipsideViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="done:"/>
-                <relationship kind="action" name="environmentControlDidUpdate:"/>
-                <relationship kind="action" name="processCreditCardsChanged:"/>
-                <relationship kind="outlet" name="acceptCreditCardsSwitch" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="environmentSegmentedControl" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="proofOfPaymentLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="proofOfPaymentTextView" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="ZZMainViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ZZMainViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="togglePopover:"/>
-                <relationship kind="outlet" name="payButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="successView" candidateClass="UIView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
+        <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
