@@ -1,6 +1,11 @@
 PayPal iOS SDK release notes
 ============================
 
+1.3.5
+-----
+
+* Fix a problem with accepting American Express cards.
+
 1.3.4
 -----
 
