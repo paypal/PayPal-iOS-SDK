@@ -1,6 +1,10 @@
 PayPal iOS SDK release notes
 ============================
 
+1.3.6
+-----
+* Fix a problem with repeat purchase resulting in 52003 error on Sandbox
+
 1.3.5
 -----
 
