@@ -1,6 +1,12 @@
 PayPal iOS SDK release notes
 ============================
 
+1.4.0
+-----
+* Make 64-bit compatible
+* Require iOS 6.0 or greater
+* Update card.io library to 3.4.0
+
 1.3.6
 -----
 * Fix a problem with repeat purchase resulting in 52003 error on Sandbox
