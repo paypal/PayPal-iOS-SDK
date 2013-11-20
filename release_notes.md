@@ -1,6 +1,10 @@
 PayPal iOS SDK release notes
 ============================
 
+1.4.1
+-----
+* Fix a problem with the 64-bit library
+
 1.4.0
 -----
 * Make 64-bit compatible
