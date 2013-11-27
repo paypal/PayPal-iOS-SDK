@@ -51,7 +51,7 @@ Integration
 
 1. Clone or download the SDK, which consists of header files, license acknowledgements, release notes, and a static library. It also includes a sample app.
 2. Add the `PayPalMobile` directory (containing several .h files and libPayPalMobile.a) to your Xcode project. We recommend checking "Copy items..." and selecting "Create groups...".
-3. In your project's **Build Settings**, add `-lc++ -ObjC` to Other Linker Flags.
+3. In your project's **Build Settings** (in the `TARGETS` section, not the `PROJECTS` section) add `-lc++ -ObjC` to Other Linker Flags.
 4. In your project's **Build Phases**, link your project with these libraries. Weak linking for iOS versions back to 6.0 is supported.
   * `AVFoundation.framework`
   * `AudioToolbox.framework`
