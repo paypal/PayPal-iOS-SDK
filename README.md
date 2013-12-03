@@ -52,20 +52,31 @@ Integration
 1. Clone or download the SDK, which consists of header files, license acknowledgements, release notes, and a static library. It also includes a sample app.
 2. Add the `PayPalMobile` directory (containing several .h files and libPayPalMobile.a) to your Xcode project. We recommend checking "Copy items..." and selecting "Create groups...".
 3. In your project's **Build Settings** (in the `TARGETS` section, not the `PROJECTS` section) add `-lc++ -ObjC` to Other Linker Flags.
-4. In your project's **Build Phases**, link your project with these libraries. Weak linking for iOS versions back to 6.0 is supported.
-  * `AVFoundation.framework`
-  * `AudioToolbox.framework`
-  * `CoreMedia.framework`
-  * `CoreVideo.framework`
-  * `libxml2.dylib`
-  * `MessageUI.framework`
-  * `MobileCoreServices.framework`
-  * `OpenGLES.framework`
-  * `QuartzCore.framework`
-  * `Security.framework`
-  * `SystemConfiguration.framework`
-  * `UIKit.framework`
-5. Add the open source license acknowledgments from acknowledgments.md to [your app's acknowledgments](http://stackoverflow.com/questions/3966116/where-to-put-open-source-credit-information-for-an-iphone-app).
+4. In your project's **Build Phases**, *either:*
+  * Link your project with these libraries. [Weak linking](http://developer.apple.com/library/mac/#documentation/DeveloperTools/Conceptual/cross_development/Configuring/configuring.html) for iOS versions back to 6.0 is supported.
+    * `AVFoundation.framework`
+    * `AudioToolbox.framework`
+    * `CoreMedia.framework`
+    * `CoreVideo.framework`
+    * `libxml2.dylib`
+    * `MessageUI.framework`
+    * `MobileCoreServices.framework`
+    * `OpenGLES.framework`
+    * `QuartzCore.framework`
+    * `Security.framework`
+    * `SystemConfiguration.framework`
+    * `UIKit.framework`
+5. *or,* if you are using Xcode 5 or newer:
+  * Add only these frameworks to your project:
+    * `libxml2.dylib`
+    * `AVFoundation.framework`
+    * `CFNetWork.framework`
+    * `MessageUI.framework`
+    * `SystemConfiguration.framework`
+  * and confirm that these two Build Settings are both enabled:
+    * `Enable Modules (C and Objective-C)`
+    * `Link Frameworks Automatically`
+6. Add [the SDK's open source license acknowledgments](https://github.com/paypal/PayPal-iOS-SDK/blob/master/acknowledgments.md) to [your app's acknowledgments](http://stackoverflow.com/questions/3966116/where-to-put-open-source-credit-information-for-an-iphone-app).
 
 
 ### Credentials
