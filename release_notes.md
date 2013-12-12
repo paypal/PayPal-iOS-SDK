@@ -1,6 +1,12 @@
 PayPal iOS SDK release notes
 ============================
 
+1.4.3
+-----
+* Improve the handling of right-to-left languages (e.g., Hebrew).
+* Update card.io library to 3.4.2
+* Fix [issue #66](https://github.com/paypal/PayPal-iOS-SDK/issues/66)
+
 1.4.2
 -----
 * Fix [issue #60](https://github.com/paypal/PayPal-iOS-SDK/issues/60)
