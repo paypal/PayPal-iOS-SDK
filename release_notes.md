@@ -1,6 +1,11 @@
 PayPal iOS SDK release notes
 ============================
 
+1.4.4
+-----
+* Fix a bug that arose when `hideCreditCardButton` is set.
+* Update card.io library to 3.4.3
+
 1.4.3
 -----
 * Improve the handling of right-to-left languages (e.g., Hebrew).
