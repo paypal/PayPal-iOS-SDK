@@ -83,8 +83,14 @@ Integration
 
 Take note of these two identifiers:
 
-  - `clientId`: Available on the [PayPal developer site](https://developer.paypal.com/).
-  - `receiverEmail`: The email address on the PayPal account used to obtain the above `clientId`.
+  - `clientId`
+  - `receiverEmail`
+  
+You can obtain your PayPal API credentials, including Client ID, by visiting the [Applications page on the PayPal Developer site](https://developer.paypal.com/webapps/developer/applications) and logging in with your PayPal account.
+
+Once logged in on this page, you will be assigned a **sandbox** Client ID, which will let you test your iOS integration against the PayPal sandbox. In your code, set `receiverEmail` to a *business* sandbox account email address, then use a *personal* sandbox account email and password to log in to PayPal in the UI of your app. You can create business and personal sandbox accounts on the [Sandbox accounts](https://developer.paypal.com/webapps/developer/applications/accounts) page.
+
+To obtain your **live** Client ID, you will need to have a business account. If you don't yet have a business account, there is a link at the bottom of that same Applications page that will get you started. For live transactions, use your PayPal email address as `receiverEmail`.
 
 
 ### Sample Code
