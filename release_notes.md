@@ -1,6 +1,10 @@
 PayPal iOS SDK release notes
 ============================
 
+1.4.5
+-----
+* Fix a bug that caused "duplicated symbol" errors when an app used the -all_load linker flag.
+
 1.4.4
 -----
 * Fix a bug that arose when `hideCreditCardButton` is set.

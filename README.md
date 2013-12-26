@@ -93,6 +93,7 @@ Once logged in on this page, you will be assigned a **sandbox** Client ID, which
 To obtain your **live** Client ID, you will need to have a business account. If you don't yet have a business account, there is a link at the bottom of that same Applications page that will get you started. For live transactions, use your PayPal email address as `receiverEmail`.
 
 
+
 ### Sample Code
 
 1. Create a class (most likely a subclass of UIViewController) that conforms to PayPalPaymentDelegate.
