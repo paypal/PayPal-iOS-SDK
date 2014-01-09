@@ -225,8 +225,16 @@ To obtain your **live** Client ID, you will need to have a business account. If 
 Testing
 -------
 
-During development and testing, use `+setEnvironment:` to avoid moving real money around. See the header files
-for more information.
+During development and testing, use `+setEnvironment:` to avoid moving real money around. See the header files for more information.
+
+
+Usability
+---------
+
+User interface appearance and behavior is set within the library itself. For the sake of usability and user experience consistency, apps should not adjust appearance properties or attempt to modify the SDK's behavior beyond the documented methods in the provided headers.
+
+Specifically, if you are using `UIAppearance` to modify the appearance of any UI elements in your app, you should reverse those changes prior to presenting our viewcontroller, and set them again after dismissing the viewcontroller. 
+
 
 International Support
 ---------------------
