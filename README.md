@@ -227,7 +227,6 @@ Testing
 
 During development and testing, use `+setEnvironment:` to avoid moving real money around. See the header files for more information.
 
-
 Usability
 ---------
 

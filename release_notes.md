@@ -1,6 +1,11 @@
 PayPal iOS SDK release notes
 ============================
 
+1.4.6
+-----
+* Update card.io library to 3.4.4,
+  fixes [Issue #83: Crashes when card.io doesn't detect number](https://github.com/paypal/PayPal-iOS-SDK/issues/83)
+
 1.4.5
 -----
 * Fix a bug that caused "duplicated symbol" errors when an app used the -all_load linker flag.
