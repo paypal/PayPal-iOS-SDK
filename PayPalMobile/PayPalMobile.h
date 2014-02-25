@@ -1,36 +1,72 @@
 //
 //  PayPalMobile.h
 //
-//  Version 1.4.6
+//  Version 2.0.0
 //
 //  Copyright (c) 2013, PayPal
 //  All rights reserved.
 //
-//  Redistribution and use in source and binary forms, with or without
-//  modification, are permitted provided that the following conditions are met:
-//
-//  1. Redistributions of source code must retain the above copyright notice, this
-//  list of conditions and the following disclaimer.
-//  2. Redistributions in binary form must reproduce the above copyright notice,
-//  this list of conditions and the following disclaimer in the documentation
-//  and/or other materials provided with the distribution.
-//
-//  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
-//  ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
-//  WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-//  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
-//  ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
-//  (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
-//   LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
-//  ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-//  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
-//  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-//
-//  The views and conclusions contained in the software and documentation are those
-//  of the authors and should not be interpreted as representing official policies,
-//  either expressed or implied, of the FreeBSD Project.
 
-//  All-in-one import for the PayPal iOS SDK
+//  All-in-one import for the PayPal Mobile SDK
 
-#import "PayPalPaymentViewController.h"
+#import "PayPalConfiguration.h"
 #import "PayPalPayment.h"
+#import "PayPalPaymentViewController.h"
+#import "PayPalFuturePaymentViewController.h"
+
+/// Production (default): Normal, live environment. Real money gets moved.
+/// This environment MUST be used for App Store submissions.
+extern NSString *const PayPalEnvironmentProduction;
+/// Sandbox: Uses the PayPal sandbox for transactions. Useful for development.
+extern NSString *const PayPalEnvironmentSandbox;
+/// NoNetwork: Mock mode. Does not submit transactions to PayPal. Fakes successful responses. Useful for unit tests.
+extern NSString *const PayPalEnvironmentNoNetwork;
+
+@interface PayPalMobile : NSObject
+
+/// You MUST call this method to initialize the PayPal Mobile SDK.
+///
+/// The PayPal Mobile SDK can operate in different environments to facilitate development and testing.
+/// See PayPalEnvironmentProduction, PayPalEnvironmentSandbox, PayPalEnvironmentNoNetwork for more details.
+/// @param clientIdsForEnvironments Your client id for each relevant environment, as obtained from developer.paypal.com.
+/// You do not need to provide a client id for PayPalEnvironmentNoNetwork.
+/// For example,
+///  @{PayPalEnvironmentProduction : @"my-client-id-for-Production",
+///    PayPalEnvironmentSandbox : @"my-client-id-for-Sandbox"}
++ (void)initializeWithClientIdsForEnvironments:(NSDictionary *)clientIdsForEnvironments;
+
+/// You MUST preconnect to PayPal to prepare the device for processing payments.
+/// This improves the user experience because it allows the PayPal Mobile SDK to make its
+/// setup request early and in the background.
+///
+/// The preconnect is valid for a limited time, so the recommended time to preconnect
+/// is when you present the UI in which users *might* choose to initiate payment.
+///
+/// Calling this method a second time, with a different value, will change the environment used
+/// by subsequently allocated PayPal Mobile SDK viewcontrollers. Existing viewcontrollers
+/// will be unaffected.
+///
+/// @param environment
+/// The PayPal Mobile SDK can operate in different environments to facilitate development and testing.
+/// See PayPalEnvironmentProduction, PayPalEnvironmentSandbox, PayPalEnvironmentNoNetwork for more details.
++ (void)preconnectWithEnvironment:(NSString *)environment;
+
+/// Once a user has consented to future payments, when the user subsequently initiates a PayPal payment
+/// from their device to be completed by your server, PayPal uses a Correlation ID to verify that the
+/// payment is originating from a valid, user-consented device+application.
+/// This helps reduce fraud and decrease declines.
+/// This method MUST be called prior to initiating a pre-consented payment (a "future payment") from a mobile device.
+/// Pass the result to your server, to include in the payment request sent to PayPal.
+/// Do not otherwise cache or store this value.
+/// @param environment
+/// The PayPal Mobile SDK can operate in different environments to facilitate development and testing.
+/// See PayPalEnvironmentProduction, PayPalEnvironmentSandbox, PayPalEnvironmentNoNetwork for more details.
+/// @return applicationCorrelationID Your server will send this to PayPal in a 'Paypal-Application-Correlation-Id' header.
++ (NSString *)applicationCorrelationIDForEnvironment:(NSString *)environment;
+
+/// @return The version of the PayPal Mobile SDK in use. Version numbering follows http://semver.org/.
+/// @note Please be sure to include this library version in tech support requests.
++ (NSString *)libraryVersion;
+
+
+@end

@@ -1,6 +1,23 @@
 PayPal iOS SDK release notes
 ============================
 
+2.0.0
+-----
+
+* Users can now authorize future payments with PayPal.
+* Reorganize API, for both single-payment and future-payment use cases:
+    * Use the `PayPalMobile` class to initialize the SDK with Client IDs for Production and Sandbox.
+    * Use a `PayPalConfiguration` object for common configuration across both single-payment and future-payment use cases.
+    * Allow an optional `PayPalPaymentDetails` object to specify Shipping, Subtotal, and Tax amounts.
+    * Allow an optional Build Notation code ("BN code") for each payment.
+    * Add a `PayPalPaymentViewController` parameter to the methods of `PayPalPaymentDelegate`.
+    * Introduce `PayPalFuturePaymentViewController` and associated `PayPalFuturePaymentDelegate`.
+* Single payments now include an `intent` property, to distinguish between:
+    1. immediate payment processing
+    2. payment authorization only, with subsequent capture by your server.
+* For API errors, the console log will now provide additional information, including a PayPal Debug-ID for MTS investigations.
+* The SDK now uses PayPal's new REST APIs exclusively.
+
 1.4.6
 -----
 * Update card.io library to 3.4.4,

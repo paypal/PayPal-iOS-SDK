@@ -40,6 +40,7 @@
 		849BE75016D443EC00E03EEC /* button_secondary.png in Resources */ = {isa = PBXBuildFile; fileRef = 849BE74C16D443EC00E03EEC /* button_secondary.png */; };
 		849BE75116D443EC00E03EEC /* button_secondary@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 849BE74D16D443EC00E03EEC /* button_secondary@2x.png */; };
 		D5463464178F5A2800A2D5F6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5463463178F5A2800A2D5F6 /* SystemConfiguration.framework */; };
+		D5709F301884CDBF00CCD3CA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5709F2F1884CDBF00CCD3CA /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,7 +85,9 @@
 		849BE74B16D443EC00E03EEC /* button_secondary_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_secondary_selected@2x.png"; sourceTree = "<group>"; };
 		849BE74C16D443EC00E03EEC /* button_secondary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_secondary.png; sourceTree = "<group>"; };
 		849BE74D16D443EC00E03EEC /* button_secondary@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_secondary@2x.png"; sourceTree = "<group>"; };
+		D540258117FCC65A001F1164 /* PayPalConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PayPalConfiguration.h; path = ../PayPalMobile/PayPalConfiguration.h; sourceTree = "<group>"; };
 		D5463463178F5A2800A2D5F6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D5709F2F1884CDBF00CCD3CA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5709F301884CDBF00CCD3CA /* CoreLocation.framework in Frameworks */,
 				D5463464178F5A2800A2D5F6 /* SystemConfiguration.framework in Frameworks */,
 				849BE6EC16D4352100E03EEC /* UIKit.framework in Frameworks */,
 				849BE6EE16D4352100E03EEC /* Foundation.framework in Frameworks */,
@@ -134,6 +138,7 @@
 		849BE6EA16D4352100E03EEC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D5709F2F1884CDBF00CCD3CA /* CoreLocation.framework */,
 				D5463463178F5A2800A2D5F6 /* SystemConfiguration.framework */,
 				849BE72E16D440B100E03EEC /* AudioToolbox.framework */,
 				849BE72F16D440B100E03EEC /* CoreMedia.framework */,
@@ -201,10 +206,11 @@
 		849BE72B16D4402000E03EEC /* PayPalMobile */ = {
 			isa = PBXGroup;
 			children = (
-				849BE72616D4401C00E03EEC /* libPayPalMobile.a */,
+				D540258117FCC65A001F1164 /* PayPalConfiguration.h */,
 				849BE72716D4401C00E03EEC /* PayPalMobile.h */,
 				849BE72816D4401C00E03EEC /* PayPalPayment.h */,
 				849BE72916D4401C00E03EEC /* PayPalPaymentViewController.h */,
+				849BE72616D4401C00E03EEC /* libPayPalMobile.a */,
 			);
 			name = PayPalMobile;
 			sourceTree = "<group>";
@@ -386,7 +392,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PayPal-iOS-SDK-Sample-App/PayPal-iOS-SDK-Sample-App-Prefix.pch";
 				INFOPLIST_FILE = "PayPal-iOS-SDK-Sample-App/PayPal-iOS-SDK-Sample-App-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../PayPalMobile\"",
@@ -406,7 +412,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PayPal-iOS-SDK-Sample-App/PayPal-iOS-SDK-Sample-App-Prefix.pch";
 				INFOPLIST_FILE = "PayPal-iOS-SDK-Sample-App/PayPal-iOS-SDK-Sample-App-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../PayPalMobile\"",
