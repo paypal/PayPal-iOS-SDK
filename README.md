@@ -159,6 +159,8 @@ in a webview.
 
 If you use [CocoaPods](http://cocoapods.org) to keep up with new versions of the PayPal iOS SDK, we strongly recommend that you [include your Pods directory in source control](http://guides.cocoapods.org/using/using-cocoapods.html#should-i-ignore-the-pods-directory-in-source-control?), as for security reasons we may sometimes stop distributing old versions of the SDK. For details, see [this discussion of the card.io SDK pod](https://github.com/card-io/card.io-iOS-SDK/issues/24).
 
+Note: We're delighted that developers are using CocoaPods to help provide easy access to our SDK, and we'll help where we can. But we leave the creation and maintenance of the Specs to developers such as yourself. See http://guides.cocoapods.org/making/specs-and-specs-repo.html for details.
+
 
 ## Next Steps
 

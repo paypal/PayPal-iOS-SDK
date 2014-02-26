@@ -70,7 +70,7 @@ curl 'https://api.paypal.com/v1/oauth2/token' \
 ```JSON
 {
     "access_token": "6oyryV79E.KtpAvPudpI8VIko.ntdPikU9HCDfg0tO0",
-    "expires_in": 28800,
+    "expires_in": 900,
     "refresh_token": "MFYQJTPW3zlCAjznPs2D0VQlQXwiEfTesR-dRiU_qhbUngzxR3NmeBxqKELcmGtSI739R-awwvOyGVO1LJbowy7n8Ul3vsf5HQDTCzUlDylqBvW0",
     "scope": "https://api.paypal.com/v1/payments/.* https://uri.paypal.com/services/payments/futurepayments",
     "token_type": "Bearer"
@@ -114,7 +114,7 @@ curl 'https://api.paypal.com/v1/oauth2/token' \
 {
     "access_token": "WfXdnxmyJtdF4q59ofxuQuAAk6eEV-Njm6puht3Nk3w",
     "app_id": "APP-3TS46380HB829954H",
-    "expires_in": 28800,
+    "expires_in": 900,
     "scope": "https://api.paypal.com/v1/payments/.* https://uri.paypal.com/services/payments/futurepayments",
     "token_type": "Bearer"
 }

@@ -1,7 +1,7 @@
 //
 //  PayPalConfiguration.h
 //
-//  Version 2.0.0
+//  Version 2.0.1
 //
 //  Copyright (c) 2013, PayPal
 //  All rights reserved.
@@ -10,7 +10,6 @@
 #import <Foundation/Foundation.h>
 
 /// You use a PayPalConfiguration object to configure many aspects of how the SDK behaves.
-/// The PayPalConfiguration class also includes two important class methods.
 @interface PayPalConfiguration : NSObject <NSCopying>
 
 /// Optional default user email address to be shown on the PayPal login view.
