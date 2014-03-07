@@ -261,7 +261,6 @@ Once your service is complete or goods provided, you would then [capture the pay
 ```bash
 curl 'https://api.paypal.com/v1/payments/authorization/4TD55050SV609544L/capture' \
     -H "Content-Type: application/json" \
-    -H "Paypal-Application-Correlation-Id: c2edbd6e97b14ff2b19ddb8eec9d264c" \
     -H "Authorization: Bearer WfXdnxmyJtdF4q59ofxuQuAAk6eEV-Njm6puht3Nk3w" \
     -d '{
            "amount":{
