@@ -1,9 +1,9 @@
 //
 //  PayPalFuturePaymentViewController.h
 //
-//  Version 2.0.1
+//  Version 2.0.2
 //
-//  Copyright (c) 2013, PayPal
+//  Copyright (c) 2014, PayPal
 //  All rights reserved.
 //
 
@@ -30,8 +30,8 @@
 @interface PayPalFuturePaymentViewController : UINavigationController
 
 /// The designated initalizer. A new view controller MUST be initialized for each use.
-/// @param configuration The configuration to be used for the lifetime of the controller
-///     (e.g., default email address or hideCreditCard); can be nil.
+/// @param configuration The configuration to be used for the lifetime of the controller.
+///     The configuration properties merchantName, merchantPrivacyPolicyURL, and merchantUserAgreementURL must be provided.
 /// @param delegate The delegate you want to receive updates about the future payment.
 - (instancetype)initWithConfiguration:(PayPalConfiguration *)configuration
                              delegate:(id<PayPalFuturePaymentDelegate>)delegate;

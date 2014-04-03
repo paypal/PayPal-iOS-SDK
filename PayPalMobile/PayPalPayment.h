@@ -1,18 +1,23 @@
 //
 //  PayPalPayment.h
 //
-//  Version 2.0.1
+//  Version 2.0.2
 //
-//  Copyright (c) 2013, PayPal
+//  Copyright (c) 2014, PayPal
 //  All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
+#pragma mark - PayPalPaymentIntent
+
 typedef NS_ENUM(NSInteger, PayPalPaymentIntent) {
   PayPalPaymentIntentSale = 0,
   PayPalPaymentIntentAuthorize = 1,
   };
+
+
+#pragma mark - PayPalPaymentDetails
 
 /// The PayPalPaymentDetails class defines optional amount details.
 /// @see https://developer.paypal.com/webapps/developer/docs/api/#details-object for more details.
@@ -30,6 +35,8 @@ typedef NS_ENUM(NSInteger, PayPalPaymentIntent) {
 @end
 
 
+#pragma mark - PayPalPayment
+
 @interface PayPalPayment : NSObject <NSCopying>
 
 /// Convenience constructor. Returns a PayPalPayment with the specified amount, currency code, and short description.
@@ -45,7 +52,7 @@ typedef NS_ENUM(NSInteger, PayPalPaymentIntent) {
                               intent:(PayPalPaymentIntent)intent;
 
 
-#pragma mark - Required properties
+#pragma mark Required properties
 
 /// ISO standard currency code (http://en.wikipedia.org/wiki/ISO_4217).
 @property(nonatomic, copy, readwrite) NSString *currencyCode;
@@ -66,9 +73,11 @@ typedef NS_ENUM(NSInteger, PayPalPaymentIntent) {
 @property(nonatomic, assign, readwrite) PayPalPaymentIntent intent;
 
 
-#pragma mark - Optional properties
+#pragma mark Optional properties
 
-/// Optional payment details @see PaymentDetails properties.
+/// Optional payment details @see PayPalPaymentDetails properties.
+/// @note If you provide payment details, be sure that `subtotal`, `shipping`, and `tax`
+/// sum exactly to the payment `amount`.
 @property (nonatomic, copy, readwrite) PayPalPaymentDetails *paymentDetails;
 
 /// Optional Build Notation code ("BN code"), obtained from partnerprogram@paypal.com,
@@ -76,7 +85,7 @@ typedef NS_ENUM(NSInteger, PayPalPaymentIntent) {
 @property(nonatomic, copy, readwrite) NSString *bnCode;
 
 
-#pragma mark - Convenience getters
+#pragma mark Convenience getters
 
 /// Can this payment be processed?
 /// A payment might not be processable if, for example:
@@ -91,7 +100,7 @@ typedef NS_ENUM(NSInteger, PayPalPaymentIntent) {
 @property(nonatomic, copy, readonly) NSString *localizedAmountForDisplay;
 
 
-#pragma mark - Properties available on completed purchases
+#pragma mark Properties available on completed purchases
 
 /// Full payment confirmation, with lots of details including the proof
 /// of payment token. You should send the entire confirmation

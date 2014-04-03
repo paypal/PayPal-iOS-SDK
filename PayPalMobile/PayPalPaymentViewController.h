@@ -1,9 +1,9 @@
 //
 //  PayPalPaymentViewController.h
 //
-//  Version 2.0.1
+//  Version 2.0.2
 //
-//  Copyright (c) 2013, PayPal
+//  Copyright (c) 2014, PayPal
 //  All rights reserved.
 //
 

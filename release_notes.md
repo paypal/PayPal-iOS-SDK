@@ -1,6 +1,13 @@
 PayPal iOS SDK release notes
 ============================
 
+2.0.2
+-----
+* Add full support for device rotation.
+* Add translations for Arabic and Malay.
+* Update card.io library to 3.6.4.
+
+
 2.0.1
 -----
 * A few very minor fixes:

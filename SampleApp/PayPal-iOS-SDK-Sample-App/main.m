@@ -2,7 +2,7 @@
 //  main.m
 //  PayPal-iOS-SDK-Sample-App
 //
-//  Copyright (c) 2013 PayPal. All rights reserved.
+//  Copyright (c) 2014 PayPal. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
