@@ -1,12 +1,18 @@
 PayPal iOS SDK release notes
 ============================
 
+2.0.3
+-----
+* For payments using `PayPalPaymentIntentAuthorize` , the `PayPalPayment.confirmation` now includes `authorization_id`.
+  [issue #125](https://github.com/paypal/PayPal-iOS-SDK/issues/125#issuecomment-39613855)
+* Correct the handling of currencies HKD, HUF, and TWD.
+  [issue #130](https://github.com/paypal/PayPal-iOS-SDK/issues/130)
+
 2.0.2
 -----
 * Add full support for device rotation.
 * Add translations for Arabic and Malay.
 * Update card.io library to 3.6.4.
-
 
 2.0.1
 -----

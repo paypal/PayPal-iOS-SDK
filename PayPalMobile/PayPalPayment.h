@@ -1,7 +1,7 @@
 //
 //  PayPalPayment.h
 //
-//  Version 2.0.2
+//  Version 2.0.3
 //
 //  Copyright (c) 2014, PayPal
 //  All rights reserved.
@@ -106,6 +106,7 @@ typedef NS_ENUM(NSInteger, PayPalPaymentIntent) {
 /// of payment token. You should send the entire confirmation
 /// dictionary to your servers and process it there, for maximum flexibility.
 /// See https://developer.paypal.com/webapps/developer/docs/integration/mobile/verify-mobile-payment/
+/// and https://developer.paypal.com/webapps/developer/docs/integration/direct/capture-payment/
 /// for more details.
 @property(nonatomic, readonly, copy) NSDictionary *confirmation;
 

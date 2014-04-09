@@ -1,7 +1,7 @@
 //
 //  PayPalConfiguration.h
 //
-//  Version 2.0.2
+//  Version 2.0.3
 //
 //  Copyright (c) 2014, PayPal
 //  All rights reserved.
@@ -62,14 +62,8 @@
 /// E.g., specifying "en" on a device set to "English" and "United Kingdom" will result in "en_GB".
 ///
 /// These localizations are currently included:
-/// ar, da,de,en,en_AU,en_GB,en_SE,es,es_MX,fr,he,it,ja,ko,ms,nb,nl,pl,pt,pt_BR,ru,sv,tr,zh-Hans,zh-Hant_HK,zh-Hant_TW.
+/// ar,da,de,en,en_AU,en_GB,en_SE,es,es_MX,fr,he,it,ja,ko,ms,nb,nl,pl,pt,pt_BR,ru,sv,tr,zh-Hans,zh-Hant_HK,zh-Hant_TW.
 @property(nonatomic, copy, readwrite) NSString *languageOrLocale;
-#if DEBUG
-
-/// For debug experimentation only!
-/// If this property is nil, then PPServiceManager will fall back to usual logic for determining adaptation country.
-@property (nonatomic, copy, readwrite) NSString *countryForAdaptation;
-#endif
 
 /// Normally, the SDK blurs the screen when the app is backgrounded,
 /// to obscure credit card or PayPal account details in the iOS-saved screenshot.

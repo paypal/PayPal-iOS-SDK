@@ -1,7 +1,7 @@
 Single Payment
 ==============
 
-Receive a single, immediate payment from your customer, via either PayPal or payment card with [card.io](https://www.card.io/).
+Receive a single payment from your customer, via either PayPal or payment card with [card.io](https://www.card.io/). This can be either an **immediate** payment which your servers should subsequently **verify**, or else an **authorization** for a payment which your servers must subsequently **capture**.
 
 _If you haven't already, see the [README](../README.md) for an initial overview and instructions for adding the SDK to your project._
 
@@ -15,8 +15,8 @@ Overview
     3. Returns the payment response to your app.
 * Your code...
     1. Receives payment response from the PayPal iOS SDK.
-    2. [Sends the payment response to your servers for verification](https://developer.paypal.com/webapps/developer/docs/integration/mobile/verify-mobile-payment/).
-    3. Provides the user their goods or services.
+    2. Sends the payment response to your servers for [verification](https://developer.paypal.com/webapps/developer/docs/integration/mobile/verify-mobile-payment/) or [capture](https://developer.paypal.com/webapps/developer/docs/integration/direct/capture-payment/#capture-the-payment).
+    3. Provides the user their goods or services (usually via your servers).
 
 
 Sample Code
@@ -94,7 +94,7 @@ This document shows sample code for using the PayPal iOS SDK's Payment API in yo
     }
     ```
 
-5. Create a `PayPalPayment` with an amount, a currency code, short description, and intent (Authorization vs Sale):
+5. Create a `PayPalPayment` with an amount, a currency code, short description, and intent (immediate sale vs. authorization/capture):
 
     ```obj-c
     // SomeViewController.m
@@ -162,9 +162,9 @@ This document shows sample code for using the PayPal iOS SDK's Payment API in yo
     }
     ```
 
-8. [Send the payment response to your servers for verification](https://developer.paypal.com/webapps/developer/docs/integration/mobile/verify-mobile-payment/), as well as any other processing required for your business, such as fulfillment.
+8. Send the payment response to your servers for [verification](https://developer.paypal.com/webapps/developer/docs/integration/mobile/verify-mobile-payment/) or [capture](https://developer.paypal.com/webapps/developer/docs/integration/direct/capture-payment/#capture-the-payment), as well as any other processing required for your business, such as fulfillment.
 
-   **Tip:** At this point, the payment has been completed, and the user has been charged. **If you can't reach your server, it is important that you save the proof of payment and try again later.**
+   **Tip:** At this point, for an **immediate** payment, the payment has been completed and the user has been charged. For an **authorization/capture** payment, your server still must capture the payment to actually charge the user. **If you can't reach your server, it is important that you save the proof of payment and try again later.**
 
     ```obj-c
     // SomeViewController.m
@@ -184,4 +184,6 @@ This document shows sample code for using the PayPal iOS SDK's Payment API in yo
 Next Steps
 ----------
 
-**Avoid fraud!** Be sure to [verify the proof of payment](https://developer.paypal.com/webapps/developer/docs/integration/mobile/verify-mobile-payment/).
+**Avoid fraud!** For an immediate payment, be sure to [verify the proof of payment](https://developer.paypal.com/webapps/developer/docs/integration/mobile/verify-mobile-payment/).
+
+For an authorization/capture payment, your server must [capture the payment](https://developer.paypal.com/webapps/developer/docs/integration/direct/capture-payment/#capture-the-payment).
