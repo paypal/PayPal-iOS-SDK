@@ -1,9 +1,13 @@
 PayPal iOS SDK release notes
 ============================
 
+2.0.4
+-----
+* Eliminate remaining references to IDFA (Advertising ID) to prevent potential issues for app approvals.
+
 2.0.3
 -----
-* For payments using `PayPalPaymentIntentAuthorize` , the `PayPalPayment.confirmation` now includes `authorization_id`.
+* For payments using `PayPalPaymentIntentAuthorize`, the `PayPalPayment.confirmation` now includes `authorization_id`.
   [issue #125](https://github.com/paypal/PayPal-iOS-SDK/issues/125#issuecomment-39613855)
 * Correct the handling of currencies HKD, HUF, and TWD.
   [issue #130](https://github.com/paypal/PayPal-iOS-SDK/issues/130)
