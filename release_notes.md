@@ -1,6 +1,10 @@
 PayPal iOS SDK release notes
 ============================
 
+2.0.5
+-----
+* Update a Spanish translation. [issue #139](https://github.com/paypal/PayPal-iOS-SDK/issues/139)
+
 2.0.4
 -----
 * Eliminate remaining references to IDFA (Advertising ID) to prevent potential issues for app approvals.
