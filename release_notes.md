@@ -1,6 +1,15 @@
 PayPal iOS SDK release notes
 ============================
 
+2.1.0
+-----
+* Add support for Multiple Items per payment.
+* Add `clearAllUserData` method to `PayPalMobile`.
+* If app provides `defaultUserEmail`, `defaultUserPhoneCountryCode`, and/or `defaultUserPhoneNumber`,
+  these will now be overridden by the user's most recent PayPal login.
+* Update PayPal logo.
+* Update card.io library to 3.7.0.
+
 2.0.5
 -----
 * Update a Spanish translation. [issue #139](https://github.com/paypal/PayPal-iOS-SDK/issues/139)

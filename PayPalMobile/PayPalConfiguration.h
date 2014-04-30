@@ -1,7 +1,7 @@
 //
 //  PayPalConfiguration.h
 //
-//  Version 2.0.5
+//  Version 2.1.0
 //
 //  Copyright (c) 2014, PayPal
 //  All rights reserved.
@@ -14,13 +14,16 @@
 
 /// Optional default user email address to be shown on the PayPal login view.
 /// Will be overridden by email used in most recent PayPal login.
+/// @see forceDefaultsInSandbox
 @property(nonatomic, copy, readwrite) NSString *defaultUserEmail;
 /// Optional default user phone country code used in the PayPal login view.
 /// Will be overridden by phone country code used in most recent PayPal login.
+/// @see forceDefaultsInSandbox
 @property(nonatomic, copy, readwrite) NSString *defaultUserPhoneCountryCode;
 /// Optional default user phone number to be shown in the PayPal login view.
 /// Will be overridden by phone number used in most recent PayPal login.
 /// @note If you set defaultUserPhoneNumber, be sure to also set defaultUserPhoneCountryCode.
+/// @see forceDefaultsInSandbox
 @property(nonatomic, copy, readwrite) NSString *defaultUserPhoneNumber;
 
 /// Your company name, as it should be displayed to the user
@@ -49,6 +52,8 @@
 /// not be remembered.
 ///
 /// Defaults to YES.
+///
+/// @see PayPalMobile +(void)clearAllUserData
 @property(nonatomic, assign, readwrite) BOOL rememberUser;
 
 /// If not set, or if set to nil, defaults to the device's current language setting.
@@ -74,7 +79,12 @@
 /// Sandbox credentials can be difficult to type on a mobile device. Setting this flag to YES will
 /// cause the sandboxUserPassword and sandboxUserPin to always be pre-populated into login fields.
 ///
-/// This setting will have no effect if the operation mode is production.
+/// Defaults to NO.
+///
+/// This setting will have no effect if the environment is PayPalEnvironmentProduction.
+///
+/// @note: Use defaultUserEmail, defaultUserPhoneCountryCode, and defaultUserPhoneNumber to
+/// pre-populate the email and phone fields as well.
 @property (nonatomic, assign, readwrite) BOOL forceDefaultsInSandbox;
 
 /// Password to use for sandbox if 'forceDefaultsInSandbox' is set.

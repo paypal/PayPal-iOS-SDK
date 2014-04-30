@@ -1,7 +1,7 @@
 //
 //  PayPalPayment.h
 //
-//  Version 2.0.5
+//  Version 2.1.0
 //
 //  Copyright (c) 2014, PayPal
 //  All rights reserved.
@@ -23,14 +23,65 @@ typedef NS_ENUM(NSInteger, PayPalPaymentIntent) {
 /// @see https://developer.paypal.com/webapps/developer/docs/api/#details-object for more details.
 @interface PayPalPaymentDetails : NSObject <NSCopying>
 
-/// Amount charged for shipping. 10 characters max with support for 2 decimal places.
-@property(nonatomic, copy, readwrite) NSDecimalNumber *shipping;
+/// Convenience constructor.
+/// See the documentation of the individual properties for more detail.
+/// @param subtotal Sum of amounts for all items in this transaction.
+/// @param shipping Shipping and handling amount for the overall transaction.
+/// @param tax Tax amount for the overall transaction.
++ (PayPalPaymentDetails *)paymentDetailsWithSubtotal:(NSDecimalNumber *)subtotal
+                                        withShipping:(NSDecimalNumber *)shipping
+                                             withTax:(NSDecimalNumber *)tax;
 
 /// Sub-total (amount) of items being paid for. 10 characters max with support for 2 decimal places.
 @property(nonatomic, copy, readwrite) NSDecimalNumber *subtotal;
 
+/// Amount charged for shipping. 10 characters max with support for 2 decimal places.
+@property(nonatomic, copy, readwrite) NSDecimalNumber *shipping;
+
 /// Amount charged for tax. 10 characters max with support for 2 decimal places.
 @property(nonatomic, copy, readwrite) NSDecimalNumber *tax;
+
+@end
+
+
+#pragma mark - PayPalItem
+
+/// The PayPalItem class defines an optional itemization for a payment.
+/// @see https://developer.paypal.com/docs/api/#item-object for more details.
+@interface PayPalItem : NSObject <NSCopying>
+
+/// Convenience constructor.
+/// See the documentation of the individual properties for more detail.
+/// @param name Name of the item.
+/// @param quantity Number of units.
+/// @param price Unit price for this item.
+/// @param currency ISO standard currency code.
+/// @param sku The stock keeping unit for this item.
++ (PayPalItem *)itemWithName:(NSString *)name
+                withQuantity:(NSUInteger)quantity
+                   withPrice:(NSDecimalNumber *)price
+                withCurrency:(NSString *)currency
+                     withSku:(NSString *)sku;
+
+/// Convenience utility.
+/// Returns the total of (quantity * price) for all of the items.
+/// @param array of PayPalItem objects.
++ (NSDecimalNumber *)totalPriceForItems:(NSArray *)items;
+
+/// Item name. 127 characters max. Required.
+@property(nonatomic, copy, readwrite) NSString *name;
+
+/// Number of a particular item. 10 characters max. Required.
+@property(nonatomic, assign, readwrite) NSUInteger quantity;
+
+/// Item cost. 10 characters max. Required.
+@property(nonatomic, copy, readwrite) NSDecimalNumber *price;
+
+/// ISO standard currency code (http://en.wikipedia.org/wiki/ISO_4217). Required.
+@property(nonatomic, copy, readwrite) NSString *currency;
+
+/// Stock keeping unit corresponding (SKU) to item. 50 characters max.
+@property(nonatomic, copy, readwrite) NSString *sku;
 
 @end
 
@@ -39,7 +90,7 @@ typedef NS_ENUM(NSInteger, PayPalPaymentIntent) {
 
 @interface PayPalPayment : NSObject <NSCopying>
 
-/// Convenience constructor. Returns a PayPalPayment with the specified amount, currency code, and short description.
+/// Convenience constructor.
 /// See the documentation of the individual properties for more detail.
 /// @param amount The amount of the payment.
 /// @param currencyCode The ISO 4217 currency for the payment.
@@ -79,6 +130,11 @@ typedef NS_ENUM(NSInteger, PayPalPaymentIntent) {
 /// @note If you provide payment details, be sure that `subtotal`, `shipping`, and `tax`
 /// sum exactly to the payment `amount`.
 @property (nonatomic, copy, readwrite) PayPalPaymentDetails *paymentDetails;
+
+/// Optional array of PayPalItem objects. @see PayPalItem
+/// @note If you provide one or more items, be sure that the various prices correctly
+/// sum to the payment `amount` or to `paymentDetails.subtotal`.
+@property (nonatomic, copy, readwrite) NSArray *items;
 
 /// Optional Build Notation code ("BN code"), obtained from partnerprogram@paypal.com,
 /// for your tracking purposes.
