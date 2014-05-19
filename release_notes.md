@@ -1,6 +1,12 @@
 PayPal iOS SDK release notes
 ============================
 
+2.1.1
+-----
+* Add translations for Thai.
+* Update card.io library to 3.7.1.
+* Allow hyphens or underscores within the optional Build Notation code ("BN code").
+
 2.1.0
 -----
 * Add support for Multiple Items per payment.
