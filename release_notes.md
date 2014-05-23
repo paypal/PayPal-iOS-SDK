@@ -1,6 +1,11 @@
 PayPal iOS SDK release notes
 ============================
 
+2.1.2
+-----
+* Fix a bug involving the format of `PayPalItem` `price` in server requests.
+  (The bug affected items whose fractional price was a multiple of 0.10)
+
 2.1.1
 -----
 * Add translations for Thai.
