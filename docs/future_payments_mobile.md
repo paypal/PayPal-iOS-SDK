@@ -118,7 +118,7 @@ Obtain Customer Consent
                                                                                  delegate:self];
 
       // Present the PayPalFuturePaymentViewController
-      [self presentViewController:futurePaymentViewController animated:YES completion:nil];
+      [self presentViewController:fpViewController animated:YES completion:nil];
     }
     ```
 
