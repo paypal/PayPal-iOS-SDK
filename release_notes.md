@@ -1,6 +1,13 @@
 PayPal iOS SDK release notes
 ============================
 
+2.1.3
+-----
+* Fix a crash involving PayPal accounts that have enabled two-factor authentication.
+* Fix an iOS 8 crash.
+* Make the HK dialect of Traditional Chinese the default dialect. (zh-Hant_TW remains available as well.)
+* Update card.io library to 3.8.0.
+
 2.1.2
 -----
 * Fix a bug involving the format of `PayPalItem` `price` in server requests.
