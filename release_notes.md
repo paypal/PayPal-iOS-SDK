@@ -1,6 +1,11 @@
 PayPal iOS SDK release notes
 ============================
 
+2.1.4
+-----
+* Fix some localization issues [issue #164](https://github.com/paypal/PayPal-iOS-SDK/issues/164)
+* Update card.io library to 3.8.2.
+
 2.1.3
 -----
 * Fix a crash involving PayPal accounts that have enabled two-factor authentication.
