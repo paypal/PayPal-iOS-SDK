@@ -1,6 +1,10 @@
 PayPal iOS SDK release notes
 ============================
 
+2.1.6
+-----
+* Minor bug fixes.
+
 2.1.5
 -----
 * Fix a very rare problem involving the app caches directory getting cleared. [issue #163](https://github.com/paypal/PayPal-iOS-SDK/issues/163)
