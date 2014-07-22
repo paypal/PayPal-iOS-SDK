@@ -69,8 +69,6 @@ Later, when that customer initiates a payment:
   * `SystemConfiguration.framework`
 5. Add the open source license acknowledgments from acknowledgments.md to [your app's acknowledgments](http://stackoverflow.com/questions/3966116/where-to-put-open-source-credit-information-for-an-iphone-app).
 
-**CocoaPods users:** see [this note](#cocoapods).
-
 ## Credentials
 
 Your mobile integration requires different `client_id` values for each environment: Live and Test (Sandbox).
@@ -153,13 +151,6 @@ Issues related to MPL should be filed in the [sdk-packages repo](https://github.
 
 Developers with existing Express Checkout integrations or who want additional features may wish to use [Mobile Express Checkout](https://developer.paypal.com/webapps/developer/docs/classic/mobile/gs_MEC/)
 in a webview.
-
-
-###CocoaPods
-
-If you use [CocoaPods](http://cocoapods.org) to keep up with new versions of the PayPal iOS SDK, we strongly recommend that you [include your Pods directory in source control](http://guides.cocoapods.org/using/using-cocoapods.html#should-i-ignore-the-pods-directory-in-source-control?), as for security reasons we may sometimes stop distributing old versions of the SDK. For details, see [this discussion of the card.io SDK pod](https://github.com/card-io/card.io-iOS-SDK/issues/24).
-
-Note: We're delighted that developers are using CocoaPods to help provide easy access to our SDK, and we'll help where we can. But we leave the creation and maintenance of the Specs to developers such as yourself. See http://guides.cocoapods.org/making/specs-and-specs-repo.html for details.
 
 
 ## Next Steps
