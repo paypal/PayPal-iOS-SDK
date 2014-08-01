@@ -51,6 +51,13 @@
   // For full details, including a list of available languages and locales, see PayPalPaymentViewController.h.
   
   _payPalConfig.languageOrLocale = [NSLocale preferredLanguages][0];
+  
+  
+  // Setting the payPalShippingAddressOption property is optional.
+  //
+  // See PayPalConfiguration.h for details.
+  
+  _payPalConfig.payPalShippingAddressOption = PayPalShippingAddressOptionPayPal;
 
   // Do any additional setup after loading the view, typically from a nib.
 
@@ -161,7 +168,7 @@
 
 #pragma mark - Authorize Future Payments
 
-- (IBAction)getUserAuthorization:(id)sender {
+- (IBAction)getUserAuthorizationForFuturePayments:(id)sender {
   
   PayPalFuturePaymentViewController *futurePaymentViewController = [[PayPalFuturePaymentViewController alloc] initWithConfiguration:self.payPalConfig delegate:self];
   [self presentViewController:futurePaymentViewController animated:YES completion:nil];
@@ -170,12 +177,13 @@
 
 #pragma mark PayPalFuturePaymentDelegate methods
 
-- (void)payPalFuturePaymentViewController:(PayPalFuturePaymentViewController *)futurePaymentViewController didAuthorizeFuturePayment:(NSDictionary *)futurePaymentAuthorization {
+- (void)payPalFuturePaymentViewController:(PayPalFuturePaymentViewController *)futurePaymentViewController
+                didAuthorizeFuturePayment:(NSDictionary *)futurePaymentAuthorization {
   NSLog(@"PayPal Future Payment Authorization Success!");
-  self.resultText = futurePaymentAuthorization[@"code"];
+  self.resultText = [futurePaymentAuthorization description];
   [self showSuccess];
 
-  [self sendAuthorizationToServer:futurePaymentAuthorization];
+  [self sendFuturePaymentAuthorizationToServer:futurePaymentAuthorization];
   [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -185,9 +193,44 @@
   [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)sendAuthorizationToServer:(NSDictionary *)authorization {
+- (void)sendFuturePaymentAuthorizationToServer:(NSDictionary *)authorization {
   // TODO: Send authorization to server
   NSLog(@"Here is your authorization:\n\n%@\n\nSend this to your server to complete future payment setup.", authorization);
+}
+
+
+#pragma mark - Authorize Profile Sharing
+
+- (IBAction)getUserAuthorizationForProfileSharing:(id)sender {
+  
+  NSSet *scopeValues = [NSSet setWithArray:@[kPayPalOAuth2ScopeOpenId, kPayPalOAuth2ScopeEmail, kPayPalOAuth2ScopeAddress, kPayPalOAuth2ScopePhone]];
+  
+  PayPalProfileSharingViewController *profileSharingPaymentViewController = [[PayPalProfileSharingViewController alloc] initWithScopeValues:scopeValues configuration:self.payPalConfig delegate:self];
+  [self presentViewController:profileSharingPaymentViewController animated:YES completion:nil];
+}
+
+
+#pragma mark PayPalProfileSharingDelegate methods
+
+- (void)payPalProfileSharingViewController:(PayPalProfileSharingViewController *)profileSharingViewController
+             userDidLogInWithAuthorization:(NSDictionary *)profileSharingAuthorization {
+  NSLog(@"PayPal Profile Sharing Authorization Success!");
+  self.resultText = [profileSharingAuthorization description];
+  [self showSuccess];
+  
+  [self sendProfileSharingAuthorizationToServer:profileSharingAuthorization];
+  [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)userDidCancelPayPalProfileSharingViewController:(PayPalProfileSharingViewController *)profileSharingViewController {
+  NSLog(@"PayPal Profile Sharing Authorization Canceled");
+  self.successView.hidden = YES;
+  [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)sendProfileSharingAuthorizationToServer:(NSDictionary *)authorization {
+  // TODO: Send authorization to server
+  NSLog(@"Here is your authorization:\n\n%@\n\nSend this to your server to complete profile sharing setup.", authorization);
 }
 
 

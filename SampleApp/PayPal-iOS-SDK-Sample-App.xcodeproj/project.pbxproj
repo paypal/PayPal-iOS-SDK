@@ -46,6 +46,9 @@
 /* Begin PBXFileReference section */
 		2D48B18416EE8F0800C83CD2 /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
 		2D48B18516EE8F0800C83CD2 /* check@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check@2x.png"; sourceTree = "<group>"; };
+		3E7AF6B419773AB300A4CF5E /* PayPalFuturePaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PayPalFuturePaymentViewController.h; path = ../PayPalMobile/PayPalFuturePaymentViewController.h; sourceTree = "<group>"; };
+		3E7AF6B519773AB300A4CF5E /* PayPalOAuthScopes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PayPalOAuthScopes.h; path = ../PayPalMobile/PayPalOAuthScopes.h; sourceTree = "<group>"; };
+		3E7AF6B619773AB300A4CF5E /* PayPalProfileSharingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PayPalProfileSharingViewController.h; path = ../PayPalMobile/PayPalProfileSharingViewController.h; sourceTree = "<group>"; };
 		849BE6E816D4352100E03EEC /* PayPal-iOS-SDK-Sample-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PayPal-iOS-SDK-Sample-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		849BE6EB16D4352100E03EEC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		849BE6ED16D4352100E03EEC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -206,10 +209,13 @@
 		849BE72B16D4402000E03EEC /* PayPalMobile */ = {
 			isa = PBXGroup;
 			children = (
-				D540258117FCC65A001F1164 /* PayPalConfiguration.h */,
 				849BE72716D4401C00E03EEC /* PayPalMobile.h */,
+				D540258117FCC65A001F1164 /* PayPalConfiguration.h */,
 				849BE72816D4401C00E03EEC /* PayPalPayment.h */,
 				849BE72916D4401C00E03EEC /* PayPalPaymentViewController.h */,
+				3E7AF6B419773AB300A4CF5E /* PayPalFuturePaymentViewController.h */,
+				3E7AF6B619773AB300A4CF5E /* PayPalProfileSharingViewController.h */,
+				3E7AF6B519773AB300A4CF5E /* PayPalOAuthScopes.h */,
 				849BE72616D4401C00E03EEC /* libPayPalMobile.a */,
 			);
 			name = PayPalMobile;

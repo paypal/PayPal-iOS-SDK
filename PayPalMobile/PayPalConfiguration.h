@@ -1,13 +1,20 @@
 //
 //  PayPalConfiguration.h
 //
-//  Version 2.1.6
+//  Version 2.2.0
 //
 //  Copyright (c) 2014, PayPal
 //  All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
+
+typedef NS_ENUM(NSInteger, PayPalShippingAddressOption) {
+  PayPalShippingAddressOptionNone = 0,
+  PayPalShippingAddressOptionProvided = 1,
+  PayPalShippingAddressOptionPayPal = 2,
+  PayPalShippingAddressOptionBoth = 3,
+};
 
 /// You use a PayPalConfiguration object to configure many aspects of how the SDK behaves.
 @interface PayPalConfiguration : NSObject <NSCopying>
@@ -27,13 +34,13 @@
 @property(nonatomic, copy, readwrite) NSString *defaultUserPhoneNumber;
 
 /// Your company name, as it should be displayed to the user
-/// when requesting consent via a PayPalFuturePaymentViewController.
+/// when requesting consent via a PayPalFuturePaymentViewController or a PayPalProfileSharingViewController.
 @property(nonatomic, copy, readwrite) NSString *merchantName;
 /// URL of your company's privacy policy, which will be offered to the user
-/// when requesting consent via a PayPalFuturePaymentViewController.
+/// when requesting consent via a PayPalFuturePaymentViewController or a PayPalProfileSharingViewController.
 @property(nonatomic, copy, readwrite) NSURL *merchantPrivacyPolicyURL;
 /// URL of your company's user agreement, which will be offered to the user
-/// when requesting consent via a PayPalFuturePaymentViewController.
+/// when requesting consent via a PayPalFuturePaymentViewController or a PayPalProfileSharingViewController.
 @property(nonatomic, copy, readwrite) NSURL *merchantUserAgreementURL;
 
 /// If set to NO, the SDK will only support paying with PayPal, not with credit cards.
@@ -41,6 +48,17 @@
 /// Future payments (via PayPalFuturePaymentViewController) always use PayPal.
 /// Defaults to YES.
 @property(nonatomic, assign, readwrite) BOOL acceptCreditCards;
+
+/// For single payments, options for the shipping address.
+/// - PayPalShippingAddressOptionNone: no shipping address applies.
+/// - PayPalShippingAddressOptionProvided: shipping address will be provided by your app,
+///   in the shippingAddress property of PayPalPayment.
+/// - PayPalShippingAddressOptionPayPal: user will choose from shipping addresses on file
+///   for their PayPal account.
+/// - PayPalShippingAddressOptionBoth: user will choose from the shipping address provided by your app,
+///   in the shippingAddress property of PayPalPayment, plus the shipping addresses on file for the user's PayPal account.
+/// Defaults to PayPalShippingAddressOptionNone.
+@property(nonatomic, assign, readwrite) PayPalShippingAddressOption payPalShippingAddressOption;
 
 /// If set to YES, then if the user pays via their PayPal account,
 /// the SDK will remember the user's PayPal username or phone number;

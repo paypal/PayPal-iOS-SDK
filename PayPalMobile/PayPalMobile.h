@@ -1,7 +1,7 @@
 //
 //  PayPalMobile.h
 //
-//  Version 2.1.6
+//  Version 2.2.0
 //
 //  Copyright (c) 2014, PayPal
 //  All rights reserved.
@@ -10,9 +10,11 @@
 //  All-in-one import for the PayPal Mobile SDK
 
 #import "PayPalConfiguration.h"
+#import "PayPalFuturePaymentViewController.h"
+#import "PayPalOAuthScopes.h"
 #import "PayPalPayment.h"
 #import "PayPalPaymentViewController.h"
-#import "PayPalFuturePaymentViewController.h"
+#import "PayPalProfileSharingViewController.h"
 
 /// Production (default): Normal, live environment. Real money gets moved.
 /// This environment MUST be used for App Store submissions.

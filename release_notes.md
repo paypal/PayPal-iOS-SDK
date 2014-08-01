@@ -1,6 +1,13 @@
 PayPal iOS SDK release notes
 ============================
 
+2.2.0
+-----
+* Add Profile Sharing feature. (See `PayPalProfileSharingViewController.h`.)
+* For PayPal single payments, allow user to choose from app-provided and/or PayPal-account-provided Shipping Address.
+* For PayPal single payments, user will now automatically be offered a choice of funding options (when appropriate).
+* Fix a bug in the `clearAllUserData` method of `PayPalMobile`. (Credit card not being cleared while app remains in memory.)
+
 2.1.6
 -----
 * Minor bug fixes.

@@ -1,7 +1,7 @@
 //
 //  PayPalPayment.h
 //
-//  Version 2.1.6
+//  Version 2.2.0
 //
 //  Copyright (c) 2014, PayPal
 //  All rights reserved.
@@ -86,6 +86,53 @@ typedef NS_ENUM(NSInteger, PayPalPaymentIntent) {
 @end
 
 
+#pragma mark - PayPalShippingAddress
+
+/// The PayPalShippingAddress class defines an optional customer shipping address.
+/// @see https://developer.paypal.com/webapps/developer/docs/api/#shippingaddress-object for more details
+@interface PayPalShippingAddress : NSObject <NSCopying>
+
+/// Convenience constructor.
+/// See the documentation of the individual properties for more detail.
+/// @param receipientName Name of recipient.
+/// @param line1 First line of address.
+/// @param line2 Second line of address, if any.
+/// @param city City.
+/// @param state State, county, etc., as appropriate.
+/// @param postalCode Appropriate ZIP or postal code.
+/// @param countryCode 2-letter country code.
++ (PayPalShippingAddress *)shippingAddressWithRecipientName:(NSString *)recipientName
+                                                  withLine1:(NSString *)line1
+                                                  withLine2:(NSString *)line2
+                                                   withCity:(NSString *)city
+                                                  withState:(NSString *)state
+                                             withPostalCode:(NSString *)postalCode
+                                            withCountryCode:(NSString *)countryCode;
+
+/// Name of the recipient at this address. 50 characters max. Required.
+@property(nonatomic, copy, readwrite) NSString *recipientName;
+
+/// Line 1 of the address (e.g., Number, street, etc). 100 characters max. Required.
+@property(nonatomic, copy, readwrite) NSString *line1;
+
+/// Line 2 of the address (e.g., Suite, apt #, etc). 100 characters max.
+@property(nonatomic, copy, readwrite) NSString *line2;
+
+/// City name. 50 characters max. Required.
+@property(nonatomic, copy, readwrite) NSString *city;
+
+/// 2-letter code for US states, and the equivalent for other countries. 100 characters max. Required in certain countries.
+@property(nonatomic, copy, readwrite) NSString *state;
+
+/// ZIP code or equivalent is usually required for countries that have them. 20 characters max. Required in certain countries.
+@property(nonatomic, copy, readwrite) NSString *postalCode;
+
+/// 2-letter country code. 2 characters max. Required.
+@property(nonatomic, copy, readwrite) NSString *countryCode;
+
+@end
+
+
 #pragma mark - PayPalPayment
 
 @interface PayPalPayment : NSObject <NSCopying>
@@ -135,6 +182,9 @@ typedef NS_ENUM(NSInteger, PayPalPaymentIntent) {
 /// @note If you provide one or more items, be sure that the various prices correctly
 /// sum to the payment `amount` or to `paymentDetails.subtotal`.
 @property (nonatomic, copy, readwrite) NSArray *items;
+
+/// Optional customer shipping address, if your app wishes to provide this to the SDK.
+@property (nonatomic, copy, readwrite) PayPalShippingAddress *shippingAddress;
 
 /// Optional Build Notation code ("BN code"), obtained from partnerprogram@paypal.com,
 /// for your tracking purposes.

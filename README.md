@@ -21,7 +21,7 @@ The PayPal iOS SDK makes it easy to add PayPal and credit card payments to mobil
 
 ## Use Cases
 
-The SDK supports two use cases: **Single Payment** and **Future Payments**.
+The SDK supports two use cases for making payments - **Single Payment** and **Future Payments** - and a third use case for obtaining information about the customer - **Profile Sharing**.
 
 
 ### Single Payment
@@ -44,6 +44,14 @@ Later, when that customer initiates a payment:
 1. [Obtain an Application Correlation ID](docs/future_payments_mobile.md#obtain-an-application-correlation-id) that you'll pass to your server.
 2. On your server, [Create a Payment](docs/future_payments_server.md#create-a-payment) using your OAuth2 tokens, the Application Correlation ID, and PayPal's API.
 
+
+### Profile Sharing
+
+Your customer logs in to PayPal and consents to PayPal sharing information with you:
+
+1. [Obtain Customer Consent](docs/profile_sharing_mobile.md#obtain-customer-consent) to receive an authorization code.
+2. On your server, use this authorization code to [Obtain OAuth2 Tokens](docs/profile_sharing_server.md#obtain-oauth2-tokens).
+3. On your server, [Retrieve Customer Information](docs/profile_sharing_server.md#retrieve-customer-information) using your OAuth2 tokens and PayPal's API.
 
 
 ## Requirements
@@ -68,6 +76,8 @@ Later, when that customer initiates a payment:
   * `MessageUI.framework`
   * `SystemConfiguration.framework`
 5. Add the open source license acknowledgments from acknowledgments.md to [your app's acknowledgments](http://stackoverflow.com/questions/3966116/where-to-put-open-source-credit-information-for-an-iphone-app).
+
+**CocoaPods users:** see [this note](#cocoapods).
 
 ## Credentials
 
@@ -153,9 +163,17 @@ Developers with existing Express Checkout integrations or who want additional fe
 in a webview.
 
 
+###CocoaPods
+
+If you use [CocoaPods](http://cocoapods.org) to keep up with new versions of the PayPal iOS SDK, we strongly recommend that you [include your Pods directory in source control](http://guides.cocoapods.org/using/using-cocoapods.html#should-i-ignore-the-pods-directory-in-source-control?), as for security reasons we may sometimes stop distributing old versions of the SDK. For details, see [this discussion of the card.io SDK pod](https://github.com/card-io/card.io-iOS-SDK/issues/24).
+
+Note: We're delighted that developers are using CocoaPods to help provide easy access to our SDK, and we'll help where we can. But, for the moment, we leave the creation and maintenance of the Specs to developers such as yourself. See http://guides.cocoapods.org/making/specs-and-specs-repo.html for details.
+
+
 ## Next Steps
 
 Depending on your use case, you can now:
 
 * [Accept a single payment](docs/single_payment.md)
 * [Obtain user consent](docs/future_payments_mobile.md) to [create future payments](docs/future_payments_server.md).
+* [Obtain user consent](docs/profile_sharing_mobile.md) to [retrieve customer information](docs/profile_sharing_server.md).

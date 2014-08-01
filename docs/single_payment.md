@@ -18,6 +18,15 @@ Overview
     2. Sends the payment response to your servers for [verification](https://developer.paypal.com/webapps/developer/docs/integration/mobile/verify-mobile-payment/) or [capture](https://developer.paypal.com/webapps/developer/docs/integration/direct/capture-payment/#capture-the-payment).
     3. Provides the user their goods or services (usually via your servers).
 
+*Optionally, your app can also instruct the PayPal iOS SDK to ask the user to pick a* **Shipping Address**:
+* Your code...
+    1. Instructs the PayPal iOS SDK to display an app-provided Shipping Address and/or the Shipping Addresses already associated with the user's PayPal account.
+* The PayPal iOS SDK...
+    1. Allows the user to examine and choose from the displayed Shipping Address(es).
+    2. Adds the chosen Shipping Address to the payment information sent to PayPal's servers.
+* Your server...
+    1. When [verifying](https://developer.paypal.com/webapps/developer/docs/integration/mobile/verify-mobile-payment/) or [capturing](https://developer.paypal.com/webapps/developer/docs/integration/direct/capture-payment/#capture-the-payment) the payment, retrieves the Shipping Address from the payment information.
+
 
 Sample Code
 -----------
@@ -72,6 +81,9 @@ This document shows sample code for using the PayPal iOS SDK's Payment API in yo
         // Should you wish to change any of the values, you can do so here.
         // For example, if you wish to accept PayPal but not payment card payments, then add:
         _payPalConfiguration.acceptCreditCards = NO;
+        // Or if you wish to have the user choose a Shipping Address from those already
+        // associated with the user's PayPal account, then add:
+        _payPalConfiguration.payPalShippingAddressOption = PayPalShippingAddressOptionPayPal;
       }
       return self;
     }
@@ -94,7 +106,7 @@ This document shows sample code for using the PayPal iOS SDK's Payment API in yo
     }
     ```
 
-5. Create a `PayPalPayment` with an amount, a currency code, short description, and intent (immediate sale vs. authorization/capture):
+5. Create a `PayPalPayment` with an amount, a currency code, short description, and intent (immediate sale vs. authorization/capture). Optionally, include a `PayPalShippingAddress` (as defined in `PayPalPayment.h`):
 
     ```obj-c
     // SomeViewController.m
@@ -113,6 +125,10 @@ This document shows sample code for using the PayPal iOS SDK's Payment API in yo
       // meaning combined Authorization + Capture. To perform Authorization only,
       // and defer Capture to your server, use PayPalPaymentIntentAuthorize.
       payment.intent = PayPalPaymentIntentSale;
+      
+      // If your app collects Shipping Address information from the customer,
+      // or already stores that information on your server, you may provide it here.
+      payment.shippingAddress = address; // a previously-created PayPalShippingAddress object
 
       // Check whether payment is processable.
       if (!payment.processable) {

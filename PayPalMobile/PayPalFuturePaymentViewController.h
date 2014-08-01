@@ -1,7 +1,7 @@
 //
 //  PayPalFuturePaymentViewController.h
 //
-//  Version 2.1.6
+//  Version 2.2.0
 //
 //  Copyright (c) 2014, PayPal
 //  All rights reserved.
@@ -12,6 +12,10 @@
 
 @class PayPalFuturePaymentViewController;
 
+#pragma mark - PayPalFuturePaymentDelegate
+
+/// Exactly one of these delegate methods will get called when the UI completes.
+/// You MUST dismiss the modal view controller from these delegate methods.
 @protocol PayPalFuturePaymentDelegate <NSObject>
 @required
 
@@ -27,16 +31,19 @@
 
 @end
 
+
+#pragma mark - PayPalFuturePaymentViewController
+
 @interface PayPalFuturePaymentViewController : UINavigationController
+
+/// Delegate access
+@property (nonatomic, weak, readonly) id<PayPalFuturePaymentDelegate> futurePaymentDelegate;
 
 /// The designated initalizer. A new view controller MUST be initialized for each use.
 /// @param configuration The configuration to be used for the lifetime of the controller.
 ///     The configuration properties merchantName, merchantPrivacyPolicyURL, and merchantUserAgreementURL must be provided.
-/// @param delegate The delegate you want to receive updates about the future payment.
+/// @param delegate The delegate you want to receive updates about the future payment authorization.
 - (instancetype)initWithConfiguration:(PayPalConfiguration *)configuration
                              delegate:(id<PayPalFuturePaymentDelegate>)delegate;
-
-/// Delegate access
-@property(nonatomic, weak, readonly) id<PayPalFuturePaymentDelegate> futurePaymentDelegate;
 
 @end
