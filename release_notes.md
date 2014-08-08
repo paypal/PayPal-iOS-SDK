@@ -1,6 +1,10 @@
 PayPal iOS SDK release notes
 ============================
 
+2.2.1
+-----
+* Minor bug fixes.
+
 2.2.0
 -----
 * Add Profile Sharing feature. (See `PayPalProfileSharingViewController.h`.)
