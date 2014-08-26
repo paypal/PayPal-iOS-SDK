@@ -1,7 +1,7 @@
 //
 //  PayPalPayment.h
 //
-//  Version 2.2.1
+//  Version 2.3.0
 //
 //  Copyright (c) 2014, PayPal
 //  All rights reserved.
@@ -14,6 +14,7 @@
 typedef NS_ENUM(NSInteger, PayPalPaymentIntent) {
   PayPalPaymentIntentSale = 0,
   PayPalPaymentIntentAuthorize = 1,
+  PayPalPaymentIntentOrder = 2,
   };
 
 
@@ -74,7 +75,7 @@ typedef NS_ENUM(NSInteger, PayPalPaymentIntent) {
 /// Number of a particular item. 10 characters max. Required.
 @property(nonatomic, assign, readwrite) NSUInteger quantity;
 
-/// Item cost. 10 characters max. Required.
+/// Item cost. 10 characters max. May be negative for "coupon" etc. Required.
 @property(nonatomic, copy, readwrite) NSDecimalNumber *price;
 
 /// ISO standard currency code (http://en.wikipedia.org/wiki/ISO_4217). Required.
@@ -143,7 +144,8 @@ typedef NS_ENUM(NSInteger, PayPalPaymentIntent) {
 /// @param currencyCode The ISO 4217 currency for the payment.
 /// @param shortDescription A short descripton of the payment.
 /// @param intent PayPalPaymentIntentSale for an immediate payment;
-///                PayPalPaymentIntentAuthorize for payment authorization only, to be captured separately at a later time.
+///                PayPalPaymentIntentAuthorize for payment authorization only, to be captured separately at a later time;
+///                PayPalPaymentIntentOrder for taking an order, with authorization and capture to be done separately at a later time.
 + (PayPalPayment *)paymentWithAmount:(NSDecimalNumber *)amount
                         currencyCode:(NSString *)currencyCode
                     shortDescription:(NSString *)shortDescription
@@ -164,9 +166,18 @@ typedef NS_ENUM(NSInteger, PayPalPaymentIntent) {
 @property(nonatomic, copy, readwrite) NSString *shortDescription;
 
 /// The intent of this payment:
+///
 /// - PayPalPaymentIntentSale for an immediate payment
+///
 /// - PayPalPaymentIntentAuthorize for payment authorization only,
 ///   to be captured separately at a later time.
+///
+/// - PayPalPaymentIntentOrder for taking an order, with authorization
+///   and capture to be done separately at a later time.
+///
+///   (PayPalPaymentIntentOrder is valid only for PayPal payments,
+///   not credit card payments.)
+///
 /// Defaults to PayPalPaymentIntentSale.
 @property(nonatomic, assign, readwrite) PayPalPaymentIntent intent;
 
@@ -185,6 +196,15 @@ typedef NS_ENUM(NSInteger, PayPalPaymentIntent) {
 
 /// Optional customer shipping address, if your app wishes to provide this to the SDK.
 @property (nonatomic, copy, readwrite) PayPalShippingAddress *shippingAddress;
+
+/// Optional invoice number, for your tracking purposes. (up to 256 characters)
+@property (nonatomic, copy, readwrite) NSString *invoiceNumber;
+
+/// Optional text, for your tracking purposes. (up to 256 characters)
+@property (nonatomic, copy, readwrite) NSString *custom;
+
+/// Optional text which will appear on the customer's credit card statement. (up to 22 characters)
+@property (nonatomic, copy, readwrite) NSString *softDescriptor;
 
 /// Optional Build Notation code ("BN code"), obtained from partnerprogram@paypal.com,
 /// for your tracking purposes.

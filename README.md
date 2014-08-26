@@ -26,10 +26,10 @@ The SDK supports two use cases for making payments - **Single Payment** and **Fu
 
 ### Single Payment
 
-Receive immediate payment from a customer's PayPal account or payment card (scanned with [card.io](https://www.card.io/)). This can be either an **immediate** payment which your servers should subsequently **verify**, or else an **authorization** for a payment which your servers must subsequently **capture**:
+Receive a one-time payment from a customer's PayPal account or payment card (scanned with [card.io](https://www.card.io/)). This can be either (1) an **immediate** payment which your servers should subsequently **verify**, or (2) an **authorization** for a payment which your servers must subsequently **capture**, or (3) a payment for an **order** which your servers must subsequently **authorize** and **capture**:
 
 1. [Accept a Single Payment](docs/single_payment.md) and receive back a proof of payment.
-2. On your server, [Verify the Payment](https://developer.paypal.com/webapps/developer/docs/integration/mobile/verify-mobile-payment/) or [Capture the Payment](https://developer.paypal.com/webapps/developer/docs/integration/direct/capture-payment/#capture-the-payment) (PayPal Developer site) using PayPal's API.
+2. On your server, [Verify the Payment](https://developer.paypal.com/webapps/developer/docs/integration/mobile/verify-mobile-payment/), [Capture the Payment](https://developer.paypal.com/webapps/developer/docs/integration/direct/capture-payment/#capture-the-payment), or [Process the Order](https://developer.paypal.com/webapps/developer/docs/integration/direct/create-process-order/) (PayPal Developer site) using PayPal's API.
 
 
 ### Future Payments

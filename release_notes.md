@@ -1,6 +1,13 @@
 PayPal iOS SDK release notes
 ============================
 
+2.3.0
+-----
+* Add support for `order` payments.
+* Add `invoiceNumber`, `custom`, and `softDescriptor` as optional properties on `PayPalPayment`.
+* For Single Payments, an individual `PayPalItem` `price` may now be negative (for coupons, etc). [issue #162](https://github.com/paypal/PayPal-iOS-SDK/issues/162)
+* Support use of the iOS 8 1Password Extension for PayPal logins.
+
 2.2.1
 -----
 * Minor bug fixes.

@@ -1,7 +1,7 @@
 Single Payment
 ==============
 
-Receive a single payment from your customer, via either PayPal or payment card with [card.io](https://www.card.io/). This can be either an **immediate** payment which your servers should subsequently **verify**, or else an **authorization** for a payment which your servers must subsequently **capture**.
+Receive a one-time payment from your customer, via either PayPal or payment card with [card.io](https://www.card.io/). This can be either (1) an **immediate** payment which your servers should subsequently **verify**, or (2) an **authorization** for a payment which your servers must subsequently **capture**, or (3) a payment for an **order** which your servers must subsequently **authorize** and **capture**.
 
 _If you haven't already, see the [README](../README.md) for an initial overview and instructions for adding the SDK to your project._
 
@@ -15,17 +15,17 @@ Overview
     3. Returns the payment response to your app.
 * Your code...
     1. Receives payment response from the PayPal iOS SDK.
-    2. Sends the payment response to your servers for [verification](https://developer.paypal.com/webapps/developer/docs/integration/mobile/verify-mobile-payment/) or [capture](https://developer.paypal.com/webapps/developer/docs/integration/direct/capture-payment/#capture-the-payment).
+    2. Sends the payment response to your servers for [verification](https://developer.paypal.com/webapps/developer/docs/integration/mobile/verify-mobile-payment/) or [capture](https://developer.paypal.com/webapps/developer/docs/integration/direct/capture-payment/#capture-the-payment) or [order processing](https://developer.paypal.com/webapps/developer/docs/integration/direct/create-process-order/).
     3. Provides the user their goods or services (usually via your servers).
 
-*Optionally, your app can also instruct the PayPal iOS SDK to ask the user to pick a* **Shipping Address**:
-* Your code...
-    1. Instructs the PayPal iOS SDK to display an app-provided Shipping Address and/or the Shipping Addresses already associated with the user's PayPal account.
-* The PayPal iOS SDK...
-    1. Allows the user to examine and choose from the displayed Shipping Address(es).
-    2. Adds the chosen Shipping Address to the payment information sent to PayPal's servers.
-* Your server...
-    1. When [verifying](https://developer.paypal.com/webapps/developer/docs/integration/mobile/verify-mobile-payment/) or [capturing](https://developer.paypal.com/webapps/developer/docs/integration/direct/capture-payment/#capture-the-payment) the payment, retrieves the Shipping Address from the payment information.
+* Optionally, your app can also instruct the PayPal iOS SDK to ask the user to pick a **Shipping Address**:
+    * Your code...
+        1. Instructs the PayPal iOS SDK to display an app-provided Shipping Address and/or the Shipping Addresses already associated with the user's PayPal account.
+    * The PayPal iOS SDK...
+        1. Allows the user to examine and choose from the displayed Shipping Address(es).
+        2. Adds the chosen Shipping Address to the payment information sent to PayPal's servers.
+    * Your server...
+        1. When [verifying](https://developer.paypal.com/webapps/developer/docs/integration/mobile/verify-mobile-payment/), [capturing](https://developer.paypal.com/webapps/developer/docs/integration/direct/capture-payment/#capture-the-payment), or [processing](https://developer.paypal.com/webapps/developer/docs/integration/direct/create-process-order/) the payment, retrieves the Shipping Address from the payment information.
 
 
 Sample Code
@@ -106,7 +106,7 @@ This document shows sample code for using the PayPal iOS SDK's Payment API in yo
     }
     ```
 
-5. Create a `PayPalPayment` with an amount, a currency code, short description, and intent (immediate sale vs. authorization/capture). Optionally, include a `PayPalShippingAddress` (as defined in `PayPalPayment.h`):
+5. Create a `PayPalPayment` with an amount, a currency code, short description, and intent (immediate sale vs. authorization/capture vs. order/authorization/capture). If you like, include optional fields such as `invoiceNumber` and `PayPalShippingAddress` (as defined in `PayPalPayment.h`):
 
     ```obj-c
     // SomeViewController.m
@@ -122,13 +122,20 @@ This document shows sample code for using the PayPal iOS SDK's Payment API in yo
       payment.shortDescription = @"Awesome saws";
 
       // Use the intent property to indicate that this is a "sale" payment,
-      // meaning combined Authorization + Capture. To perform Authorization only,
-      // and defer Capture to your server, use PayPalPaymentIntentAuthorize.
+      // meaning combined Authorization + Capture.
+      // To perform Authorization only, and defer Capture to your server,
+      // use PayPalPaymentIntentAuthorize.
+      // To place an Order, and defer both Authorization and Capture to
+      // your server, use PayPalPaymentIntentOrder.
+      // (PayPalPaymentIntentOrder is valid only for PayPal payments, not credit card payments.)
       payment.intent = PayPalPaymentIntentSale;
-      
+
       // If your app collects Shipping Address information from the customer,
       // or already stores that information on your server, you may provide it here.
       payment.shippingAddress = address; // a previously-created PayPalShippingAddress object
+      
+      // Several other optional fields that you can set here are documented in PayPalPayment.h,
+      // including paymentDetails, items, invoiceNumber, custom, softDescriptor, etc.
 
       // Check whether payment is processable.
       if (!payment.processable) {
@@ -178,9 +185,9 @@ This document shows sample code for using the PayPal iOS SDK's Payment API in yo
     }
     ```
 
-8. Send the payment response to your servers for [verification](https://developer.paypal.com/webapps/developer/docs/integration/mobile/verify-mobile-payment/) or [capture](https://developer.paypal.com/webapps/developer/docs/integration/direct/capture-payment/#capture-the-payment), as well as any other processing required for your business, such as fulfillment.
+8. Send the payment response to your servers for [verification](https://developer.paypal.com/webapps/developer/docs/integration/mobile/verify-mobile-payment/), [capture](https://developer.paypal.com/webapps/developer/docs/integration/direct/capture-payment/#capture-the-payment), or [processing](https://developer.paypal.com/webapps/developer/docs/integration/direct/create-process-order/), as well as any other processing required for your business, such as fulfillment.
 
-   **Tip:** At this point, for an **immediate** payment, the payment has been completed and the user has been charged. For an **authorization/capture** payment, your server still must capture the payment to actually charge the user. **If you can't reach your server, it is important that you save the proof of payment and try again later.**
+   **Tip:** At this point, for an **immediate** payment, the payment has been completed and the user has been charged. For an **authorization/capture** payment or an **order**, your server still must capture the payment to actually charge the user. **If you can't reach your server, it is important that you save the proof of payment and try again later.**
 
     ```obj-c
     // SomeViewController.m
@@ -203,3 +210,5 @@ Next Steps
 **Avoid fraud!** For an immediate payment, be sure to [verify the proof of payment](https://developer.paypal.com/webapps/developer/docs/integration/mobile/verify-mobile-payment/).
 
 For an authorization/capture payment, your server must [capture the payment](https://developer.paypal.com/webapps/developer/docs/integration/direct/capture-payment/#capture-the-payment).
+
+For an order, your server must [process the order](https://developer.paypal.com/webapps/developer/docs/integration/direct/create-process-order/).

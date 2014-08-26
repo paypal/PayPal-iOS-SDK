@@ -1,7 +1,7 @@
 //
 //  PayPalMobile.h
 //
-//  Version 2.2.1
+//  Version 2.3.0
 //
 //  Copyright (c) 2014, PayPal
 //  All rights reserved.
@@ -15,6 +15,7 @@
 #import "PayPalPayment.h"
 #import "PayPalPaymentViewController.h"
 #import "PayPalProfileSharingViewController.h"
+
 
 /// Production (default): Normal, live environment. Real money gets moved.
 /// This environment MUST be used for App Store submissions.
@@ -78,6 +79,5 @@ extern NSString *const PayPalEnvironmentNoNetwork;
 /// @return The version of the PayPal Mobile SDK in use. Version numbering follows http://semver.org/.
 /// @note Please be sure to include this library version in tech support requests.
 + (NSString *)libraryVersion;
-
 
 @end
