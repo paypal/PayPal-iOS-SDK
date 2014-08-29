@@ -1,6 +1,10 @@
 PayPal iOS SDK release notes
 ============================
 
+2.3.1
+-----
+* Update some localized strings.
+
 2.3.0
 -----
 * Add support for `order` payments.
