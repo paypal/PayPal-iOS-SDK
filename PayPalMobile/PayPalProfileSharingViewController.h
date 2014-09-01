@@ -1,7 +1,7 @@
 //
 //  PayPalProfileSharingViewController.h
 //
-//  Version 2.3.1
+//  Version 2.3.2
 //
 //  Copyright (c) 2014, PayPal
 //  All rights reserved.

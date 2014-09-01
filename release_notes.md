@@ -1,6 +1,10 @@
 PayPal iOS SDK release notes
 ============================
 
+2.3.2
+-----
+* Fix version reporting
+
 2.3.1
 -----
 * Update some localized strings.
