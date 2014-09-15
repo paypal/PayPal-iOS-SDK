@@ -1,7 +1,7 @@
 //
 //  PayPalConfiguration.h
 //
-//  Version 2.3.2
+//  Version 2.4.0
 //
 //  Copyright (c) 2014, PayPal
 //  All rights reserved.
@@ -48,7 +48,6 @@ typedef NS_ENUM(NSInteger, PayPalShippingAddressOption) {
 /// Future payments (via PayPalFuturePaymentViewController) always use PayPal.
 /// Defaults to YES.
 @property(nonatomic, assign, readwrite) BOOL acceptCreditCards;
-
 
 /// For single payments, options for the shipping address.
 /// - PayPalShippingAddressOptionNone: no shipping address applies.

@@ -71,9 +71,12 @@ Your customer logs in to PayPal and consents to PayPal sharing information with 
   * enable `Enable Modules (C and Objective-C)`
   * enable `Link Frameworks Automatically`
 4. In your project's **Build Phases**, link your project with these libraries. Weak linking for iOS versions back to 6.0 is supported.
+  * `AudioToolbox.framework`
   * `AVFoundation.framework`
   * `CoreLocation.framework`
+  * `CoreMedia.framework`
   * `MessageUI.framework`
+  * `MobileCoreServices.framework`
   * `SystemConfiguration.framework`
 5. Add the open source license acknowledgments from acknowledgments.md to [your app's acknowledgments](http://stackoverflow.com/questions/3966116/where-to-put-open-source-credit-information-for-an-iphone-app).
 

@@ -1,7 +1,7 @@
 //
 //  PayPalMobile.h
 //
-//  Version 2.3.2
+//  Version 2.4.0
 //
 //  Copyright (c) 2014, PayPal
 //  All rights reserved.
@@ -15,7 +15,6 @@
 #import "PayPalPayment.h"
 #import "PayPalPaymentViewController.h"
 #import "PayPalProfileSharingViewController.h"
-
 
 /// Production (default): Normal, live environment. Real money gets moved.
 /// This environment MUST be used for App Store submissions.

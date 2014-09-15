@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		2D48B18616EE8F0800C83CD2 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D48B18416EE8F0800C83CD2 /* check.png */; };
 		2D48B18716EE8F0800C83CD2 /* check@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D48B18516EE8F0800C83CD2 /* check@2x.png */; };
+		3ED93D8119C7814400478314 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849BE6EF16D4352100E03EEC /* CoreGraphics.framework */; };
 		849BE6EC16D4352100E03EEC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849BE6EB16D4352100E03EEC /* UIKit.framework */; };
 		849BE6EE16D4352100E03EEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849BE6ED16D4352100E03EEC /* Foundation.framework */; };
-		849BE6F016D4352100E03EEC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849BE6EF16D4352100E03EEC /* CoreGraphics.framework */; };
 		849BE6F616D4352100E03EEC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 849BE6F416D4352100E03EEC /* InfoPlist.strings */; };
 		849BE6F816D4352100E03EEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 849BE6F716D4352100E03EEC /* main.m */; };
 		849BE6FC16D4352100E03EEC /* ZZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 849BE6FB16D4352100E03EEC /* ZZAppDelegate.m */; };
@@ -98,22 +98,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5709F301884CDBF00CCD3CA /* CoreLocation.framework in Frameworks */,
-				D5463464178F5A2800A2D5F6 /* SystemConfiguration.framework in Frameworks */,
-				849BE6EC16D4352100E03EEC /* UIKit.framework in Frameworks */,
-				849BE6EE16D4352100E03EEC /* Foundation.framework in Frameworks */,
-				849BE6F016D4352100E03EEC /* CoreGraphics.framework in Frameworks */,
-				849BE72A16D4401C00E03EEC /* libPayPalMobile.a in Frameworks */,
 				849BE74016D440D700E03EEC /* AudioToolbox.framework in Frameworks */,
+				849BE74916D440D700E03EEC /* AVFoundation.framework in Frameworks */,
+				3ED93D8119C7814400478314 /* CoreGraphics.framework in Frameworks */,
+				D5709F301884CDBF00CCD3CA /* CoreLocation.framework in Frameworks */,
 				849BE74116D440D700E03EEC /* CoreMedia.framework in Frameworks */,
 				849BE74216D440D700E03EEC /* CoreVideo.framework in Frameworks */,
-				849BE74316D440D700E03EEC /* libxml2.dylib in Frameworks */,
+				849BE6EE16D4352100E03EEC /* Foundation.framework in Frameworks */,
 				849BE74416D440D700E03EEC /* MessageUI.framework in Frameworks */,
 				849BE74516D440D700E03EEC /* MobileCoreServices.framework in Frameworks */,
 				849BE74616D440D700E03EEC /* OpenGLES.framework in Frameworks */,
 				849BE74716D440D700E03EEC /* QuartzCore.framework in Frameworks */,
 				849BE74816D440D700E03EEC /* Security.framework in Frameworks */,
-				849BE74916D440D700E03EEC /* AVFoundation.framework in Frameworks */,
+				D5463464178F5A2800A2D5F6 /* SystemConfiguration.framework in Frameworks */,
+				849BE6EC16D4352100E03EEC /* UIKit.framework in Frameworks */,
+				849BE72A16D4401C00E03EEC /* libPayPalMobile.a in Frameworks */,
+				849BE74316D440D700E03EEC /* libxml2.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,21 +141,21 @@
 		849BE6EA16D4352100E03EEC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D5709F2F1884CDBF00CCD3CA /* CoreLocation.framework */,
-				D5463463178F5A2800A2D5F6 /* SystemConfiguration.framework */,
 				849BE72E16D440B100E03EEC /* AudioToolbox.framework */,
+				849BE72C16D4407D00E03EEC /* AVFoundation.framework */,
+				849BE6EF16D4352100E03EEC /* CoreGraphics.framework */,
+				D5709F2F1884CDBF00CCD3CA /* CoreLocation.framework */,
 				849BE72F16D440B100E03EEC /* CoreMedia.framework */,
 				849BE73016D440B100E03EEC /* CoreVideo.framework */,
-				849BE73116D440B100E03EEC /* libxml2.dylib */,
+				849BE6ED16D4352100E03EEC /* Foundation.framework */,
 				849BE73216D440B100E03EEC /* MessageUI.framework */,
 				849BE73316D440B200E03EEC /* MobileCoreServices.framework */,
 				849BE73416D440B200E03EEC /* OpenGLES.framework */,
 				849BE73516D440B200E03EEC /* QuartzCore.framework */,
 				849BE73616D440B200E03EEC /* Security.framework */,
-				849BE72C16D4407D00E03EEC /* AVFoundation.framework */,
+				D5463463178F5A2800A2D5F6 /* SystemConfiguration.framework */,
 				849BE6EB16D4352100E03EEC /* UIKit.framework */,
-				849BE6ED16D4352100E03EEC /* Foundation.framework */,
-				849BE6EF16D4352100E03EEC /* CoreGraphics.framework */,
+				849BE73116D440B100E03EEC /* libxml2.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

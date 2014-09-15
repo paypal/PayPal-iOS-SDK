@@ -263,7 +263,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
   if ([[segue identifier] isEqualToString:@"pushSettings"]) {
-    [[segue destinationViewController] setDelegate:self];
+    [[segue destinationViewController] setDelegate:(id)self];
 
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
       UIPopoverController *popoverController = [(UIStoryboardPopoverSegue *)segue popoverController];

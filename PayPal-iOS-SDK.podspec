@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name             = 'PayPal-iOS-SDK'
-  spec.version          = '2.3.2'
+  spec.version          = '2.4.0'
   spec.license          = { type: 'BSD', file: 'LICENSE.md' }
   spec.homepage         = 'https://developer.paypal.com/webapps/developer/docs/integration/mobile/mobile-sdk-overview/'
   spec.authors          = { 'PayPal' => 'support@paypal.com' }
@@ -12,7 +12,7 @@ Pod::Spec.new do |spec|
   spec.requires_arc     = false
   spec.source_files     = 'PayPalMobile/*.h'
   spec.preserve_path    = 'PayPalMobile/*.a'
-  spec.frameworks       = 'AVFoundation', 'CoreLocation', 'MessageUI', 'SystemConfiguration'
+  spec.frameworks       = 'AudioToolbox', 'AVFoundation', 'CoreLocation', 'CoreMedia', 'MessageUI', 'MobileCoreServices', 'SystemConfiguration'
   spec.libraries        = 'PayPalMobile'
   spec.compiler_flags   = { 'CLANG_ENABLE_MODULES' => '1', 'CLANG_MODULES_AUTOLINK' => '1' }
   spec.xcconfig         = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/PayPal-iOS-SDK/PayPalMobile"', 'OTHER_LDFLAGS' => '-lc++ -ObjC'}

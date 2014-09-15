@@ -1,6 +1,21 @@
 PayPal iOS SDK release notes
 ============================
 
+2.4.0
+-----
+* NOTE 1: version 2.4.0 requires Xcode 6 and iOS 8 SDK. If you are still using Xcode 5, please use version 2.3.2 of this SDK.
+* NOTE 2: in the `Link Binary With Libraries` section of your project target's Build Phases, add:
+    * `AudioToolbox.framework`
+    * `CoreMedia.framework`
+    * `MobileCoreServices.framework`
+* Official release for iOS 8, built with Xcode 6 GM seed.
+* Support use of the iOS 8 1Password Extension for PayPal logins.
+* Update Sample App icons.
+* Update card.io library to 3.8.6.
+* Improve mSDK behavior when presented within a popover.
+* Update some localized strings.
+* Minor bug fixes.
+
 2.3.2
 -----
 * Fix version reporting
@@ -14,7 +29,6 @@ PayPal iOS SDK release notes
 * Add support for `order` payments.
 * Add `invoiceNumber`, `custom`, and `softDescriptor` as optional properties on `PayPalPayment`.
 * For Single Payments, an individual `PayPalItem` `price` may now be negative (for coupons, etc). [issue #162](https://github.com/paypal/PayPal-iOS-SDK/issues/162)
-* Support use of the iOS 8 1Password Extension for PayPal logins.
 
 2.2.1
 -----

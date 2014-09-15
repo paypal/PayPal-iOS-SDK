@@ -38,7 +38,7 @@
 - (void)viewWillAppear:(BOOL)animated {
   [self logEnvironment];
 
-  int numberOfSegments = self.environmentSegmentedControl.numberOfSegments;
+  int numberOfSegments = (int)self.environmentSegmentedControl.numberOfSegments;
   while (numberOfSegments--) {
     NSString *title = [self.environmentSegmentedControl titleForSegmentAtIndex:numberOfSegments];
     if ([[title lowercaseString] isEqualToString:self.delegate.environment]) {
