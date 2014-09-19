@@ -65,6 +65,7 @@ Your customer logs in to PayPal and consents to PayPal sharing information with 
 ## Add the SDK to Your Project
 
 1. Clone or download the SDK, which consists of header files, license acknowledgements, release notes, and a static library. It also includes a sample app.
+    * **As of version 2.4.0, the SDK requires Xcode 6 and iOS 8 SDK. If you are still using Xcode 5, please use [version 2.3.2](https://github.com/paypal/PayPal-iOS-SDK/releases) of this SDK.**
 2. Add the `PayPalMobile` directory (containing several .h files and libPayPalMobile.a) to your Xcode project. We recommend checking "Copy items..." and selecting "Create groups...".
 3. In your project's **Build Settings** (in the `TARGETS` section, not the `PROJECTS` section):
   * add `-lc++ -ObjC` to `Other Linker Flags`
