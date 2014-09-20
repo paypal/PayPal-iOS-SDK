@@ -1,6 +1,11 @@
 PayPal iOS SDK release notes
 ============================
 
+2.4.1
+-----
+* NOTE: version 2.4.1 requires Xcode 6 and iOS 8 SDK. If you are still using Xcode 5, please use version 2.3.2 of this SDK.
+* Fix a bug where user selection of Shipping Address (for a Single Payment) sometimes did not work correctly.
+
 2.4.0
 -----
 * NOTE 1: version 2.4.0 requires Xcode 6 and iOS 8 SDK. If you are still using Xcode 5, please use version 2.3.2 of this SDK.
