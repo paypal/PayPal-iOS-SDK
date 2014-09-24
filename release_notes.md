@@ -1,6 +1,12 @@
 PayPal iOS SDK release notes
 ============================
 
+2.4.2
+-----
+* NOTE: version 2.4.2 requires Xcode 6 and iOS 8 SDK. If you are still using Xcode 5, please use version 2.3.2 of this SDK.
+* Correct the number of expected decimal places for the HUF and TWD currencies. [issue #191](https://github.com/paypal/PayPal-iOS-SDK/issues/191)
+* Update card.io library to 3.9.0.
+
 2.4.1
 -----
 * NOTE: version 2.4.1 requires Xcode 6 and iOS 8 SDK. If you are still using Xcode 5, please use version 2.3.2 of this SDK.
