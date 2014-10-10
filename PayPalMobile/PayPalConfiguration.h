@@ -1,7 +1,7 @@
 //
 //  PayPalConfiguration.h
 //
-//  Version 2.4.2
+//  Version 2.5.0
 //
 //  Copyright (c) 2014, PayPal
 //  All rights reserved.
@@ -93,6 +93,10 @@ typedef NS_ENUM(NSInteger, PayPalShippingAddressOption) {
 /// If your app already does its own blurring upon backgrounding, you might choose to disable this.
 /// Defaults to NO.
 @property(nonatomic, assign, readwrite) BOOL disableBlurWhenBackgrounding;
+
+/// If you will present the SDK's view controller within a popover, then set this property to YES.
+/// Defaults to NO.
+@property(nonatomic, assign, readwrite) BOOL presentingInPopover;
 
 /// Sandbox credentials can be difficult to type on a mobile device. Setting this flag to YES will
 /// cause the sandboxUserPassword and sandboxUserPin to always be pre-populated into login fields.

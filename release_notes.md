@@ -1,6 +1,15 @@
 PayPal iOS SDK release notes
 ============================
 
+2.5.0
+-----
+* NOTE: version 2.5.0 requires Xcode 6 and iOS 8 SDK. If you are still using Xcode 5, please use version 2.3.2 of this SDK.
+* Add `presentingInPopover` property to `PayPalConfiguration`.
+* Add a new optional delegate method for each of our view controllers, to allow your app
+  to talk with your server while our activity indicator is still visible.
+* Fix an iOS 6 crash. [issue #202](https://github.com/paypal/PayPal-iOS-SDK/issues/202)
+* Update card.io library to 3.10.0.
+
 2.4.2
 -----
 * NOTE: version 2.4.2 requires Xcode 6 and iOS 8 SDK. If you are still using Xcode 5, please use version 2.3.2 of this SDK.

@@ -1,7 +1,7 @@
 //
 //  PayPalPaymentViewController.h
 //
-//  Version 2.4.2
+//  Version 2.5.0
 //
 //  Copyright (c) 2014, PayPal
 //  All rights reserved.
@@ -22,23 +22,44 @@
 #pragma mark - Delegates and notifications
 
 @class PayPalPaymentViewController;
+typedef void (^PayPalPaymentDelegateCompletionBlock)(void);
 
-/// Exactly one of these delegate methods will get called when the UI completes.
-/// You MUST dismiss the modal view controller from these delegate methods.
+/// Exactly one of these two required delegate methods will get called when the UI completes.
+/// You MUST dismiss the modal view controller from these required delegate methods.
 @protocol PayPalPaymentDelegate <NSObject>
 @required
 
 /// User canceled the payment process.
+/// Your code MUST dismiss the PayPalPaymentViewController.
 /// @param paymentViewController The PayPalPaymentViewController that the user canceled without making a payment.
 - (void)payPalPaymentDidCancel:(PayPalPaymentViewController *)paymentViewController;
 
 /// User successfully completed the payment.
+/// The PayPalPaymentViewController's activity indicator has been dismissed.
+/// Your code MAY deal with the completedPayment, if it did not already do so within your optional
+///     payPalPaymentViewController:willCompletePayment:completionBlock: method.
+/// Your code MUST dismiss the PayPalPaymentViewController.
 /// See https://developer.paypal.com/webapps/developer/docs/integration/mobile/verify-mobile-payment/ for
-/// information about payment verification.
+///     information about payment verification.
 /// @param paymentViewController The PayPalPaymentViewController where the user successfullly made a payment.
 /// @param completedPayment completedPayment.confirmation contains information your server will need to verify the payment.
 - (void)payPalPaymentViewController:(PayPalPaymentViewController *)paymentViewController
                  didCompletePayment:(PayPalPayment *)completedPayment;
+
+@optional
+/// User successfully completed the payment.
+/// The PayPalPaymentViewController's activity indicator is still visible.
+/// Your code MAY deal with the completedPayment; e.g., send it to your server and await confirmation.
+/// Your code MUST finish by calling the completionBlock.
+/// Your code must NOT dismiss the PayPalPaymentViewController.
+/// See https://developer.paypal.com/webapps/developer/docs/integration/mobile/verify-mobile-payment/ for
+///     information about payment verification.
+/// @param paymentViewController The PayPalPaymentViewController where the user successfullly made a payment.
+/// @param completedPayment completedPayment.confirmation contains information your server will need to verify the payment.
+/// @param completionBlock Block to execute when your processing is done.
+- (void)payPalPaymentViewController:(PayPalPaymentViewController *)paymentViewController
+                 willCompletePayment:(PayPalPayment *)completedPayment
+                    completionBlock:(PayPalPaymentDelegateCompletionBlock)completionBlock;
 
 @end
 
