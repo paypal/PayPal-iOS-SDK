@@ -3,7 +3,7 @@ PayPal iOS SDK
 
 PayPal iOS SDKを使用すると、モバイルアプリにPayPalおよびクレジットカード決済の機能を簡単に追加できます。
 
-![SDKのスクリーンショット](docs/sdk-screens.png)
+![SDKのスクリーンショット](sdk-screens.png)
 
 ## 目次
 
