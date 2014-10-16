@@ -5,6 +5,8 @@ The PayPal iOS SDK makes it easy to add PayPal and credit card payments to mobil
 
 ![SDK screenshots](docs/sdk-screens.png)
 
+*This documentation is available in Japanese: [日本語のドキュメント](docs/ja/README.md).*
+
 ## Contents
 
 - [Use Cases](#use-cases)
