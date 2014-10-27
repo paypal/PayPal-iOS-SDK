@@ -58,7 +58,7 @@ Your customer logs in to PayPal and consents to PayPal sharing information with 
 
 ## Requirements
 
-* Xcode 5 and iOS SDK 7
+* Xcode 6 and iOS SDK 8
 * iOS 6.0+ target deployment
 * armv7, armv7s, and arm64 devices, and the simulator (not armv6)
 * iPhone and iPad of all sizes and resolutions

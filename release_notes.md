@@ -1,6 +1,13 @@
 PayPal iOS SDK release notes
 ============================
 
+2.6.0
+-----
+* Allow login by users who have enabled two-factor authentication on their PayPal accounts.
+* Streamline Profile Sharing for cases where a user has previously authorized sharing.
+* Prevent a "duplicate symbol" problem for apps that are also integrating with 1Password.
+* Minor bug fixes.
+
 2.5.0
 -----
 * NOTE: version 2.5.0 requires Xcode 6 and iOS 8 SDK. If you are still using Xcode 5, please use version 2.3.2 of this SDK.

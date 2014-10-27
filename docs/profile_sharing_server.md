@@ -57,7 +57,7 @@ Note that all returned code and token values should be considered variable lengt
 ```bash
 curl 'https://api.paypal.com/v1/oauth2/token' \
     -H "Content-Type: application/x-www-form-urlencoded" \
-    -H "Authorization: Basic QWZV...==" \
+    -u "client_id:secret" \
     -d 'grant_type=authorization_code&response_type=token&redirect_uri=urn:ietf:wg:oauth:2.0:oob&code=EBYhRW3ncivudQn8UopLp4A28...'
 ```
 
