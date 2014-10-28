@@ -1,6 +1,10 @@
 PayPal iOS SDK release notes
 ============================
 
+2.6.1
+-----
+* Minor improvements relevant only to select partners.
+
 2.6.0
 -----
 * Allow login by users who have enabled two-factor authentication on their PayPal accounts.

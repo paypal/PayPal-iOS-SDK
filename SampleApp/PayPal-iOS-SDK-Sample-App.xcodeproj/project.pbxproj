@@ -400,6 +400,7 @@
 		849BE71216D4352100E03EEC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PayPal-iOS-SDK-Sample-App/PayPal-iOS-SDK-Sample-App-Prefix.pch";
 				INFOPLIST_FILE = "PayPal-iOS-SDK-Sample-App/PayPal-iOS-SDK-Sample-App-Info.plist";
@@ -420,6 +421,7 @@
 		849BE71316D4352100E03EEC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PayPal-iOS-SDK-Sample-App/PayPal-iOS-SDK-Sample-App-Prefix.pch";
 				INFOPLIST_FILE = "PayPal-iOS-SDK-Sample-App/PayPal-iOS-SDK-Sample-App-Info.plist";
