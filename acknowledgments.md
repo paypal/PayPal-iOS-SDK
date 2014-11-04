@@ -3,19 +3,65 @@ Summary
 
 The PayPal iOS SDK uses code from the following libraries:
 
-  * Willow Garage's [OpenCV](http://opencv.willowgarage.com/wiki/)
+  * PayPal's [card.io](https://github.com/card-io)
+  * AgileBit's [1Password App Extension](https://github.com/AgileBits/onepassword-app-extension)
   * [Eigen](http://eigen.tuxfamily.org)
   * Erica Sadun's [iPhone Developer's Cookbook Code Samples and uidevice-extension categories](https://github.com/erica/)
   * Georg Kitz's [UIDevice-with-UniqueIdentifier-for-iOS-5](https://github.com/gekitz/UIDevice-with-UniqueIdentifier-for-iOS-5)
   * Base64 [en|de]coding methods by Dave Winer, via Colloquy's [Chat Core](http://colloquy.info/project/wiki/Source%20Code)
-  * Tomáš Znamenáček's [Lambda Alert](https://github.com/zoul/Lambda-Alert)
+  * Willow Garage's [OpenCV](http://opencv.willowgarage.com/wiki/)
   * Josh Bleecher Snyder's [TLCommon](https://github.com/treelinelabs/TLCommon)
+  * Tomáš Znamenáček's [Lambda Alert](https://github.com/zoul/Lambda-Alert)
   * Facebook's [Three20](https://github.com/facebook/three20)
   * [Openstack](http://openstack.org/)
   * [Mersenne Twister](http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/emt.html)
 
 Full licenses
 -------------
+
+PayPal's card.io, MIT license:
+
+    Copyright (c) 2013-2014 PayPal
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+
+AgileBits' 1Password App Extension, MIT license:
+
+    Copyright (c) 2014 AgileBits Inc.
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.
 
 Eigen: MPLv2 license text can be found at [http://www.mozilla.org/MPL/2.0/](http://www.mozilla.org/MPL/2.0/); the source code is available at [https://bitbucket.org/eigen/eigen/](https://bitbucket.org/eigen/eigen/) or via [http://eigen.tuxfamily.org/](http://eigen.tuxfamily.org/)
 
