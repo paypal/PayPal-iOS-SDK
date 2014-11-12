@@ -1,6 +1,10 @@
 PayPal iOS SDK release notes
 ============================
 
+2.7.1
+-----
+* Prevent two MORE potential "duplicate symbol" problems for apps that are also integrating with 1Password. Grr.
+
 2.7.0
 -----
 * Add support for Russian Rubles. [issue #223](https://github.com/paypal/PayPal-iOS-SDK/issues/223)
