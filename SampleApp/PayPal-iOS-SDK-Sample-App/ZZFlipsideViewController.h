@@ -13,9 +13,9 @@
 
 @protocol ZZFlipsideViewControllerDelegate
 
-- (void)flipsideViewControllerDidFinish:(ZZFlipsideViewController *)controller;
 - (BOOL)acceptCreditCards;
 - (void)setAcceptCreditCards:(BOOL)processCreditCards;
+- (void)setPayPalEnvironment:(NSString *)environment;
 
 @property(nonatomic, strong, readwrite) NSString *environment;
 @property(nonatomic, strong, readwrite) NSString *resultText;
@@ -27,7 +27,5 @@
 @interface ZZFlipsideViewController : UIViewController
 
 @property(weak, nonatomic) id <ZZFlipsideViewControllerDelegate> delegate;
-
-- (IBAction)done:(id)sender;
 
 @end

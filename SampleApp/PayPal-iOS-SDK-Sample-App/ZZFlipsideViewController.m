@@ -67,7 +67,7 @@
 
 - (IBAction)environmentControlDidUpdate:(id)sender {
   if (self.environmentSegmentedControl == sender) {
-    self.delegate.environment = [[self.environmentSegmentedControl titleForSegmentAtIndex:self.environmentSegmentedControl.selectedSegmentIndex] lowercaseString];
+    [self.delegate setPayPalEnvironment:[[self.environmentSegmentedControl titleForSegmentAtIndex:self.environmentSegmentedControl.selectedSegmentIndex] lowercaseString]];
   }
   [self logEnvironment];
 }
@@ -75,11 +75,6 @@
 - (IBAction)processCreditCardsChanged:(id)sender {
   [self.delegate setAcceptCreditCards:self.acceptCreditCardsSwitch.on];
   [self logEnvironment];
-}
-
-- (IBAction)done:(id)sender {
-  [self logEnvironment];
-  [self.delegate flipsideViewControllerDidFinish:self];
 }
 
 @end

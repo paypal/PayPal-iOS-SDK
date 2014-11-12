@@ -1,6 +1,15 @@
 PayPal iOS SDK release notes
 ============================
 
+2.7.0
+-----
+* Add support for Russian Rubles. [issue #223](https://github.com/paypal/PayPal-iOS-SDK/issues/223)
+* Include public header files for [card.io](https://www.card.io), which is contained inside the PayPal iOS SDK,
+  for apps that use card.io directly. [issue #219](https://github.com/paypal/PayPal-iOS-SDK/issues/219)
+* Minor improvements to Sample App.
+* Prevent a few more potential "duplicate symbol" problems for apps that are also integrating with 1Password.
+* Update card.io library to 3.10.1.
+
 2.6.1
 -----
 * Minor improvements relevant only to select partners.
