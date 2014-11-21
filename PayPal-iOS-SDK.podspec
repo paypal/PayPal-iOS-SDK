@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name             = 'PayPal-iOS-SDK'
-  spec.version          = '2.7.1'
+  spec.version          = '2.7.2'
   spec.license          = { type: 'BSD', file: 'LICENSE.md' }
   spec.homepage         = 'https://developer.paypal.com/webapps/developer/docs/integration/mobile/mobile-sdk-overview/'
   spec.authors          = { 'PayPal' => 'support@paypal.com' }

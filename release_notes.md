@@ -1,6 +1,10 @@
 PayPal iOS SDK release notes
 ============================
 
+2.7.2
+-----
+* Minor bug fixes.
+
 2.7.1
 -----
 * Prevent two MORE potential "duplicate symbol" problems for apps that are also integrating with 1Password. Grr.

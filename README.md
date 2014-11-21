@@ -66,6 +66,15 @@ Your customer logs in to PayPal and consents to PayPal sharing information with 
 
 ## Add the SDK to Your Project
 
+### If you use [CocoaPods](http://cocoapods.org), then add these lines to your podfile:
+
+```ruby
+platform :ios, '6.0'
+pod 'PayPal-iOS-SDK'
+```
+
+### If you don't use CocoaPods, then:
+
 1. Clone or download the SDK, which consists of header files, license acknowledgements, release notes, and a static library. It also includes a sample app.
     * **As of version 2.4.0, the SDK requires Xcode 6 and iOS 8 SDK. If you are still using Xcode 5, please use [version 2.3.2](https://github.com/paypal/PayPal-iOS-SDK/releases) of this SDK.**
 2. Add the `PayPalMobile` directory (containing several .h files and libPayPalMobile.a) to your Xcode project. We recommend checking "Copy items..." and selecting "Create groups...".
@@ -81,7 +90,10 @@ Your customer logs in to PayPal and consents to PayPal sharing information with 
   * `MessageUI.framework`
   * `MobileCoreServices.framework`
   * `SystemConfiguration.framework`
-5. Add the open source license acknowledgments from acknowledgments.md to [your app's acknowledgments](http://stackoverflow.com/questions/3966116/where-to-put-open-source-credit-information-for-an-iphone-app).
+
+### With or without CocoaPods:
+
+1. Add the open source license acknowledgments from acknowledgments.md to [your app's acknowledgments](http://stackoverflow.com/questions/3966116/where-to-put-open-source-credit-information-for-an-iphone-app).
 
 ## Credentials
 
