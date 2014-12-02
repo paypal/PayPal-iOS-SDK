@@ -21,13 +21,13 @@ First, you must [obtain customer consent](#obtain-customer-consent) to take paym
     1. Receives an OAuth2 authorization code from the SDK.
     2. Sends the authorization code to your server, which then [exchanges the code for OAuth2 access and refresh tokens](future_payments_server.md#obtain-oauth2-tokens).
 
-Later, when initiating a pre-consented payment, you must [obtain an Application Correlation ID](#obtain-an-application-correlation-id). How this works:
+Later, when initiating a pre-consented payment, you must [obtain a Client Metadata ID](#obtain-an-application-correlation-id). How this works:
 
 * The PayPal iOS SDK...
-    * Provides an Application Correlation ID.
+    * Provides a Client Metadata ID.
 * Your app...
     * Sends the Correlation ID and transaction information to your server.
-    * Your server then [uses its OAuth2 tokens, Application Correlation ID, and transaction info to create a payment](future_payments_server.md).
+    * Your server then [uses its OAuth2 tokens, Client Metadata ID, and transaction info to create a payment](future_payments_server.md).
 
 
 Obtain Customer Consent
@@ -169,12 +169,12 @@ Obtain Customer Consent
     ```
 
 
-Obtain an Application Correlation ID
------------------------
+Obtain a Client Metadata ID
+---------------------------
 
-When initiating a pre-consented payment (a "future payment") from a mobile device, your mobile application must obtain an Application Correlation ID from the Mobile SDK to pass to your server. Your server must include this Application Correlation ID in its payment request sent to PayPal.
+When initiating a pre-consented payment (a "future payment") from a mobile device, your mobile application must obtain a Client Metadata ID from the Mobile SDK to pass to your server. Your server must include this Client Metadata ID in its payment request sent to PayPal.
 
-PayPal uses this Application Correlation ID to verify that the payment is originating from a valid, user-consented device+application. This helps reduce fraud and decrease declines. **PayPal does not provide any loss protection for transactions that do not correctly supply an Application Correlation ID.**
+PayPal uses this Client Metadata ID to verify that the payment is originating from a valid, user-consented device+application. This helps reduce fraud and decrease declines. **PayPal does not provide any loss protection for transactions that do not correctly supply a Client Metadata ID.**
 
 **Do not cache or store this value.**
 
@@ -185,13 +185,13 @@ Example:
 
     // Display activity indicator...
 
-    NSString *correlationId = [PayPalMobile applicationCorrelationIDForEnvironment:PayPalEnvironmentProduction];
+    NSString *metadataID = [PayPalMobile clientMetadataID];
 
-    // Send correlationId and transaction details to your server for processing with PayPal...
+    // Send metadataID and transaction details to your server for processing with PayPal...
 }
 ```
 
-When your server makes its payment request to PayPal, it must include a `Paypal-Application-Correlation-Id` HTTP header with this Application Correlation ID value obtained from the SDK.
+When your server makes its payment request to PayPal, it must include a `PayPal-Client-Metadata-Id` HTTP header with this Client Metadata ID value obtained from the SDK.
 
 
 

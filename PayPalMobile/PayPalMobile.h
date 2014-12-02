@@ -1,7 +1,7 @@
 //
 //  PayPalMobile.h
 //
-//  Version 2.7.2
+//  Version 2.8.0
 //
 //  Copyright (c) 2014, PayPal
 //  All rights reserved.
@@ -60,11 +60,11 @@ extern NSString *const PayPalEnvironmentNoNetwork;
 /// This method MUST be called prior to initiating a pre-consented payment (a "future payment") from a mobile device.
 /// Pass the result to your server, to include in the payment request sent to PayPal.
 /// Do not otherwise cache or store this value.
-/// @param environment
-/// The PayPal Mobile SDK can operate in different environments to facilitate development and testing.
-/// See PayPalEnvironmentProduction, PayPalEnvironmentSandbox, PayPalEnvironmentNoNetwork for more details.
-/// @return applicationCorrelationID Your server will send this to PayPal in a 'Paypal-Application-Correlation-Id' header.
-+ (NSString *)applicationCorrelationIDForEnvironment:(NSString *)environment;
+/// @return clientMetadataID Your server will send this to PayPal in a 'PayPal-Client-Metadata-Id' header.
++ (NSString *)clientMetadataID;
+
+/// Method deprecated use clientMetadataID instead
++ (NSString *)applicationCorrelationIDForEnvironment:(NSString *)environment __attribute__((deprecated("Use clientMetadataID instead.")));
 
 /// Delete all previously remembered user data (credit card, email, phone, PayPal account),
 /// for all environments. (See PayPalEnvironmentProduction, PayPalEnvironmentSandbox, PayPalEnvironmentNoNetwork.)

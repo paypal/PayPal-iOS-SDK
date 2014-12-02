@@ -134,7 +134,7 @@ Authorization: Bearer YOUR_ACCESS_TOKEN
 
 * 詳細は[支払いの作成](https://developer.paypal.com/webapps/developer/docs/api/#create-a-payment)を参照してください。
 
-* モバイル端末から支払いが開始された場合、すべての決済APIリクエストに、[モバイルSDK]を使用して取得された`Paypal-Application-Correlation-Id`ヘッダー値(future_payments_mobile.md#obtain-an-application-correlation-id)が含まれる必要があります。
+* モバイル端末から支払いが開始された場合、すべての決済APIリクエストに、[モバイルSDK]を使用して取得された`PayPal-Client-Metadata-Id`ヘッダー値(future_payments_mobile.md#obtain-an-application-correlation-id)が含まれる必要があります。
 
 * 1回払いの実例を示す標準的なREST APIのドキュメントとは異なり、今後の支払いでは、最初にユーザーの同意を得た後は、そのつど[支払いの承認を得る](https://developer.paypal.com/webapps/developer/docs/integration/web/accept-paypal-payment/#get-payment-approval)必要はありません。支払いは、ユーザーによって事前承認されています。
 
@@ -148,7 +148,7 @@ Authorization: Bearer YOUR_ACCESS_TOKEN
 ```bash
 curl 'https://api.paypal.com/v1/payments/payment' \
     -H "Content-Type: application/json" \
-    -H "Paypal-Application-Correlation-Id: c2edbd6e97b14ff2b19ddb8eec9d264c" \
+    -H "PayPal-Client-Metadata-Id: c2edbd6e97b14ff2b19ddb8eec9d264c" \
     -H "Authorization: Bearer WfXdnxmyJtdF4q59ofxuQuAAk6eEV-Njm6puht3Nk3w" \
     -d '{
            "intent":"authorize",

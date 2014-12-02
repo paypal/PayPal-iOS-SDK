@@ -1,6 +1,13 @@
 PayPal iOS SDK release notes
 ============================
 
+2.8.0
+-----
+* Update `Paypal-Application-Correlation-Id` header to `PayPal-Client-Metadata-Id`,
+  and deprecate `[PayPalMobile applicationCorrelationIDForEnvironment:]` in favor
+  of `[PayPalMobile clientMetadataID]`.
+* Update card.io library to 4.0.0.
+
 2.7.2
 -----
 * Minor bug fixes.

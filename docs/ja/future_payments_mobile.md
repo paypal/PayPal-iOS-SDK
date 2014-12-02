@@ -183,13 +183,13 @@ PayPalは、このアプリケーション相関IDを使用して、ユーザー
 
     // アクティビティインジケーターを表示します。
 
-    NSString *correlationId = [PayPalMobile applicationCorrelationIDForEnvironment:PayPalEnvironmentProduction];
+    NSString *metadataID = [PayPalMobile clientMetadataID];
 
     // PayPalでの処理のため、相関IDと取引の詳細をサーバーに送信します。
 }
 ```
 
-サーバーは、PayPalへの支払いリクエストを作成する際、HTTPヘッダー`Paypal-Application-Correlation-Id`に、SDKから取得したこのアプリケーション相関IDの値を含める必要があります。
+サーバーは、PayPalへの支払いリクエストを作成する際、HTTPヘッダー`PayPal-Client-Metadata-Id`に、SDKから取得したこのアプリケーション相関IDの値を含める必要があります。
 
 
 
