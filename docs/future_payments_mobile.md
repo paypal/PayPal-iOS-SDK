@@ -174,7 +174,7 @@ Obtain a Client Metadata ID
 
 When initiating a pre-consented payment (a "future payment") from a mobile device, your mobile application must obtain a Client Metadata ID from the Mobile SDK to pass to your server. Your server must include this Client Metadata ID in its payment request sent to PayPal.
 
-PayPal uses this Client Metadata ID to verify that the payment is originating from a valid, user-consented device+application. This helps reduce fraud and decrease declines. **Transactions that do not include a Client Metadata ID are not eligible for PayPal Seller Protection.**
+PayPal uses this Client Metadata ID to verify that the payment is originating from a valid, user-consented device+application. This helps reduce fraud and decrease declines. **PayPal does not provide any loss protection for transactions that do not correctly supply a Client Metadata ID.**
 
 **Do not cache or store this value.**
 

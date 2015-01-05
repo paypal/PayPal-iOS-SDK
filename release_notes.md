@@ -1,6 +1,11 @@
 PayPal iOS SDK release notes
 ============================
 
+2.8.1
+-----
+* Prevent a rare crash. (https://github.com/paypal/PayPal-iOS-SDK/issues/220)
+* Update card.io library to 4.0.1.
+
 2.8.0
 -----
 * Update `Paypal-Application-Correlation-Id` header to `PayPal-Client-Metadata-Id`,
