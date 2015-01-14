@@ -1,6 +1,12 @@
 PayPal iOS SDK release notes
 ============================
 
+2.8.2
+-----
+* Improve handling of some server errors.
+* Minor bug fixes.
+* Update card.io library to 4.0.2.
+
 2.8.1
 -----
 * Prevent a rare crash. (https://github.com/paypal/PayPal-iOS-SDK/issues/220)
