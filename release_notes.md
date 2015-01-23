@@ -1,6 +1,15 @@
 PayPal iOS SDK release notes
 ============================
 
+2.8.3
+-----
+* Fix an iOS 6 crash.
+* Improve UI for country codes during Phone/PIN login.
+* Display currency codes for mixed-currency situations;
+  e.g., when choosing between balances in different currencies.
+* Minor bug fixes.
+* Update card.io library to 5.0.0.
+
 2.8.2
 -----
 * Improve handling of some server errors.
