@@ -21,7 +21,7 @@ First, you must [obtain customer consent](#obtain-customer-consent) to take paym
     1. Receives an OAuth2 authorization code from the SDK.
     2. Sends the authorization code to your server, which then [exchanges the code for OAuth2 access and refresh tokens](future_payments_server.md#obtain-oauth2-tokens).
 
-Later, when initiating a pre-consented payment, you must [obtain a Client Metadata ID](#obtain-an-application-correlation-id). How this works:
+Later, when initiating a pre-consented payment, you must [obtain a Client Metadata ID](#obtain-a-client-metadata-id). How this works:
 
 * The PayPal iOS SDK...
     * Provides a Client Metadata ID.

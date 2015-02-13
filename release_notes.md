@@ -1,6 +1,12 @@
 PayPal iOS SDK release notes
 ============================
 
+2.8.4
+-----
+* Add button allowing user to create a new PayPal account.
+* Minor bug fixes.
+* Update card.io library to 5.0.1.
+
 2.8.3
 -----
 * Fix an iOS 6 crash.
