@@ -1,7 +1,7 @@
 //
 //  PayPalConfiguration.h
 //
-//  Version 2.8.4
+//  Version 2.8.5
 //
 //  Copyright (c) 2014, PayPal
 //  All rights reserved.
