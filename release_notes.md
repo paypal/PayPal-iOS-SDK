@@ -1,6 +1,11 @@
 PayPal iOS SDK release notes
 ============================
 
+2.9.0
+-----
+* Add `alwaysDisplayCurrencyCodes` property to `PayPalConfiguration`.
+* Update card.io library to 5.0.3.
+
 2.8.5
 -----
 * Change "Send Payment" button to "Pay". (see https://github.com/paypal/PayPal-iOS-SDK/issues/174)

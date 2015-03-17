@@ -1,7 +1,7 @@
 //
 //  PayPalConfiguration.h
 //
-//  Version 2.8.5
+//  Version 2.9.0
 //
 //  Copyright (c) 2014, PayPal
 //  All rights reserved.
@@ -87,6 +87,17 @@ typedef NS_ENUM(NSInteger, PayPalShippingAddressOption) {
 /// These localizations are currently included:
 /// ar,da,de,en,en_AU,en_GB,es,es_MX,fr,he,it,ja,ko,ms,nb,nl,pl,pt,pt_BR,ru,sv,th,tr,zh-Hans,zh-Hant,zh-Hant_TW.
 @property(nonatomic, copy, readwrite) NSString *languageOrLocale;
+
+/// If set to YES, then all displayed payment amounts will include a currency code (e.g., "USD")
+/// in addition to the standard currency symbol (e.g., "$").
+///
+/// Even if set to NO, currency codes will still be displayed in the case where a user's PayPal account
+/// includes any funding source whose currency differs from that of the current payment.
+/// For example, if the current payment is in US Dollars but the user's PayPal account includes a
+/// credit card in Canadian Dollars, then all displayed amounts will be labeled as either USD or CAD.
+///
+/// Defaults to NO.
+@property(nonatomic, assign, readwrite) BOOL alwaysDisplayCurrencyCodes;
 
 /// Normally, the SDK blurs the screen when the app is backgrounded,
 /// to obscure credit card or PayPal account details in the iOS-saved screenshot.
