@@ -51,7 +51,7 @@ class MainViewController: UIViewController, PayPalPaymentDelegate, PayPalFutureP
     //
     // For full details, including a list of available languages and locales, see PayPalPaymentViewController.h.
     
-    payPalConfig.languageOrLocale = NSLocale.preferredLanguages()[0] as String
+    payPalConfig.languageOrLocale = NSLocale.preferredLanguages()[0] as! String
     
     // Setting the payPalShippingAddressOption property is optional.
     //
@@ -162,7 +162,7 @@ class MainViewController: UIViewController, PayPalPaymentDelegate, PayPalFutureP
   
   @IBAction func authorizeProfileSharingAction(sender: AnyObject) {
     let scopes = [kPayPalOAuth2ScopeOpenId, kPayPalOAuth2ScopeEmail, kPayPalOAuth2ScopeAddress, kPayPalOAuth2ScopePhone]
-    let profileSharingViewController = PayPalProfileSharingViewController(scopeValues: NSSet(array: scopes), configuration: payPalConfig, delegate: self)
+    let profileSharingViewController = PayPalProfileSharingViewController(scopeValues: NSSet(array: scopes) as Set<NSObject>, configuration: payPalConfig, delegate: self)
     presentViewController(profileSharingViewController, animated: true, completion: nil)
   }
   

@@ -1,6 +1,13 @@
 PayPal iOS SDK release notes
 ============================
 
+2.10.0
+------
+* Improve currency display for some currencies/locales.
+  (see http://stackoverflow.com/questions/29409480/paypal-for-ios-in-arabic-language-giving-issue)
+* Update card.io library to 5.0.4.
+* Minor bug fixes.
+
 2.9.0
 -----
 * Add `alwaysDisplayCurrencyCodes` property to `PayPalConfiguration`.
