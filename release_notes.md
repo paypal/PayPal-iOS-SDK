@@ -1,6 +1,12 @@
 PayPal iOS SDK release notes
 ============================
 
+2.10.1
+------
+* Improve the country code displayed for Phone/PIN login.
+* Build the SDK using Xcode 6.2 rather than 6.3, to provide better compatibility
+  for those developers still using Xcode 6.2.
+
 2.10.0
 ------
 * Improve currency display for some currencies/locales.

@@ -10,14 +10,11 @@ The PayPal iOS SDK makes it easy to add PayPal and credit card payments to mobil
 >### Note
 > Version 2.10.0 of the PayPal iOS SDK was built using Xcode 6.3.
 >
->If you are still using Xcode 6.2, and experience any linking problems (duplicate symbols),
-then you have two choices:
+>If you are still using Xcode 6.2, you may experience link errors (duplicate symbols) when using version **2.10.0** of the PayPal iOS SDK.
 >
->* Upgrade to Xcode 6.3.
->* Stick with version 2.9.0 of the PayPal iOS SDK for now.
+> However, version **2.10.1** was built using Xcode 6.2, and should therefore avoid this problem.
 >
-> Either way, please post your observations [here](https://github.com/paypal/PayPal-iOS-SDK/issues/269). Perhaps we can figure out some additional
-> details which would be helpful for Apple.
+> We are working with Apple to try to resolve this issue going forward.
 
 ## Contents
 
