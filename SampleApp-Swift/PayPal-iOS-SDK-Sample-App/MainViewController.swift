@@ -144,7 +144,7 @@ class MainViewController: UIViewController, PayPalPaymentDelegate, PayPalFutureP
   
   
   func payPalFuturePaymentDidCancel(futurePaymentViewController: PayPalFuturePaymentViewController!) {
-    println("PayPal Future Payment Authorizaiton Canceled")
+    println("PayPal Future Payment Authorization Canceled")
     successView.hidden = true
     futurePaymentViewController?.dismissViewControllerAnimated(true, completion: nil)
   }
