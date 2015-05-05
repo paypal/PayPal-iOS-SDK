@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2D48B18616EE8F0800C83CD2 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D48B18416EE8F0800C83CD2 /* check.png */; };
 		2D48B18716EE8F0800C83CD2 /* check@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D48B18516EE8F0800C83CD2 /* check@2x.png */; };
+		3E81C3C01AF950BD00D157EA /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E81C3BF1AF950BD00D157EA /* Accelerate.framework */; };
 		3EC3966819FEBCA20044C28F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849BE73316D440B200E03EEC /* MobileCoreServices.framework */; };
 		3ED93D8119C7814400478314 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849BE6EF16D4352100E03EEC /* CoreGraphics.framework */; };
 		849BE6EC16D4352100E03EEC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849BE6EB16D4352100E03EEC /* UIKit.framework */; };
@@ -49,6 +50,7 @@
 		3E7AF6B419773AB300A4CF5E /* PayPalFuturePaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PayPalFuturePaymentViewController.h; path = ../PayPalMobile/PayPalFuturePaymentViewController.h; sourceTree = "<group>"; };
 		3E7AF6B519773AB300A4CF5E /* PayPalOAuthScopes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PayPalOAuthScopes.h; path = ../PayPalMobile/PayPalOAuthScopes.h; sourceTree = "<group>"; };
 		3E7AF6B619773AB300A4CF5E /* PayPalProfileSharingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PayPalProfileSharingViewController.h; path = ../PayPalMobile/PayPalProfileSharingViewController.h; sourceTree = "<group>"; };
+		3E81C3BF1AF950BD00D157EA /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		849BE6E816D4352100E03EEC /* PayPal-iOS-SDK-Sample-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PayPal-iOS-SDK-Sample-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		849BE6EB16D4352100E03EEC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		849BE6ED16D4352100E03EEC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -98,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E81C3C01AF950BD00D157EA /* Accelerate.framework in Frameworks */,
 				849BE74016D440D700E03EEC /* AudioToolbox.framework in Frameworks */,
 				849BE74916D440D700E03EEC /* AVFoundation.framework in Frameworks */,
 				3ED93D8119C7814400478314 /* CoreGraphics.framework in Frameworks */,
@@ -141,6 +144,7 @@
 		849BE6EA16D4352100E03EEC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3E81C3BF1AF950BD00D157EA /* Accelerate.framework */,
 				849BE72E16D440B100E03EEC /* AudioToolbox.framework */,
 				849BE72C16D4407D00E03EEC /* AVFoundation.framework */,
 				849BE6EF16D4352100E03EEC /* CoreGraphics.framework */,

@@ -92,6 +92,7 @@ pod 'PayPal-iOS-SDK'
   * enable `Enable Modules (C and Objective-C)`
   * enable `Link Frameworks Automatically`
 4. In your project's **Build Phases**, link your project with these libraries. Weak linking for iOS versions back to 6.0 is supported.
+  * `Accelerate.framework`
   * `AudioToolbox.framework`
   * `AVFoundation.framework`
   * `CoreLocation.framework`

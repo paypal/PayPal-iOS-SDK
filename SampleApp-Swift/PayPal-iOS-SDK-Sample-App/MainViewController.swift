@@ -151,7 +151,7 @@ class MainViewController: UIViewController, PayPalPaymentDelegate, PayPalFutureP
   
   func payPalFuturePaymentViewController(futurePaymentViewController: PayPalFuturePaymentViewController!, didAuthorizeFuturePayment futurePaymentAuthorization: [NSObject : AnyObject]!) {
     println("PayPal Future Payment Authorization Success!")
-    // send authorizaiton to your server to get refresh token.
+    // send authorization to your server to get refresh token.
     futurePaymentViewController?.dismissViewControllerAnimated(true, completion: { () -> Void in
       self.resultText = futurePaymentAuthorization!.description
       self.showSuccess()

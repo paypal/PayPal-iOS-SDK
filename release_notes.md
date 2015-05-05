@@ -1,6 +1,14 @@
 PayPal iOS SDK release notes
 ============================
 
+2.10.2
+------
+* Fix an iPad display issue. (see https://github.com/paypal/PayPal-iOS-SDK/issues/272)
+* Improve mSDK screen blurring when app is backgrounded.
+  NOTE: this change requires that you add one more framework to your project:
+        `Accelerate.framework`
+* Minor bug fixes.
+
 2.10.1
 ------
 * Improve the country code displayed for Phone/PIN login.
