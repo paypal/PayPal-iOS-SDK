@@ -135,7 +135,7 @@ Tips:
 
 * For more information, see [creating a payment](https://developer.paypal.com/webapps/developer/docs/api/#create-a-payment).
 
-* When a payment is initiated from a mobile device, all payment API requests should include the `PayPal-Client-Metadata-Id` header value obtained using the [Mobile SDK](future_payments_mobile.md#obtain-an-application-correlation-id).
+* When a payment is initiated from a mobile device, all payment API requests should include the `PayPal-Client-Metadata-Id` header value obtained using the [Mobile SDK](future_payments_mobile.md#obtain-a-client-metadata-id).
 
 * Unlike the standard REST API docs that demonstrate a one time payment, a future payment doesn't require you to separately [get payment approval](https://developer.paypal.com/webapps/developer/docs/integration/web/accept-paypal-payment/#get-payment-approval) after getting initial user consent. The payment is pre-approved by the user.
 

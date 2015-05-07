@@ -54,7 +54,7 @@ extern NSString *const PayPalEnvironmentNoNetwork;
 + (void)preconnectWithEnvironment:(NSString *)environment;
 
 /// Once a user has consented to future payments, when the user subsequently initiates a PayPal payment
-/// from their device to be completed by your server, PayPal uses a Correlation ID to verify that the
+/// from their device to be completed by your server, PayPal uses a Client Metadata ID to verify that the
 /// payment is originating from a valid, user-consented device+application.
 /// This helps reduce fraud and decrease declines.
 /// This method MUST be called prior to initiating a pre-consented payment (a "future payment") from a mobile device.

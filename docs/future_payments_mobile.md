@@ -26,7 +26,7 @@ Later, when initiating a pre-consented payment, you must [obtain a Client Metada
 * The PayPal iOS SDK...
     * Provides a Client Metadata ID.
 * Your app...
-    * Sends the Correlation ID and transaction information to your server.
+    * Sends the Client Metadata ID and transaction information to your server.
     * Your server then [uses its OAuth2 tokens, Client Metadata ID, and transaction info to create a payment](future_payments_server.md).
 
 
@@ -199,4 +199,4 @@ When your server makes its payment request to PayPal, it must include a `PayPal-
 Next Steps
 ----------
 
-Read [Future Payments Server-Side Integration](future_payments_server.md) to exchange the authorization code for OAuth2 tokens and create payments with an access token and a Correlation ID.
+Read [Future Payments Server-Side Integration](future_payments_server.md) to exchange the authorization code for OAuth2 tokens and create payments with an access token and a Client Metadata ID.
