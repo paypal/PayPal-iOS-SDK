@@ -1,7 +1,7 @@
 //
 //  PayPalFuturePaymentViewController.h
 //
-//  Version 2.10.2
+//  Version 2.11.0
 //
 //  Copyright (c) 2014, PayPal
 //  All rights reserved.

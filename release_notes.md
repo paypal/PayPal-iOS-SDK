@@ -1,6 +1,12 @@
 PayPal iOS SDK release notes
 ============================
 
+2.11.0
+------
+* NOTE: version 2.11.0 requires Xcode 6.3+. If you are still using Xcode 6.2, please use version 2.10.2 of this SDK.
+* Update card.io library to 5.0.5. (fixes https://github.com/paypal/PayPal-iOS-SDK/issues/278)
+* Minor bug fixes.
+
 2.10.2
 ------
 * Fix an iPad display issue. (see https://github.com/paypal/PayPal-iOS-SDK/issues/272)

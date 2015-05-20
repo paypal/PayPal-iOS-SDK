@@ -1,7 +1,7 @@
 //
 //  PayPalMobile.h
 //
-//  Version 2.10.2
+//  Version 2.11.0
 //
 //  Copyright (c) 2014, PayPal
 //  All rights reserved.
@@ -63,7 +63,7 @@ extern NSString *const PayPalEnvironmentNoNetwork;
 /// @return clientMetadataID Your server will send this to PayPal in a 'PayPal-Client-Metadata-Id' header.
 + (NSString *)clientMetadataID;
 
-/// Method deprecated use clientMetadataID instead
+/// Method deprecated. Use clientMetadataID instead
 + (NSString *)applicationCorrelationIDForEnvironment:(NSString *)environment __attribute__((deprecated("Use clientMetadataID instead.")));
 
 /// Delete all previously remembered user data (credit card, email, phone, PayPal account),
