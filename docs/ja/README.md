@@ -15,7 +15,7 @@ PayPal iOS SDKを使用すると、モバイルアプリにPayPalおよびクレ
 - [テスト](#テスト)
 - [ドキュメント](#ドキュメント)
 - [ユーザビリティ](#ユーザビリティ)
-- [PayPal iOS SDK 2.0への移行](#PayPal iOS SDK 2.0への移行)
+- [PayPal iOS SDK 2.0への移行](#PayPal-iOS-SDK-20への移行)
 - [次のステップ](#次のステップ)
 
 
