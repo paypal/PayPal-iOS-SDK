@@ -65,7 +65,8 @@ SDKは、支払いについて**1件の支払い**と**今後の支払い**の2�
 ## プロジェクトにSDKを追加する
 
 1. SDKをコピーまたはダウンロードします。SDKは、ヘッダーファイル、ライセンス許諾書、リリースノート、およびスタティックライブラリで構成されています。サンプルアプリも含まれています。* **バージョン2.4.0以降の場合、Xcode 6およびiOS 8 SDKが必要です。Xcode 5を使用している場合は、このSDKの[バージョン2.3.2](https://github.com/paypal/PayPal-iOS-SDK/releases)を使用してください。**
-2. `PayPalMobile`ディレクトリ(複数の.hファイルおよびlibPayPalMobile.aを含む)を自分のXcodeプロジェクトに追加します。[Copy items...(項目をコピー...)]にチェックを入れて[Create groups...(グループを作成...)]を選択することをおすすめします。3. プロジェクトの**ビルドの設定** (`PROJECTS`セクションではなく`TARGETS`セクション)で以下を行います。
+2. `PayPalMobile`ディレクトリ(複数の.hファイルおよびlibPayPalMobile.aを含む)を自分のXcodeプロジェクトに追加します。[Copy items...(項目をコピー...)]にチェックを入れて[Create groups...(グループを作成...)]を選択することをおすすめします。
+3. プロジェクトの**ビルドの設定** (`PROJECTS`セクションではなく`TARGETS`セクション)で以下を行います。
   * `-lc++ -ObjC`を`Other Linker Flags`に追加する
   * `Enable Modules (C and Objective-C)`を有効にする
   * `Link Frameworks Automatically`を有効にする
