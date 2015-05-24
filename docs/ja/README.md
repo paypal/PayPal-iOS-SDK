@@ -28,13 +28,16 @@ SDKは、支払いについて**1件の支払い**と**今後の支払い**の2�
 
 お客さまのPayPalアカウントまたは([card.io](https://www.card.io/)でスキャンされた)決済カードから1回のみ支払いを受け取ります。これは、(1)サーバーがその後に**認証する**必要がある**即時**支払い、または(2)サーバーがその後に**回収する**必要がある支払いの**認証**、または(3)サーバーがその後に**認証**および**回収する**必要がある**注文**の支払いのいずれかです。
 
-1. [1件の支払いを受諾](single_payment.md)して支払い証明を受け取ります。2. サーバーで、PayPalのAPIを使用して、[支払いの認証](https://developer.paypal.com/webapps/developer/docs/integration/mobile/verify-mobile-payment/)、[支払いの回収](https://developer.paypal.com/webapps/developer/docs/integration/direct/capture-payment/#capture-the-payment)、または[注文の処理](https://developer.paypal.com/webapps/developer/docs/integration/direct/create-process-order/) (PayPalデベロッパーサイト)を行います。
+1. [1件の支払いを受諾](single_payment.md)して支払い証明を受け取ります。
+2. サーバーで、PayPalのAPIを使用して、[支払いの認証](https://developer.paypal.com/webapps/developer/docs/integration/mobile/verify-mobile-payment/)、[支払いの回収](https://developer.paypal.com/webapps/developer/docs/integration/direct/capture-payment/#capture-the-payment)、または[注文の処理](https://developer.paypal.com/webapps/developer/docs/integration/direct/create-process-order/) (PayPalデベロッパーサイト)を行います。
 
 
 ### 今後の支払い(Future Payments)
 
 お客さまは、一度だけPayPalにログインして今後の支払いに同意します。
-1. [お客さまの同意を得て](future_payments_mobile.md#obtain-customer-consent)承認コードを受け取ります。2. ご使用のサーバーで、この承認コードを使用して[OAuth2トークンを取得](future_payments_server.md#obtain-oauth2-tokens)します。
+
+1. [お客さまの同意を得て](future_payments_mobile.md#obtain-customer-consent)承認コードを受け取ります。
+2. ご使用のサーバーで、この承認コードを使用して[OAuth2トークンを取得](future_payments_server.md#obtain-oauth2-tokens)します。
 
 この後、お客さまが支払いを開始すると以下のプロセスに進みます。 
 
@@ -46,7 +49,9 @@ SDKは、支払いについて**1件の支払い**と**今後の支払い**の2�
 
 お客さまは、PayPalにログインして、PayPalが貴社と情報を共有することに同意します。
 
-1. [お客さまの同意を得て](profile_sharing_mobile.md#obtain-customer-consent)承認コードを取得します。2. ご使用のサーバーで、この承認コードを使用して[OAuth2トークンを取得](profile_sharing_server.md#obtain-oauth2-tokens)します。3. ご使用のサーバーで、OAuth2トークンとPayPalのAPIを使用して、[顧客情報を検索](profile_sharing_server.md#retrieve-customer-information)します。
+1. [お客さまの同意を得て](profile_sharing_mobile.md#obtain-customer-consent)承認コードを取得します。
+2. ご使用のサーバーで、この承認コードを使用して[OAuth2トークンを取得](profile_sharing_server.md#obtain-oauth2-tokens)します。
+3. ご使用のサーバーで、OAuth2トークンとPayPalのAPIを使用して、[顧客情報を検索](profile_sharing_server.md#retrieve-customer-information)します。
 
 
 ## 要件
@@ -136,7 +141,9 @@ SDKでは複数の通貨に対応しています。完全な最新リストは�
 
 メジャーバージョンの変更として、2.0で導入されるAPIは、1.x統合との下位互換性がありません。ただし、SDKは、1件の支払いについて、これまでのすべての機能を引き続きサポートしています。アップグレードは簡単です。
 
-* SDKの初期化は、新しい`PayPalMobile`クラスのメソッドで実行されます。* `PayPalPaymentViewController`のプロパティの多くは`PayPalConfiguration`に移動しています。また`PayPalPaymentViewController`イニシャライザはそのような構成オブジェクトを取得するよう変更されています。* `PayPalPaymentDelegate`プロトコルメソッドも、パラメータとして`PayPalPaymentViewController`を含むよう変更されています。
+* SDKの初期化は、新しい`PayPalMobile`クラスのメソッドで実行されます。
+* `PayPalPaymentViewController`のプロパティの多くは`PayPalConfiguration`に移動しています。また`PayPalPaymentViewController`イニシャライザはそのような構成オブジェクトを取得するよう変更されています。
+* `PayPalPaymentDelegate`プロトコルメソッドも、パラメータとして`PayPalPaymentViewController`を含むよう変更されています。
 
 
 ### 旧ライブラリ
