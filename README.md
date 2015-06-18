@@ -43,6 +43,9 @@ Receive a one-time payment from a customer's PayPal account or payment card (sca
 2. On your server, [Verify the Payment](https://developer.paypal.com/webapps/developer/docs/integration/mobile/verify-mobile-payment/), [Capture the Payment](https://developer.paypal.com/webapps/developer/docs/integration/direct/capture-payment/#capture-the-payment), or [Process the Order](https://developer.paypal.com/webapps/developer/docs/integration/direct/create-process-order/) (PayPal Developer site) using PayPal's API.
 
 
+>### Note
+> Direct Credit Card Payments is only available in US, UK. Please refer to https://developer.paypal.com/webapps/developer/docs/integration/direct/rest_api_payment_country_currency_support/#direct-credit-card-payments
+
 ### Future Payments
 
 Your customer logs in to PayPal just one time and consents to future payments:
