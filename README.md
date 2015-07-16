@@ -1,7 +1,9 @@
+**We recommend [v.zero](https://www.braintreepayments.com/v.zero) on [Braintree iOS](https://github.com/braintree/braintree_ios) as the easiest general purpose payment acceptance solution in [supported countries](https://www.braintreepayments.com/country-selection).**
+
 PayPal iOS SDK
 ==============
 
-The PayPal iOS SDK makes it easy to add PayPal and credit card payments to mobile apps.
+Use PayPal iOS SDK for direct integration with the [PayPal REST API](https://developer.paypal.com/webapps/developer/docs/api/) on iOS. 
 
 ![SDK screenshots](docs/sdk-screens.png)
 
