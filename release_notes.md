@@ -1,6 +1,10 @@
 PayPal iOS SDK release notes
 ============================
 
+2.11.3
+------
+* fix [#306 - App in a bad state if interrupted during transition](https://github.com/paypal/PayPal-iOS-SDK/issues/306)
+
 2.11.2
 ------
 * Update card.io to 5.1.0

@@ -1,7 +1,7 @@
 //
 //  PayPalConfiguration.h
 //
-//  Version 2.11.2
+//  Version 2.11.3
 //
 //  Copyright (c) 2014, PayPal
 //  All rights reserved.
@@ -24,6 +24,8 @@ typedef NS_ENUM(NSInteger, PayPalShippingAddressOption) {
 /// @see forceDefaultsInSandbox
 @property(nonatomic, copy, readwrite) NSString *defaultUserEmail;
 /// Optional default user phone country code used in the PayPal login view.
+/// The input to this method is expected to be a digit string.
+/// For example: `@"1"` for North America, `@"44"` for UK
 /// Will be overridden by phone country code used in most recent PayPal login.
 /// @see forceDefaultsInSandbox
 @property(nonatomic, copy, readwrite) NSString *defaultUserPhoneCountryCode;
