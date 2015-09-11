@@ -1,6 +1,13 @@
 PayPal iOS SDK release notes
 ============================
 
+2.12.0
+------
+* Built using Xcode 7.0
+* Use `SFSafariViewController` via `SafariServices.framework` (if linked) for opening web pages
+* Fixed behavior where `retrieve_shipping_address ` is disabled and no `shipping address` is provided from the app,
+  so it will not default to the PayPal account `shipping address`.
+
 2.11.4
 ------
 * Fix [issue #290](https://github.com/paypal/PayPal-iOS-SDK/issues/290).
