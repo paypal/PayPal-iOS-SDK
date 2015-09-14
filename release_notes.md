@@ -1,6 +1,11 @@
 PayPal iOS SDK release notes
 ============================
 
+2.12.1
+------
+* Fix [issue #320](https://github.com/paypal/PayPal-iOS-SDK/issues/320) with 2-Factor Authentication flow
+* Add README note for URL schemes which the SDK queries
+
 2.12.0
 ------
 * Built using Xcode 7.0

@@ -103,6 +103,10 @@ pod 'PayPal-iOS-SDK'
 ### With or without CocoaPods:
 
 1. Add the open source license acknowledgments from acknowledgments.md to [your app's acknowledgments](http://stackoverflow.com/questions/3966116/where-to-put-open-source-credit-information-for-an-iphone-app).
+2. In your app's Info.plist, add the following URL schemes to `LSApplicationQueriesSchemes`:
+  * `com.paypal.ppclient.touch.v1`
+  * `com.paypal.ppclient.touch.v2`
+  * `org-appextension-feature-password-management`
 
 ## Credentials
 
