@@ -16,12 +16,21 @@ class MainViewController: UIViewController, PayPalPaymentDelegate, PayPalFutureP
       }
     }
   }
-  
+
+#if HAS_CARDIO
   var acceptCreditCards: Bool = true {
     didSet {
       payPalConfig.acceptCreditCards = acceptCreditCards
     }
   }
+#else
+  var acceptCreditCards: Bool = false {
+    didSet {
+      payPalConfig.acceptCreditCards = acceptCreditCards
+    }
+  }
+#endif
+
   var resultText = "" // empty
   var payPalConfig = PayPalConfiguration() // default
   

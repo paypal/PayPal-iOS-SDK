@@ -48,6 +48,10 @@
   }
   self.acceptCreditCardsSwitch.on = self.delegate.acceptCreditCards;
 
+#if !HAS_CARDIO
+  self.acceptCreditCardsSwitch.enabled = NO;
+#endif
+  
   if ([self.delegate resultText]) {
     NSLog(@"%@", [self.delegate resultText]);
     self.payPalResultTextView.text = [[self.delegate resultText] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];

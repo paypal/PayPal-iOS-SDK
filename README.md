@@ -8,7 +8,11 @@ The PayPal iOS SDK makes it easy to add PayPal and credit card payments to mobil
 *This documentation is available in Japanese: [日本語のドキュメント](docs/ja/README.md).*
 
 >### Note
+> There are 2 static libraries that you should link when building your application. `libPayPalMobile.a` and `libCardIO.a` are both required. You *must* unzip `CardIO\libCardIO.a.zip` to get `libCardIO.a`.
+>
 > The current version of the PayPal iOS SDK was built using Xcode 7.0+.
+>
+> If you are still using Xcode 6.4, you may experience link errors (duplicate symbols). If you can't upgrade from Xcode 6.4, please use version **2.11.x** of this SDK.
 >
 > If you are still using Xcode 6.2, you may experience link errors (duplicate symbols). If you can't upgrade from Xcode 6.2, please use version **2.10.2** of this SDK.
 
@@ -65,7 +69,7 @@ Your customer logs in to PayPal and consents to PayPal sharing information with 
 
 ## Requirements
 
-* Xcode 6 and iOS SDK 8
+* Xcode 7 and iOS SDK 9
 * iOS 6.0+ target deployment
 * armv7, armv7s, and arm64 devices, and the simulator (not armv6)
 * iPhone and iPad of all sizes and resolutions
@@ -83,13 +87,15 @@ pod 'PayPal-iOS-SDK'
 ### If you don't use CocoaPods, then:
 
 1. Clone or download the SDK, which consists of header files, license acknowledgements, release notes, and a static library. It also includes a sample app.
-    * **As of version 2.4.0, the SDK requires Xcode 6 and iOS 8 SDK. If you are still using Xcode 5, please use [version 2.3.2](https://github.com/paypal/PayPal-iOS-SDK/releases) of this SDK.**
+    * **As of version 2.12.0, the SDK requires Xcode 7 and iOS 8 SDK.**
 2. Add the `PayPalMobile` directory (containing several .h files and libPayPalMobile.a) to your Xcode project. We recommend checking "Copy items..." and selecting "Create groups...".
-3. In your project's **Build Settings** (in the `TARGETS` section, not the `PROJECTS` section):
+3. Unzip the `CardIO\libCardIO.a.zip` archive.
+4. (Optionally) Add the `CardIO` directory (containing several .h files and libCardIO.a) to your Xcode project. We recommend checking "Copy items..." and selecting "Create groups...". `libCardIO.a` adds the functionality to pay by scanning a card.
+5. In your project's **Build Settings** (in the `TARGETS` section, not the `PROJECTS` section):
   * add `-lc++ -ObjC` to `Other Linker Flags`
   * enable `Enable Modules (C and Objective-C)`
   * enable `Link Frameworks Automatically`
-4. In your project's **Build Phases**, link your project with these libraries. Weak linking for iOS versions back to 6.0 is supported.
+6. In your project's **Build Phases**, link your project with these libraries. Weak linking for iOS versions back to 6.0 is supported.
   * `Accelerate.framework`
   * `AudioToolbox.framework`
   * `AVFoundation.framework`

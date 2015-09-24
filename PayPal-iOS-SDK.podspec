@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name             = 'PayPal-iOS-SDK'
-  spec.version          = '2.11.5'
+  spec.version          = '2.12.2'
   spec.license          = { type: 'BSD', file: 'LICENSE.md' }
   spec.homepage         = 'https://developer.paypal.com/webapps/developer/docs/integration/mobile/mobile-sdk-overview/'
   spec.authors          = { 'PayPal' => 'support@paypal.com' }
@@ -10,10 +10,10 @@ Pod::Spec.new do |spec|
   spec.platform         = :ios, '6.0'
   spec.ios.deployment_target = '6.0'
   spec.requires_arc     = false
-  spec.source_files     = 'PayPalMobile/*.h'
-  spec.preserve_path    = 'PayPalMobile/*.a'
+  spec.source_files     = [ 'PayPalMobile/*.h', 'CardIO/*.h' ]
+  spec.preserve_path    = [ 'PayPalMobile/*.a', 'CardIO/*.a' ]
   spec.frameworks       = 'Accelerate', 'AudioToolbox', 'AVFoundation', 'CoreLocation', 'CoreMedia', 'MessageUI', 'MobileCoreServices', 'SystemConfiguration'
-  spec.libraries        = 'PayPalMobile'
+  spec.libraries        = [ 'PayPalMobile', 'CardIO' ]
   spec.compiler_flags   = '-fmodules', '-fmodules-autolink'
-  spec.xcconfig         = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/PayPal-iOS-SDK/PayPalMobile"', 'OTHER_LDFLAGS' => '-lc++ -ObjC'}
+  spec.xcconfig         = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/PayPal-iOS-SDK/PayPalMobile" "$(PODS_ROOT)/PayPal-iOS-SDK/CardIO"', 'OTHER_LDFLAGS' => '-lc++ -ObjC'}
 end

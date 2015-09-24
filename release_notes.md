@@ -1,6 +1,34 @@
 PayPal iOS SDK release notes
 ============================
 
+2.12.2
+------
+* There are now 2 static libraries which you should link to your application:
+  - `libPayPalMobile.a` in the `PayPalMobile` directory
+  - `libCardIO.a` in the `CardIO` directory. Please unzip the `libCardIO.a.zip` archive.
+* `libPayPalMobile.a` is a required static library which has all the previous PayPal functionality using the REST APIs
+* `libCardIO.a` is an optional static library. If you want to allow payments by scanning credit cards, you must also
+  link this library. It is currently zipped in a `libCardIO.a.zip` file. Use a standard unzip tool to unzip
+  `CardIO\libCardIO.a.zip` to get `libCardIO.a`.
+* If you want the same functionality which you had before in version 2.12.1, link to both `libPayPalMobile.a` and
+  `libCardIO.a`. You must use the `libPayPalMobile.a` and `libCardIO.a` from the same SDK.
+* Bitcode enabled the libraries. While the static libraries are larger, the application delivered to users should not
+  be significantly different in size compared to before. [Issue #284](https://github.com/paypal/PayPal-iOS-SDK/issues/284)
+* You must use Xcode 7.0 with these versions of the SDK. For Xcode 6.4, you can use the 2.11.x libraries but it is
+  advised that you upgrade as soon as possible. Xcode 6.4 is not compatible with Bitcode enabled libraries.
+
+2.12.1
+------
+* Fix [issue #320](https://github.com/paypal/PayPal-iOS-SDK/issues/320) with 2-Factor Authentication flow
+* Add README note for URL schemes which the SDK queries
+
+2.12.0
+------
+* Built using Xcode 7.0
+* Use `SFSafariViewController` via `SafariServices.framework` (if linked) for opening web pages
+* Fixed behavior where `retrieve_shipping_address ` is disabled and no `shipping address` is provided from the app,
+  so it will not default to the PayPal account `shipping address`.
+
 2.11.5
 ------
 * Note this is the same code as 2.12.1 except built with Xcode 6.4 [issue #327](https://github.com/paypal/PayPal-iOS-SDK/issues/327)

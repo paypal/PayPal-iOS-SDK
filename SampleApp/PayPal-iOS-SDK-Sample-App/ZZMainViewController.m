@@ -27,13 +27,25 @@
 
 @implementation ZZMainViewController
 
+- (BOOL)acceptCreditCards {
+  return self.payPalConfig.acceptCreditCards;
+}
+
+- (void)setAcceptCreditCards:(BOOL)acceptCreditCards {
+  self.payPalConfig.acceptCreditCards = acceptCreditCards;
+}
+
 - (void)viewDidLoad {
   [super viewDidLoad];
   self.title = @"PayPal SDK Demo";
 
   // Set up payPalConfig
   _payPalConfig = [[PayPalConfiguration alloc] init];
+#if HAS_CARDIO
   _payPalConfig.acceptCreditCards = YES;
+#else
+  _payPalConfig.acceptCreditCards = NO;
+#endif
   _payPalConfig.merchantName = @"Awesome Shirts, Inc.";
   _payPalConfig.merchantPrivacyPolicyURL = [NSURL URLWithString:@"https://www.paypal.com/webapps/mpp/ua/privacy-full"];
   _payPalConfig.merchantUserAgreementURL = [NSURL URLWithString:@"https://www.paypal.com/webapps/mpp/ua/useragreement-full"];
