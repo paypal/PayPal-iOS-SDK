@@ -1,6 +1,13 @@
 PayPal iOS SDK release notes
 ============================
 
+2.12.3
+------
+* Fixed long string description text wrapping for iOS9
+* Updated Swift Sample App to Swift 2.0 syntax
+* Fixed cocoapods spec file to unzip libCardIO.a.zip when installing for dependency resolution
+* Parsing enhancement for empty response received from server APIs
+
 2.12.2
 ------
 * There are now 2 static libraries which you should link to your application:

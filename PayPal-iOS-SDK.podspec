@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name             = 'PayPal-iOS-SDK'
-  spec.version          = '2.12.2'
+  spec.version          = '2.12.3'
   spec.license          = { type: 'BSD', file: 'LICENSE.md' }
   spec.homepage         = 'https://developer.paypal.com/webapps/developer/docs/integration/mobile/mobile-sdk-overview/'
   spec.authors          = { 'PayPal' => 'support@paypal.com' }
@@ -16,4 +16,8 @@ Pod::Spec.new do |spec|
   spec.libraries        = [ 'PayPalMobile', 'CardIO' ]
   spec.compiler_flags   = '-fmodules', '-fmodules-autolink'
   spec.xcconfig         = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/PayPal-iOS-SDK/PayPalMobile" "$(PODS_ROOT)/PayPal-iOS-SDK/CardIO"', 'OTHER_LDFLAGS' => '-lc++ -ObjC'}
+  spec.prepare_command = <<-CMD
+      [ -f CardIO/libCardIo.a ] && rm CardIO/libCardIO.a
+      unzip -d CardIO/ CardIO/libCardIO.a.zip
+  CMD
 end

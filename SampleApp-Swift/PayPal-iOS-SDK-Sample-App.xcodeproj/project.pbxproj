@@ -297,6 +297,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3E589F271AF042C000D6BCEA /* Build configuration list for PBXNativeTarget "PayPal-iOS-SDK+cardio-Sample-App" */;
 			buildPhases = (
+				A5DBDCFC1BB9E95D00DC835A /* Unzip libCardIO */,
 				3E589F021AF042C000D6BCEA /* Sources */,
 				3E589F071AF042C000D6BCEA /* Frameworks */,
 				3E589F181AF042C000D6BCEA /* Resources */,
@@ -334,6 +335,8 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = ZZ;
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = PayPal;
 			};
@@ -399,6 +402,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A5DBDCFC1BB9E95D00DC835A /* Unzip libCardIO */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Unzip libCardIO";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "[ -f ../CardIO/libCardIO.a ] && rm ../CardIO/libCardIO.a\nunzip -d ../CardIO/ ../CardIO/libCardIO.a.zip";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3E589F021AF042C000D6BCEA /* Sources */ = {

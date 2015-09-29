@@ -60,7 +60,7 @@ class MainViewController: UIViewController, PayPalPaymentDelegate, PayPalFutureP
     //
     // For full details, including a list of available languages and locales, see PayPalPaymentViewController.h.
     
-    payPalConfig.languageOrLocale = NSLocale.preferredLanguages()[0] as! String
+    payPalConfig.languageOrLocale = NSLocale.preferredLanguages()[0] 
     
     // Setting the payPalShippingAddressOption property is optional.
     //
@@ -68,7 +68,7 @@ class MainViewController: UIViewController, PayPalPaymentDelegate, PayPalFutureP
     
     payPalConfig.payPalShippingAddressOption = .PayPal;
     
-    println("PayPal iOS SDK Version: \(PayPalMobile.libraryVersion())")
+    print("PayPal iOS SDK Version: \(PayPalMobile.libraryVersion())")
     
   }
   
@@ -90,9 +90,9 @@ class MainViewController: UIViewController, PayPalPaymentDelegate, PayPalFutureP
     //       and simply set payment.amount to your total charge.
     
     // Optional: include multiple items
-    var item1 = PayPalItem(name: "Old jeans with holes", withQuantity: 2, withPrice: NSDecimalNumber(string: "84.99"), withCurrency: "USD", withSku: "Hip-0037")
-    var item2 = PayPalItem(name: "Free rainbow patch", withQuantity: 1, withPrice: NSDecimalNumber(string: "0.00"), withCurrency: "USD", withSku: "Hip-00066")
-    var item3 = PayPalItem(name: "Long-sleeve plaid shirt (mustache not included)", withQuantity: 1, withPrice: NSDecimalNumber(string: "37.99"), withCurrency: "USD", withSku: "Hip-00291")
+    let item1 = PayPalItem(name: "Old jeans with holes", withQuantity: 2, withPrice: NSDecimalNumber(string: "84.99"), withCurrency: "USD", withSku: "Hip-0037")
+    let item2 = PayPalItem(name: "Free rainbow patch", withQuantity: 1, withPrice: NSDecimalNumber(string: "0.00"), withCurrency: "USD", withSku: "Hip-00066")
+    let item3 = PayPalItem(name: "Long-sleeve plaid shirt (mustache not included)", withQuantity: 1, withPrice: NSDecimalNumber(string: "37.99"), withCurrency: "USD", withSku: "Hip-00291")
     
     let items = [item1, item2, item3]
     let subtotal = PayPalItem.totalPriceForItems(items)
@@ -118,7 +118,7 @@ class MainViewController: UIViewController, PayPalPaymentDelegate, PayPalFutureP
       // example, the amount was negative or the shortDescription was
       // empty, this payment wouldn't be processable, and you'd want
       // to handle that here.
-      println("Payment not processalbe: \(payment)")
+      print("Payment not processalbe: \(payment)")
     }
     
   }
@@ -126,17 +126,17 @@ class MainViewController: UIViewController, PayPalPaymentDelegate, PayPalFutureP
   // PayPalPaymentDelegate
   
   func payPalPaymentDidCancel(paymentViewController: PayPalPaymentViewController!) {
-    println("PayPal Payment Cancelled")
+    print("PayPal Payment Cancelled")
     resultText = ""
     successView.hidden = true
     paymentViewController?.dismissViewControllerAnimated(true, completion: nil)
   }
   
   func payPalPaymentViewController(paymentViewController: PayPalPaymentViewController!, didCompletePayment completedPayment: PayPalPayment!) {
-    println("PayPal Payment Success !")
+    print("PayPal Payment Success !")
     paymentViewController?.dismissViewControllerAnimated(true, completion: { () -> Void in
       // send completed confirmaion to your server
-      println("Here is your proof of payment:\n\n\(completedPayment.confirmation)\n\nSend this to your server for confirmation and fulfillment.")
+      print("Here is your proof of payment:\n\n\(completedPayment.confirmation)\n\nSend this to your server for confirmation and fulfillment.")
       
       self.resultText = completedPayment!.description
       self.showSuccess()
@@ -153,13 +153,13 @@ class MainViewController: UIViewController, PayPalPaymentDelegate, PayPalFutureP
   
   
   func payPalFuturePaymentDidCancel(futurePaymentViewController: PayPalFuturePaymentViewController!) {
-    println("PayPal Future Payment Authorization Canceled")
+    print("PayPal Future Payment Authorization Canceled")
     successView.hidden = true
     futurePaymentViewController?.dismissViewControllerAnimated(true, completion: nil)
   }
   
   func payPalFuturePaymentViewController(futurePaymentViewController: PayPalFuturePaymentViewController!, didAuthorizeFuturePayment futurePaymentAuthorization: [NSObject : AnyObject]!) {
-    println("PayPal Future Payment Authorization Success!")
+    print("PayPal Future Payment Authorization Success!")
     // send authorization to your server to get refresh token.
     futurePaymentViewController?.dismissViewControllerAnimated(true, completion: { () -> Void in
       self.resultText = futurePaymentAuthorization!.description
@@ -178,13 +178,13 @@ class MainViewController: UIViewController, PayPalPaymentDelegate, PayPalFutureP
   // PayPalProfileSharingDelegate
   
   func userDidCancelPayPalProfileSharingViewController(profileSharingViewController: PayPalProfileSharingViewController!) {
-    println("PayPal Profile Sharing Authorization Canceled")
+    print("PayPal Profile Sharing Authorization Canceled")
     successView.hidden = true
     profileSharingViewController?.dismissViewControllerAnimated(true, completion: nil)
   }
   
   func payPalProfileSharingViewController(profileSharingViewController: PayPalProfileSharingViewController!, userDidLogInWithAuthorization profileSharingAuthorization: [NSObject : AnyObject]!) {
-    println("PayPal Profile Sharing Authorization Success!")
+    print("PayPal Profile Sharing Authorization Success!")
     
     // send authorization to your server
     

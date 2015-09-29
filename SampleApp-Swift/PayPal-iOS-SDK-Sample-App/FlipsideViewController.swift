@@ -36,7 +36,7 @@ class FlipsideViewController: UIViewController {
   }
   
   func logEnvironment() {
-    println("Environment: \(flipsideDelegate?.environment). Accept credit cards? \(flipsideDelegate?.acceptCreditCards)")
+    print("Environment: \(flipsideDelegate?.environment). Accept credit cards? \(flipsideDelegate?.acceptCreditCards)")
   }
   
   override func viewWillAppear(animated: Bool) {
@@ -61,7 +61,7 @@ class FlipsideViewController: UIViewController {
     
     let resultText = flipsideDelegate!.resultText
     if !resultText.isEmpty {
-      println("\(resultText)")
+      print("\(resultText)")
       payResultTextView.text = resultText.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
     } else {
       payResultTextView.hidden = true
