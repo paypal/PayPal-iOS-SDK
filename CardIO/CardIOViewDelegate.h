@@ -1,6 +1,6 @@
 //
 //  CardIOViewDelegate.h
-//  Version 5.1.1-6-ga422a81
+//  Version 5.2.1
 //
 //  See the file "LICENSE.md" for the full license governing this code.
 //

@@ -43,7 +43,6 @@
 		3E589F241AF042C000D6BCEA /* button_secondary@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 849BE74D16D443EC00E03EEC /* button_secondary@2x.png */; };
 		3E589F251AF042C000D6BCEA /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D48B18416EE8F0800C83CD2 /* check.png */; };
 		3E589F261AF042C000D6BCEA /* check@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D48B18516EE8F0800C83CD2 /* check@2x.png */; };
-		3E589F321AF0462B00D6BCEA /* libCardIO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E589F311AF0462B00D6BCEA /* libCardIO.a */; };
 		3E589FD51AF9632F00D6BCEA /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E589FD41AF9632F00D6BCEA /* Accelerate.framework */; };
 		3E589FD61AF9633700D6BCEA /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E589FD41AF9632F00D6BCEA /* Accelerate.framework */; };
 		3EC3966819FEBCA20044C28F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849BE73316D440B200E03EEC /* MobileCoreServices.framework */; };
@@ -74,6 +73,9 @@
 		849BE74F16D443EC00E03EEC /* button_secondary_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 849BE74B16D443EC00E03EEC /* button_secondary_selected@2x.png */; };
 		849BE75016D443EC00E03EEC /* button_secondary.png in Resources */ = {isa = PBXBuildFile; fileRef = 849BE74C16D443EC00E03EEC /* button_secondary.png */; };
 		849BE75116D443EC00E03EEC /* button_secondary@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 849BE74D16D443EC00E03EEC /* button_secondary@2x.png */; };
+		A5F043FB1BD6AB6D000560EC /* libCardIO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F043F81BD6AB6D000560EC /* libCardIO.a */; settings = {ASSET_TAGS = (); }; };
+		A5F043FC1BD6AB6D000560EC /* libopencv_core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F043F91BD6AB6D000560EC /* libopencv_core.a */; settings = {ASSET_TAGS = (); }; };
+		A5F043FD1BD6AB6D000560EC /* libopencv_imgproc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F043FA1BD6AB6D000560EC /* libopencv_imgproc.a */; settings = {ASSET_TAGS = (); }; };
 		D5463464178F5A2800A2D5F6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5463463178F5A2800A2D5F6 /* SystemConfiguration.framework */; };
 		D5709F301884CDBF00CCD3CA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5709F2F1884CDBF00CCD3CA /* CoreLocation.framework */; };
 		D57484A21A702C8700FC9438 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57484A11A702C8700FC9438 /* MainViewController.swift */; };
@@ -85,7 +87,6 @@
 		2D48B18516EE8F0800C83CD2 /* check@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check@2x.png"; sourceTree = "<group>"; };
 		3E589F2A1AF042C000D6BCEA /* PayPal-iOS-SDK-Sample-App copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PayPal-iOS-SDK-Sample-App copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E589F2E1AF0433E00D6BCEA /* PayPal-iOS-SDK+cardio-Sample-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PayPal-iOS-SDK+cardio-Sample-App-Info.plist"; sourceTree = "<group>"; };
-		3E589F311AF0462B00D6BCEA /* libCardIO.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libCardIO.a; path = CardIO/libCardIO.a; sourceTree = "<group>"; };
 		3E589FD41AF9632F00D6BCEA /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		3E7AF6B419773AB300A4CF5E /* PayPalFuturePaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PayPalFuturePaymentViewController.h; path = ../PayPalMobile/PayPalFuturePaymentViewController.h; sourceTree = "<group>"; };
 		3E7AF6B519773AB300A4CF5E /* PayPalOAuthScopes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PayPalOAuthScopes.h; path = ../PayPalMobile/PayPalOAuthScopes.h; sourceTree = "<group>"; };
@@ -125,6 +126,9 @@
 		849BE74B16D443EC00E03EEC /* button_secondary_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_secondary_selected@2x.png"; sourceTree = "<group>"; };
 		849BE74C16D443EC00E03EEC /* button_secondary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_secondary.png; sourceTree = "<group>"; };
 		849BE74D16D443EC00E03EEC /* button_secondary@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_secondary@2x.png"; sourceTree = "<group>"; };
+		A5F043F81BD6AB6D000560EC /* libCardIO.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libCardIO.a; path = ../CardIO/libCardIO.a; sourceTree = "<group>"; };
+		A5F043F91BD6AB6D000560EC /* libopencv_core.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libopencv_core.a; path = ../CardIO/libopencv_core.a; sourceTree = "<group>"; };
+		A5F043FA1BD6AB6D000560EC /* libopencv_imgproc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libopencv_imgproc.a; path = ../CardIO/libopencv_imgproc.a; sourceTree = "<group>"; };
 		D540258117FCC65A001F1164 /* PayPalConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PayPalConfiguration.h; path = ../PayPalMobile/PayPalConfiguration.h; sourceTree = "<group>"; };
 		D5463463178F5A2800A2D5F6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D5709F2F1884CDBF00CCD3CA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -138,7 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E589F321AF0462B00D6BCEA /* libCardIO.a in Frameworks */,
+				A5F043FB1BD6AB6D000560EC /* libCardIO.a in Frameworks */,
 				3E589FD61AF9633700D6BCEA /* Accelerate.framework in Frameworks */,
 				3E589F081AF042C000D6BCEA /* AudioToolbox.framework in Frameworks */,
 				3E589F091AF042C000D6BCEA /* AVFoundation.framework in Frameworks */,
@@ -150,12 +154,14 @@
 				3E589F0F1AF042C000D6BCEA /* MessageUI.framework in Frameworks */,
 				3E589F101AF042C000D6BCEA /* MobileCoreServices.framework in Frameworks */,
 				3E589F111AF042C000D6BCEA /* OpenGLES.framework in Frameworks */,
+				A5F043FC1BD6AB6D000560EC /* libopencv_core.a in Frameworks */,
 				3E589F121AF042C000D6BCEA /* QuartzCore.framework in Frameworks */,
 				3E589F131AF042C000D6BCEA /* Security.framework in Frameworks */,
 				3E589F141AF042C000D6BCEA /* SystemConfiguration.framework in Frameworks */,
 				3E589F151AF042C000D6BCEA /* UIKit.framework in Frameworks */,
 				3E589F161AF042C000D6BCEA /* libPayPalMobile.a in Frameworks */,
 				3E589F171AF042C000D6BCEA /* libxml2.dylib in Frameworks */,
+				A5F043FD1BD6AB6D000560EC /* libopencv_imgproc.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,8 +214,10 @@
 		849BE6EA16D4352100E03EEC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A5F043F81BD6AB6D000560EC /* libCardIO.a */,
+				A5F043F91BD6AB6D000560EC /* libopencv_core.a */,
+				A5F043FA1BD6AB6D000560EC /* libopencv_imgproc.a */,
 				3E589FD41AF9632F00D6BCEA /* Accelerate.framework */,
-				3E589F311AF0462B00D6BCEA /* libCardIO.a */,
 				849BE72E16D440B100E03EEC /* AudioToolbox.framework */,
 				849BE72C16D4407D00E03EEC /* AVFoundation.framework */,
 				849BE6EF16D4352100E03EEC /* CoreGraphics.framework */,
@@ -297,7 +305,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3E589F271AF042C000D6BCEA /* Build configuration list for PBXNativeTarget "PayPal-iOS-SDK+cardio-Sample-App" */;
 			buildPhases = (
-				A5DBDCFC1BB9E95D00DC835A /* Unzip libCardIO */,
 				3E589F021AF042C000D6BCEA /* Sources */,
 				3E589F071AF042C000D6BCEA /* Frameworks */,
 				3E589F181AF042C000D6BCEA /* Resources */,
@@ -402,23 +409,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		A5DBDCFC1BB9E95D00DC835A /* Unzip libCardIO */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Unzip libCardIO";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "[ -f ../CardIO/libCardIO.a ] && rm ../CardIO/libCardIO.a\nunzip -d ../CardIO/ ../CardIO/libCardIO.a.zip";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3E589F021AF042C000D6BCEA /* Sources */ = {

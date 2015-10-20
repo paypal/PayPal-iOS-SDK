@@ -1,6 +1,13 @@
 PayPal iOS SDK release notes
 ============================
 
+2.12.4
+------
+* Split card.io libraries into 3 different libraries to help reduce the size of the individual files. [issue #339](https://github.com/paypal/PayPal-iOS-SDK/issues/339)
+  You should link to `libPayPalMobile.a`, `libCardIO.a`, `libopencv_core.a', and `libopencv_imgproc.a` for your app now. See notes in 2.12.2 for more information.
+* Fix issue with iOS 6 API availability with call to initWithBase64EncodedData:options: [issue #351](https://github.com/paypal/PayPal-iOS-SDK/issues/351)
+* Switch to use vendored_libraries in `PayPal-iOS-SDK.podspec` to help some CocoaPod issues
+
 2.12.3
 ------
 * Fixed long string description text wrapping for iOS9

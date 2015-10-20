@@ -1,7 +1,7 @@
 //
 //  PayPalOAuthScopes.h
 //
-//  Version 2.12.3
+//  Version 2.12.4
 //
 //  Copyright (c) 2014, PayPal
 //  All rights reserved.
