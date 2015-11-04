@@ -1,6 +1,15 @@
 PayPal iOS SDK release notes
 ============================
 
+2.12.5
+------
+* In CocoaPods, add subspecs to allow PayPal SDK to be used without card.io. By
+  default, all libraries are included. If you do not want to use card.io, use
+  the `Core` subspec like `PayPal-iOS-SDK/Core` in your Podfile. See the
+  SampleApp without card.io to see how you can setup your application without
+  credit card scanning. See [issue #358](https://github.com/paypal/PayPal-iOS-SDK/issues/358).
+* Update to use NSURLSession whenever possible. Falls back to NSURLConnection for iOS 6.
+
 2.12.4
 ------
 * Split card.io libraries into 3 different libraries to help reduce the size of the individual files. [issue #339](https://github.com/paypal/PayPal-iOS-SDK/issues/339)
