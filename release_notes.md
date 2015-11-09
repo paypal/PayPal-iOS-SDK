@@ -1,6 +1,11 @@
 PayPal iOS SDK release notes
 ============================
 
+2.12.6
+------
+* When the wrong PayPal login credentials are used, use shake animation
+  and allow user to login again without having to click on Pay button again
+
 2.12.5
 ------
 * In CocoaPods, add subspecs to allow PayPal SDK to be used without card.io. By
