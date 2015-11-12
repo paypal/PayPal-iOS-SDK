@@ -1,6 +1,10 @@
 PayPal iOS SDK release notes
 ============================
 
+2.12.7
+------
+* Update networking code for iOS 7 to fix potential ClassicURLConnection crash
+
 2.12.6
 ------
 * When the wrong PayPal login credentials are used, use shake animation

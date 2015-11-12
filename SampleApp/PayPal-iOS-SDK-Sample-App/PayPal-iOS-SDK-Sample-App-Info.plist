@@ -30,11 +30,11 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.12.6</string>
+	<string>2.12.7</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>2.12.6</string>
+	<string>2.12.7</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>org-appextension-feature-password-management</string>
