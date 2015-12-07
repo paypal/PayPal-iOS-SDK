@@ -1,6 +1,10 @@
 PayPal iOS SDK release notes
 ============================
 
+2.12.8
+------
+* Update network code and general code cleanup
+
 2.12.7
 ------
 * Update networking code for iOS 7 to fix potential ClassicURLConnection crash
