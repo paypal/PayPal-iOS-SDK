@@ -1,6 +1,10 @@
 PayPal iOS SDK release notes
 ============================
 
+2.12.9
+------
+* Fix issue determining valid negative amounts. See [issue #369](https://github.com/paypal/PayPal-iOS-SDK/issues/369).
+
 2.12.8
 ------
 * Update network code and general code cleanup
