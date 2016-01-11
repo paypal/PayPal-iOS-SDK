@@ -1,9 +1,9 @@
 //
 //  PayPalMobile.h
 //
-//  Version 2.12.9
+//  Version 2.13.0
 //
-//  Copyright (c) 2014, PayPal
+//  Copyright (c) 2014-2016 PayPal, Inc. All rights reserved.
 //  All rights reserved.
 //
 
@@ -18,11 +18,11 @@
 
 /// Production (default): Normal, live environment. Real money gets moved.
 /// This environment MUST be used for App Store submissions.
-extern NSString *const PayPalEnvironmentProduction;
+extern NSString * _Nonnull const PayPalEnvironmentProduction;
 /// Sandbox: Uses the PayPal sandbox for transactions. Useful for development.
-extern NSString *const PayPalEnvironmentSandbox;
+extern NSString * _Nonnull const PayPalEnvironmentSandbox;
 /// NoNetwork: Mock mode. Does not submit transactions to PayPal. Fakes successful responses. Useful for unit tests.
-extern NSString *const PayPalEnvironmentNoNetwork;
+extern NSString * _Nonnull const PayPalEnvironmentNoNetwork;
 
 @interface PayPalMobile : NSObject
 
@@ -35,7 +35,7 @@ extern NSString *const PayPalEnvironmentNoNetwork;
 /// For example,
 ///  @{PayPalEnvironmentProduction : @"my-client-id-for-Production",
 ///    PayPalEnvironmentSandbox : @"my-client-id-for-Sandbox"}
-+ (void)initializeWithClientIdsForEnvironments:(NSDictionary *)clientIdsForEnvironments;
++ (void)initializeWithClientIdsForEnvironments:(nonnull NSDictionary *)clientIdsForEnvironments;
 
 /// You MUST preconnect to PayPal to prepare the device for processing payments.
 /// This improves the user experience because it allows the PayPal Mobile SDK to make its
@@ -51,7 +51,7 @@ extern NSString *const PayPalEnvironmentNoNetwork;
 /// @param environment
 /// The PayPal Mobile SDK can operate in different environments to facilitate development and testing.
 /// See PayPalEnvironmentProduction, PayPalEnvironmentSandbox, PayPalEnvironmentNoNetwork for more details.
-+ (void)preconnectWithEnvironment:(NSString *)environment;
++ (void)preconnectWithEnvironment:(nonnull NSString *)environment;
 
 /// Once a user has consented to future payments, when the user subsequently initiates a PayPal payment
 /// from their device to be completed by your server, PayPal uses a Client Metadata ID to verify that the
@@ -61,10 +61,10 @@ extern NSString *const PayPalEnvironmentNoNetwork;
 /// Pass the result to your server, to include in the payment request sent to PayPal.
 /// Do not otherwise cache or store this value.
 /// @return clientMetadataID Your server will send this to PayPal in a 'PayPal-Client-Metadata-Id' header.
-+ (NSString *)clientMetadataID;
++ (nonnull NSString *)clientMetadataID;
 
 /// Method deprecated. Use clientMetadataID instead
-+ (NSString *)applicationCorrelationIDForEnvironment:(NSString *)environment __attribute__((deprecated("Use clientMetadataID instead.")));
++ (nonnull NSString *)applicationCorrelationIDForEnvironment:(nonnull NSString *)environment __attribute__((deprecated("Use clientMetadataID instead.")));
 
 /// Delete all previously remembered user data (credit card, email, phone, PayPal account),
 /// for all environments. (See PayPalEnvironmentProduction, PayPalEnvironmentSandbox, PayPalEnvironmentNoNetwork.)
@@ -77,6 +77,6 @@ extern NSString *const PayPalEnvironmentNoNetwork;
 
 /// @return The version of the PayPal Mobile SDK in use. Version numbering follows http://semver.org/.
 /// @note Please be sure to include this library version in tech support requests.
-+ (NSString *)libraryVersion;
++ (nonnull NSString *)libraryVersion;
 
 @end

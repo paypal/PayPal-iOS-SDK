@@ -1,9 +1,9 @@
 //
 //  PayPalFuturePaymentViewController.h
 //
-//  Version 2.12.9
+//  Version 2.13.0
 //
-//  Copyright (c) 2014, PayPal
+//  Copyright (c) 2014-2016 PayPal, Inc. All rights reserved.
 //  All rights reserved.
 //
 
@@ -23,7 +23,7 @@ typedef void (^PayPalFuturePaymentDelegateCompletionBlock)(void);
 /// User canceled the future payment process.
 /// Your code MUST dismiss the PayPalFuturePaymentViewController.
 /// @param futurePaymentViewController The PayPalFuturePaymentViewController that the user canceled without agreement.
-- (void)payPalFuturePaymentDidCancel:(PayPalFuturePaymentViewController *)futurePaymentViewController;
+- (void)payPalFuturePaymentDidCancel:(nonnull PayPalFuturePaymentViewController *)futurePaymentViewController;
 
 /// User successfully completed the future payment authorization.
 /// The PayPalFuturePaymentViewController's activity indicator has been dismissed.
@@ -32,8 +32,8 @@ typedef void (^PayPalFuturePaymentDelegateCompletionBlock)(void);
 /// Your code MUST dismiss the PayPalFuturePaymentViewController.
 /// @param futurePaymentViewController The PayPalFuturePaymentViewController where the user successfullly authorized.
 /// @param futurePaymentAuthorization A dictionary containing information that your server will need to process the payment.
-- (void)payPalFuturePaymentViewController:(PayPalFuturePaymentViewController *)futurePaymentViewController
-                didAuthorizeFuturePayment:(NSDictionary *)futurePaymentAuthorization;
+- (void)payPalFuturePaymentViewController:(nonnull PayPalFuturePaymentViewController *)futurePaymentViewController
+                didAuthorizeFuturePayment:(nonnull NSDictionary *)futurePaymentAuthorization;
 
 @optional
 /// User successfully completed the future payment authorization.
@@ -44,9 +44,9 @@ typedef void (^PayPalFuturePaymentDelegateCompletionBlock)(void);
 /// @param futurePaymentViewController The PayPalFuturePaymentViewController where the user successfullly authorized.
 /// @param futurePaymentAuthorization A dictionary containing information that your server will need to process the payment.
 /// @param completionBlock Block to execute when your processing is done.
-- (void)payPalFuturePaymentViewController:(PayPalFuturePaymentViewController *)futurePaymentViewController
-                willAuthorizeFuturePayment:(NSDictionary *)futurePaymentAuthorization
-                          completionBlock:(PayPalFuturePaymentDelegateCompletionBlock)completionBlock;
+- (void)payPalFuturePaymentViewController:(nonnull PayPalFuturePaymentViewController *)futurePaymentViewController
+               willAuthorizeFuturePayment:(nonnull NSDictionary *)futurePaymentAuthorization
+                          completionBlock:(nonnull PayPalFuturePaymentDelegateCompletionBlock)completionBlock;
 @end
 
 
@@ -58,8 +58,8 @@ typedef void (^PayPalFuturePaymentDelegateCompletionBlock)(void);
 /// @param configuration The configuration to be used for the lifetime of the controller.
 ///     The configuration properties merchantName, merchantPrivacyPolicyURL, and merchantUserAgreementURL must be provided.
 /// @param delegate The delegate you want to receive updates about the future payment authorization.
-- (instancetype)initWithConfiguration:(PayPalConfiguration *)configuration
-                             delegate:(id<PayPalFuturePaymentDelegate>)delegate;
+- (nullable instancetype)initWithConfiguration:(nonnull PayPalConfiguration *)configuration
+                                      delegate:(nullable id<PayPalFuturePaymentDelegate>)delegate;
 
 /// Delegate access
 @property (nonatomic, weak, readonly) id<PayPalFuturePaymentDelegate> futurePaymentDelegate;

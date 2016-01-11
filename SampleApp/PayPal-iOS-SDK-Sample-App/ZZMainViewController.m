@@ -2,7 +2,7 @@
 //  ZZMainViewController.m
 //  PayPal-iOS-SDK-Sample-App
 //
-//  Copyright (c) 2014, PayPal
+//  Copyright (c) 2014-2016 PayPal, Inc. All rights reserved.
 //  All rights reserved.
 //
 
@@ -42,6 +42,9 @@
   // Set up payPalConfig
   _payPalConfig = [[PayPalConfiguration alloc] init];
 #if HAS_CARDIO
+  // You should use the PayPal-iOS-SDK+card-Sample-App target to enable this setting.
+  // For your apps, you will need to link to the libCardIO and dependent libraries. Please read the README.md
+  // for more details.
   _payPalConfig.acceptCreditCards = YES;
 #else
   _payPalConfig.acceptCreditCards = NO;

@@ -1,9 +1,9 @@
 //
 //  PayPalProfileSharingViewController.h
 //
-//  Version 2.12.9
+//  Version 2.13.0
 //
-//  Copyright (c) 2014, PayPal
+//  Copyright (c) 2014-2016 PayPal, Inc. All rights reserved.
 //  All rights reserved.
 //
 
@@ -24,7 +24,7 @@ typedef void (^PayPalProfileSharingDelegateCompletionBlock)(void);
 /// User canceled without consenting.
 /// Your code MUST dismiss the PayPalProfileSharingViewController.
 /// @param profileSharingViewController The PayPalProfileSharingViewController that the user canceled without consenting.
-- (void)userDidCancelPayPalProfileSharingViewController:(PayPalProfileSharingViewController *)profileSharingViewController;
+- (void)userDidCancelPayPalProfileSharingViewController:(nonnull PayPalProfileSharingViewController *)profileSharingViewController;
 
 /// User successfully logged in and consented.
 /// The PayPalProfileSharingViewController's activity indicator has been dismissed.
@@ -33,8 +33,8 @@ typedef void (^PayPalProfileSharingDelegateCompletionBlock)(void);
 /// Your code MUST dismiss the PayPalProfileSharingViewController.
 /// @param profileSharingViewController The PayPalProfileSharingViewController where the user successfully consented.
 /// @param authorization The authorization response, which you will return to your server.
-- (void)payPalProfileSharingViewController:(PayPalProfileSharingViewController *)profileSharingViewController
-             userDidLogInWithAuthorization:(NSDictionary *)profileSharingAuthorization;
+- (void)payPalProfileSharingViewController:(nonnull PayPalProfileSharingViewController *)profileSharingViewController
+             userDidLogInWithAuthorization:(nonnull NSDictionary *)profileSharingAuthorization;
 
 @optional
 /// User successfully logged in and consented.
@@ -45,9 +45,9 @@ typedef void (^PayPalProfileSharingDelegateCompletionBlock)(void);
 /// @param profileSharingViewController The PayPalProfileSharingViewController where the user successfully consented.
 /// @param authorization The authorization response, which you will return to your server.
 /// @param completionBlock Block to execute when your processing is done.
-- (void)payPalProfileSharingViewController:(PayPalProfileSharingViewController *)profileSharingViewController
-             userWillLogInWithAuthorization:(NSDictionary *)profileSharingAuthorization
-                           completionBlock:(PayPalProfileSharingDelegateCompletionBlock)completionBlock;
+- (void)payPalProfileSharingViewController:(nonnull PayPalProfileSharingViewController *)profileSharingViewController
+            userWillLogInWithAuthorization:(nonnull NSDictionary *)profileSharingAuthorization
+                           completionBlock:(nonnull PayPalProfileSharingDelegateCompletionBlock)completionBlock;
 @end
 
 
@@ -60,9 +60,9 @@ typedef void (^PayPalProfileSharingDelegateCompletionBlock)(void);
 /// @param configuration The configuration to be used for the lifetime of the controller
 ///     The configuration properties merchantName, merchantPrivacyPolicyURL, and merchantUserAgreementURL must be provided.
 /// @param delegate The delegate you want to receive updates about the profile-sharing authorization.
-- (instancetype)initWithScopeValues:(NSSet *)scopeValues
-                      configuration:(PayPalConfiguration *)configuration
-                           delegate:(id<PayPalProfileSharingDelegate>)delegate;
+- (nullable instancetype)initWithScopeValues:(nonnull NSSet *)scopeValues
+                               configuration:(nonnull PayPalConfiguration *)configuration
+                                    delegate:(nullable id<PayPalProfileSharingDelegate>)delegate;
 
 /// Delegate access
 @property (nonatomic, weak, readonly) id<PayPalProfileSharingDelegate> profileSharingDelegate;

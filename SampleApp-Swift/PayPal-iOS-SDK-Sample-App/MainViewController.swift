@@ -2,7 +2,7 @@
 //  MainViewController.swift
 //  PayPal-iOS-SDK-Sample-App
 //
-//  Copyright (c) 2015 PayPal. All rights reserved.
+//  Copyright (c) 2015-2016 PayPal, Inc. All rights reserved.
 //
 
 import UIKit
@@ -18,6 +18,9 @@ class MainViewController: UIViewController, PayPalPaymentDelegate, PayPalFutureP
   }
 
 #if HAS_CARDIO
+  // You should use the PayPal-iOS-SDK+card-Sample-App target to enable this setting.
+  // For your apps, you will need to link to the libCardIO and dependent libraries. Please read the README.md
+  // for more details.
   var acceptCreditCards: Bool = true {
     didSet {
       payPalConfig.acceptCreditCards = acceptCreditCards

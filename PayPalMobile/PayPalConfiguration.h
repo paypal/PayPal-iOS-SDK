@@ -1,9 +1,9 @@
 //
 //  PayPalConfiguration.h
 //
-//  Version 2.12.9
+//  Version 2.13.0
 //
-//  Copyright (c) 2014, PayPal
+//  Copyright (c) 2014-2016 PayPal, Inc. All rights reserved.
 //  All rights reserved.
 //
 
@@ -22,28 +22,28 @@ typedef NS_ENUM(NSInteger, PayPalShippingAddressOption) {
 /// Optional default user email address to be shown on the PayPal login view.
 /// Will be overridden by email used in most recent PayPal login.
 /// @see forceDefaultsInSandbox
-@property(nonatomic, copy, readwrite) NSString *defaultUserEmail;
+@property(nullable, nonatomic, copy, readwrite) NSString *defaultUserEmail;
 /// Optional default user phone country code used in the PayPal login view.
 /// The input to this method is expected to be a digit string.
 /// For example: `@"1"` for North America, `@"44"` for UK
 /// Will be overridden by phone country code used in most recent PayPal login.
 /// @see forceDefaultsInSandbox
-@property(nonatomic, copy, readwrite) NSString *defaultUserPhoneCountryCode;
+@property(nullable, nonatomic, copy, readwrite) NSString *defaultUserPhoneCountryCode;
 /// Optional default user phone number to be shown in the PayPal login view.
 /// Will be overridden by phone number used in most recent PayPal login.
 /// @note If you set defaultUserPhoneNumber, be sure to also set defaultUserPhoneCountryCode.
 /// @see forceDefaultsInSandbox
-@property(nonatomic, copy, readwrite) NSString *defaultUserPhoneNumber;
+@property(nullable, nonatomic, copy, readwrite) NSString *defaultUserPhoneNumber;
 
 /// Your company name, as it should be displayed to the user
 /// when requesting consent via a PayPalFuturePaymentViewController or a PayPalProfileSharingViewController.
-@property(nonatomic, copy, readwrite) NSString *merchantName;
+@property(nullable, nonatomic, copy, readwrite) NSString *merchantName;
 /// URL of your company's privacy policy, which will be offered to the user
 /// when requesting consent via a PayPalFuturePaymentViewController or a PayPalProfileSharingViewController.
-@property(nonatomic, copy, readwrite) NSURL *merchantPrivacyPolicyURL;
+@property(nullable, nonatomic, copy, readwrite) NSURL *merchantPrivacyPolicyURL;
 /// URL of your company's user agreement, which will be offered to the user
 /// when requesting consent via a PayPalFuturePaymentViewController or a PayPalProfileSharingViewController.
-@property(nonatomic, copy, readwrite) NSURL *merchantUserAgreementURL;
+@property(nullable, nonatomic, copy, readwrite) NSURL *merchantUserAgreementURL;
 
 /// If set to NO, the SDK will only support paying with PayPal, not with credit cards.
 /// This applies only to single payments (via PayPalPaymentViewController).
@@ -88,7 +88,7 @@ typedef NS_ENUM(NSInteger, PayPalShippingAddressOption) {
 ///
 /// These localizations are currently included:
 /// ar,da,de,en,en_AU,en_GB,es,es_MX,fr,he,it,ja,ko,ms,nb,nl,pl,pt,pt_BR,ru,sv,th,tr,zh-Hans,zh-Hant,zh-Hant_TW.
-@property(nonatomic, copy, readwrite) NSString *languageOrLocale;
+@property(nullable, nonatomic, copy, readwrite) NSString *languageOrLocale;
 
 /// If set to YES, then all displayed payment amounts will include a currency code (e.g., "USD")
 /// in addition to the standard currency symbol (e.g., "$").
@@ -123,8 +123,8 @@ typedef NS_ENUM(NSInteger, PayPalShippingAddressOption) {
 @property (nonatomic, assign, readwrite) BOOL forceDefaultsInSandbox;
 
 /// Password to use for sandbox if 'forceDefaultsInSandbox' is set.
-@property (nonatomic, copy, readwrite) NSString* sandboxUserPassword;
+@property (nullable, nonatomic, copy, readwrite) NSString* sandboxUserPassword;
 /// PIN to use for sandbox if 'forceDefaultsInSandbox' is set.
-@property (nonatomic, copy, readwrite) NSString* sandboxUserPin;
+@property (nullable, nonatomic, copy, readwrite) NSString* sandboxUserPin;
 
 @end

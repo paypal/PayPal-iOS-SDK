@@ -1,9 +1,9 @@
 //
 //  PayPalPaymentViewController.h
 //
-//  Version 2.12.9
+//  Version 2.13.0
 //
-//  Copyright (c) 2014, PayPal
+//  Copyright (c) 2014-2016 PayPal, Inc. All rights reserved.
 //  All rights reserved.
 //
 
@@ -32,7 +32,7 @@ typedef void (^PayPalPaymentDelegateCompletionBlock)(void);
 /// User canceled the payment process.
 /// Your code MUST dismiss the PayPalPaymentViewController.
 /// @param paymentViewController The PayPalPaymentViewController that the user canceled without making a payment.
-- (void)payPalPaymentDidCancel:(PayPalPaymentViewController *)paymentViewController;
+- (void)payPalPaymentDidCancel:(nonnull PayPalPaymentViewController *)paymentViewController;
 
 /// User successfully completed the payment.
 /// The PayPalPaymentViewController's activity indicator has been dismissed.
@@ -43,8 +43,8 @@ typedef void (^PayPalPaymentDelegateCompletionBlock)(void);
 ///     information about payment verification.
 /// @param paymentViewController The PayPalPaymentViewController where the user successfullly made a payment.
 /// @param completedPayment completedPayment.confirmation contains information your server will need to verify the payment.
-- (void)payPalPaymentViewController:(PayPalPaymentViewController *)paymentViewController
-                 didCompletePayment:(PayPalPayment *)completedPayment;
+- (void)payPalPaymentViewController:(nonnull PayPalPaymentViewController *)paymentViewController
+                 didCompletePayment:(nonnull PayPalPayment *)completedPayment;
 
 @optional
 /// User successfully completed the payment.
@@ -57,9 +57,9 @@ typedef void (^PayPalPaymentDelegateCompletionBlock)(void);
 /// @param paymentViewController The PayPalPaymentViewController where the user successfullly made a payment.
 /// @param completedPayment completedPayment.confirmation contains information your server will need to verify the payment.
 /// @param completionBlock Block to execute when your processing is done.
-- (void)payPalPaymentViewController:(PayPalPaymentViewController *)paymentViewController
-                 willCompletePayment:(PayPalPayment *)completedPayment
-                    completionBlock:(PayPalPaymentDelegateCompletionBlock)completionBlock;
+- (void)payPalPaymentViewController:(nonnull PayPalPaymentViewController *)paymentViewController
+                willCompletePayment:(nonnull PayPalPayment *)completedPayment
+                    completionBlock:(nonnull PayPalPaymentDelegateCompletionBlock)completionBlock;
 
 @end
 
@@ -73,9 +73,9 @@ typedef void (^PayPalPaymentDelegateCompletionBlock)(void);
 /// @param configuration The configuration to be used for the lifetime of the controller
 ///     (e.g., default email address or hideCreditCard); can be nil.
 /// @param delegate The delegate you want to receive updates about the payment.
-- (instancetype)initWithPayment:(PayPalPayment *)payment
-                  configuration:(PayPalConfiguration *)configuration
-                       delegate:(id<PayPalPaymentDelegate>)delegate;
+- (nullable instancetype)initWithPayment:(nonnull PayPalPayment *)payment
+                           configuration:(nullable PayPalConfiguration *)configuration
+                                delegate:(nonnull id<PayPalPaymentDelegate>)delegate;
 
 /// Delegate access
 @property(nonatomic, weak, readonly) id<PayPalPaymentDelegate> paymentDelegate;

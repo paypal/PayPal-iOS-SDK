@@ -2,7 +2,7 @@
 //  FlipsideViewController.swift
 //  PayPal-iOS-SDK-Sample-App
 //
-//  Copyright (c) 2015 PayPal. All rights reserved.
+//  Copyright (c) 2015-2016 PayPal, Inc. All rights reserved.
 //
 
 import UIKit

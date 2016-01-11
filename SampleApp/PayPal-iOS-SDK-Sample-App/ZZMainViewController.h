@@ -2,7 +2,7 @@
 //  ZZMainViewController.h
 //  PayPal-iOS-SDK-Sample-App
 //
-//  Copyright (c) 2014, PayPal
+//  Copyright (c) 2014-2016 PayPal, Inc. All rights reserved.
 //  All rights reserved.
 //
 

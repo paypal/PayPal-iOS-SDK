@@ -1,6 +1,11 @@
 PayPal iOS SDK release notes
 ============================
 
+2.13.0
+------
+* Add nullability annotations to headers
+* Minor internal code cleanup
+
 2.12.9
 ------
 * Fix issue determining valid negative amounts. See [issue #369](https://github.com/paypal/PayPal-iOS-SDK/issues/369).
