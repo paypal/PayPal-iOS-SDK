@@ -1,6 +1,6 @@
 //
 //  CardIODetectionMode.h
-//  Version 5.2.2
+//  Version 5.3.1
 //
 //  See the file "LICENSE.md" for the full license governing this code.
 //

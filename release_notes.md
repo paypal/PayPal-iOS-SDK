@@ -1,6 +1,10 @@
 PayPal iOS SDK release notes
 ============================
 
+2.13.1
+------
+* Update card.io to 5.3.1
+
 2.13.0
 ------
 * Add nullability annotations to headers
