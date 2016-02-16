@@ -1,6 +1,11 @@
 PayPal iOS SDK release notes
 ============================
 
+2.13.2
+------
+* Fix issue with small dynamic text truncating prices.
+  See [issue #381](https://github.com/paypal/PayPal-iOS-SDK/issues/381)
+
 2.13.1
 ------
 * Update card.io to 5.3.1
