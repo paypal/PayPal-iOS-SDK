@@ -1,6 +1,11 @@
 PayPal iOS SDK release notes
 ============================
 
+2.14.0
+------
+* Fix issue with iOS 9 right to left language support
+  See [issue #389](https://github.com/paypal/PayPal-iOS-SDK/issues/389)
+
 2.13.2
 ------
 * Fix issue with small dynamic text truncating prices.
