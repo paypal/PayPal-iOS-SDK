@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2D48B18616EE8F0800C83CD2 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D48B18416EE8F0800C83CD2 /* check.png */; };
-		2D48B18716EE8F0800C83CD2 /* check@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D48B18516EE8F0800C83CD2 /* check@2x.png */; };
-		3E589F031AF042C000D6BCEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 849BE6F716D4352100E03EEC /* main.m */; };
-		3E589F041AF042C000D6BCEA /* ZZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 849BE6FB16D4352100E03EEC /* ZZAppDelegate.m */; };
+		214AC9DC1C91D1EF00E8C447 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 214D22591C91C7F80007D05B /* Images.xcassets */; };
+		214D22581C91C7C90007D05B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 214D22571C91C7C90007D05B /* LaunchScreen.storyboard */; };
+		214D225A1C91C7F80007D05B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 214D22591C91C7F80007D05B /* Images.xcassets */; };
+		214D225B1C91CC3D0007D05B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 214D22571C91C7C90007D05B /* LaunchScreen.storyboard */; };
+		214D22601C91CE280007D05B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D225F1C91CE280007D05B /* AppDelegate.swift */; };
+		214D22611C91CE280007D05B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D225F1C91CE280007D05B /* AppDelegate.swift */; };
 		3E589F051AF042C000D6BCEA /* FlipsideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57484A31A702C9E00FC9438 /* FlipsideViewController.swift */; };
 		3E589F061AF042C000D6BCEA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57484A11A702C8700FC9438 /* MainViewController.swift */; };
 		3E589F081AF042C000D6BCEA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849BE72E16D440B100E03EEC /* AudioToolbox.framework */; };
@@ -30,19 +32,8 @@
 		3E589F161AF042C000D6BCEA /* libPayPalMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 849BE72616D4401C00E03EEC /* libPayPalMobile.a */; };
 		3E589F171AF042C000D6BCEA /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 849BE73116D440B100E03EEC /* libxml2.dylib */; };
 		3E589F191AF042C000D6BCEA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 849BE6F416D4352100E03EEC /* InfoPlist.strings */; };
-		3E589F1A1AF042C000D6BCEA /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 849BE6FD16D4352100E03EEC /* Default.png */; };
-		3E589F1B1AF042C000D6BCEA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 849BE6FF16D4352100E03EEC /* Default@2x.png */; };
-		3E589F1C1AF042C000D6BCEA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 849BE70116D4352100E03EEC /* Default-568h@2x.png */; };
 		3E589F1D1AF042C000D6BCEA /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849BE70316D4352100E03EEC /* MainStoryboard_iPhone.storyboard */; };
 		3E589F1E1AF042C000D6BCEA /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849BE70616D4352100E03EEC /* MainStoryboard_iPad.storyboard */; };
-		3E589F1F1AF042C000D6BCEA /* ios_sample_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 849BE72216D43F5E00E03EEC /* ios_sample_icon.png */; };
-		3E589F201AF042C000D6BCEA /* ios_sample_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 849BE72416D43F7F00E03EEC /* ios_sample_icon@2x.png */; };
-		3E589F211AF042C000D6BCEA /* button_secondary_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 849BE74A16D443EC00E03EEC /* button_secondary_selected.png */; };
-		3E589F221AF042C000D6BCEA /* button_secondary_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 849BE74B16D443EC00E03EEC /* button_secondary_selected@2x.png */; };
-		3E589F231AF042C000D6BCEA /* button_secondary.png in Resources */ = {isa = PBXBuildFile; fileRef = 849BE74C16D443EC00E03EEC /* button_secondary.png */; };
-		3E589F241AF042C000D6BCEA /* button_secondary@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 849BE74D16D443EC00E03EEC /* button_secondary@2x.png */; };
-		3E589F251AF042C000D6BCEA /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D48B18416EE8F0800C83CD2 /* check.png */; };
-		3E589F261AF042C000D6BCEA /* check@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D48B18516EE8F0800C83CD2 /* check@2x.png */; };
 		3E589FD51AF9632F00D6BCEA /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E589FD41AF9632F00D6BCEA /* Accelerate.framework */; };
 		3E589FD61AF9633700D6BCEA /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E589FD41AF9632F00D6BCEA /* Accelerate.framework */; };
 		3EC3966819FEBCA20044C28F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849BE73316D440B200E03EEC /* MobileCoreServices.framework */; };
@@ -50,15 +41,8 @@
 		849BE6EC16D4352100E03EEC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849BE6EB16D4352100E03EEC /* UIKit.framework */; };
 		849BE6EE16D4352100E03EEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849BE6ED16D4352100E03EEC /* Foundation.framework */; };
 		849BE6F616D4352100E03EEC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 849BE6F416D4352100E03EEC /* InfoPlist.strings */; };
-		849BE6F816D4352100E03EEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 849BE6F716D4352100E03EEC /* main.m */; };
-		849BE6FC16D4352100E03EEC /* ZZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 849BE6FB16D4352100E03EEC /* ZZAppDelegate.m */; };
-		849BE6FE16D4352100E03EEC /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 849BE6FD16D4352100E03EEC /* Default.png */; };
-		849BE70016D4352100E03EEC /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 849BE6FF16D4352100E03EEC /* Default@2x.png */; };
-		849BE70216D4352100E03EEC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 849BE70116D4352100E03EEC /* Default-568h@2x.png */; };
 		849BE70516D4352100E03EEC /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849BE70316D4352100E03EEC /* MainStoryboard_iPhone.storyboard */; };
 		849BE70816D4352100E03EEC /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849BE70616D4352100E03EEC /* MainStoryboard_iPad.storyboard */; };
-		849BE72316D43F5E00E03EEC /* ios_sample_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 849BE72216D43F5E00E03EEC /* ios_sample_icon.png */; };
-		849BE72516D43F7F00E03EEC /* ios_sample_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 849BE72416D43F7F00E03EEC /* ios_sample_icon@2x.png */; };
 		849BE72A16D4401C00E03EEC /* libPayPalMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 849BE72616D4401C00E03EEC /* libPayPalMobile.a */; };
 		849BE74016D440D700E03EEC /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849BE72E16D440B100E03EEC /* AudioToolbox.framework */; };
 		849BE74116D440D700E03EEC /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849BE72F16D440B100E03EEC /* CoreMedia.framework */; };
@@ -69,13 +53,9 @@
 		849BE74716D440D700E03EEC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849BE73516D440B200E03EEC /* QuartzCore.framework */; };
 		849BE74816D440D700E03EEC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849BE73616D440B200E03EEC /* Security.framework */; };
 		849BE74916D440D700E03EEC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849BE72C16D4407D00E03EEC /* AVFoundation.framework */; };
-		849BE74E16D443EC00E03EEC /* button_secondary_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 849BE74A16D443EC00E03EEC /* button_secondary_selected.png */; };
-		849BE74F16D443EC00E03EEC /* button_secondary_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 849BE74B16D443EC00E03EEC /* button_secondary_selected@2x.png */; };
-		849BE75016D443EC00E03EEC /* button_secondary.png in Resources */ = {isa = PBXBuildFile; fileRef = 849BE74C16D443EC00E03EEC /* button_secondary.png */; };
-		849BE75116D443EC00E03EEC /* button_secondary@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 849BE74D16D443EC00E03EEC /* button_secondary@2x.png */; };
-		A5F043FB1BD6AB6D000560EC /* libCardIO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F043F81BD6AB6D000560EC /* libCardIO.a */; settings = {ASSET_TAGS = (); }; };
-		A5F043FC1BD6AB6D000560EC /* libopencv_core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F043F91BD6AB6D000560EC /* libopencv_core.a */; settings = {ASSET_TAGS = (); }; };
-		A5F043FD1BD6AB6D000560EC /* libopencv_imgproc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F043FA1BD6AB6D000560EC /* libopencv_imgproc.a */; settings = {ASSET_TAGS = (); }; };
+		A5F043FB1BD6AB6D000560EC /* libCardIO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F043F81BD6AB6D000560EC /* libCardIO.a */; };
+		A5F043FC1BD6AB6D000560EC /* libopencv_core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F043F91BD6AB6D000560EC /* libopencv_core.a */; };
+		A5F043FD1BD6AB6D000560EC /* libopencv_imgproc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F043FA1BD6AB6D000560EC /* libopencv_imgproc.a */; };
 		D5463464178F5A2800A2D5F6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5463463178F5A2800A2D5F6 /* SystemConfiguration.framework */; };
 		D5709F301884CDBF00CCD3CA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5709F2F1884CDBF00CCD3CA /* CoreLocation.framework */; };
 		D57484A21A702C8700FC9438 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57484A11A702C8700FC9438 /* MainViewController.swift */; };
@@ -83,8 +63,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2D48B18416EE8F0800C83CD2 /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
-		2D48B18516EE8F0800C83CD2 /* check@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check@2x.png"; sourceTree = "<group>"; };
+		214D22571C91C7C90007D05B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		214D22591C91C7F80007D05B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		214D225F1C91CE280007D05B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E589F2A1AF042C000D6BCEA /* PayPal-iOS-SDK-Sample-App copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PayPal-iOS-SDK-Sample-App copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E589F2E1AF0433E00D6BCEA /* PayPal-iOS-SDK+cardio-Sample-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PayPal-iOS-SDK+cardio-Sample-App-Info.plist"; sourceTree = "<group>"; };
 		3E589FD41AF9632F00D6BCEA /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
@@ -97,17 +78,8 @@
 		849BE6EF16D4352100E03EEC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		849BE6F316D4352100E03EEC /* PayPal-iOS-SDK-Sample-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PayPal-iOS-SDK-Sample-App-Info.plist"; sourceTree = "<group>"; };
 		849BE6F516D4352100E03EEC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		849BE6F716D4352100E03EEC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		849BE6F916D4352100E03EEC /* PayPal-iOS-SDK-Sample-App-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PayPal-iOS-SDK-Sample-App-Prefix.pch"; sourceTree = "<group>"; };
-		849BE6FA16D4352100E03EEC /* ZZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZAppDelegate.h; sourceTree = "<group>"; };
-		849BE6FB16D4352100E03EEC /* ZZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZAppDelegate.m; sourceTree = "<group>"; };
-		849BE6FD16D4352100E03EEC /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		849BE6FF16D4352100E03EEC /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		849BE70116D4352100E03EEC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		849BE70416D4352100E03EEC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		849BE70716D4352100E03EEC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		849BE72216D43F5E00E03EEC /* ios_sample_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ios_sample_icon.png; sourceTree = "<group>"; };
-		849BE72416D43F7F00E03EEC /* ios_sample_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios_sample_icon@2x.png"; sourceTree = "<group>"; };
 		849BE72616D4401C00E03EEC /* libPayPalMobile.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPayPalMobile.a; path = ../PayPalMobile/libPayPalMobile.a; sourceTree = "<group>"; };
 		849BE72716D4401C00E03EEC /* PayPalMobile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PayPalMobile.h; path = ../PayPalMobile/PayPalMobile.h; sourceTree = "<group>"; };
 		849BE72816D4401C00E03EEC /* PayPalPayment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PayPalPayment.h; path = ../PayPalMobile/PayPalPayment.h; sourceTree = "<group>"; };
@@ -122,10 +94,6 @@
 		849BE73416D440B200E03EEC /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		849BE73516D440B200E03EEC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		849BE73616D440B200E03EEC /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		849BE74A16D443EC00E03EEC /* button_secondary_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_secondary_selected.png; sourceTree = "<group>"; };
-		849BE74B16D443EC00E03EEC /* button_secondary_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_secondary_selected@2x.png"; sourceTree = "<group>"; };
-		849BE74C16D443EC00E03EEC /* button_secondary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_secondary.png; sourceTree = "<group>"; };
-		849BE74D16D443EC00E03EEC /* button_secondary@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_secondary@2x.png"; sourceTree = "<group>"; };
 		A5F043F81BD6AB6D000560EC /* libCardIO.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libCardIO.a; path = ../CardIO/libCardIO.a; sourceTree = "<group>"; };
 		A5F043F91BD6AB6D000560EC /* libopencv_core.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libopencv_core.a; path = ../CardIO/libopencv_core.a; sourceTree = "<group>"; };
 		A5F043FA1BD6AB6D000560EC /* libopencv_imgproc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libopencv_imgproc.a; path = ../CardIO/libopencv_imgproc.a; sourceTree = "<group>"; };
@@ -240,14 +208,12 @@
 		849BE6F116D4352100E03EEC /* PayPal-iOS-SDK-Sample-App */ = {
 			isa = PBXGroup;
 			children = (
-				849BE6FA16D4352100E03EEC /* ZZAppDelegate.h */,
-				849BE6FB16D4352100E03EEC /* ZZAppDelegate.m */,
 				849BE70316D4352100E03EEC /* MainStoryboard_iPhone.storyboard */,
 				849BE70616D4352100E03EEC /* MainStoryboard_iPad.storyboard */,
-				849BE6F216D4352100E03EEC /* Supporting Files */,
-				D574849C1A702BC000FC9438 /* PayPal-iOS-SDK-Sample-App-Bridging-Header.h */,
 				D57484A11A702C8700FC9438 /* MainViewController.swift */,
 				D57484A31A702C9E00FC9438 /* FlipsideViewController.swift */,
+				214D225F1C91CE280007D05B /* AppDelegate.swift */,
+				849BE6F216D4352100E03EEC /* Supporting Files */,
 			);
 			path = "PayPal-iOS-SDK-Sample-App";
 			sourceTree = "<group>";
@@ -255,32 +221,14 @@
 		849BE6F216D4352100E03EEC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D574849C1A702BC000FC9438 /* PayPal-iOS-SDK-Sample-App-Bridging-Header.h */,
 				849BE6F316D4352100E03EEC /* PayPal-iOS-SDK-Sample-App-Info.plist */,
 				3E589F2E1AF0433E00D6BCEA /* PayPal-iOS-SDK+cardio-Sample-App-Info.plist */,
 				849BE6F416D4352100E03EEC /* InfoPlist.strings */,
-				849BE6F716D4352100E03EEC /* main.m */,
-				849BE6F916D4352100E03EEC /* PayPal-iOS-SDK-Sample-App-Prefix.pch */,
-				849BE6FD16D4352100E03EEC /* Default.png */,
-				849BE6FF16D4352100E03EEC /* Default@2x.png */,
-				849BE70116D4352100E03EEC /* Default-568h@2x.png */,
-				849BE71416D4389D00E03EEC /* Images */,
+				214D22571C91C7C90007D05B /* LaunchScreen.storyboard */,
+				214D22591C91C7F80007D05B /* Images.xcassets */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		849BE71416D4389D00E03EEC /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				2D48B18416EE8F0800C83CD2 /* check.png */,
-				2D48B18516EE8F0800C83CD2 /* check@2x.png */,
-				849BE72216D43F5E00E03EEC /* ios_sample_icon.png */,
-				849BE72416D43F7F00E03EEC /* ios_sample_icon@2x.png */,
-				849BE74A16D443EC00E03EEC /* button_secondary_selected.png */,
-				849BE74B16D443EC00E03EEC /* button_secondary_selected@2x.png */,
-				849BE74C16D443EC00E03EEC /* button_secondary.png */,
-				849BE74D16D443EC00E03EEC /* button_secondary@2x.png */,
-			);
-			path = Images;
 			sourceTree = "<group>";
 		};
 		849BE72B16D4402000E03EEC /* PayPalMobile */ = {
@@ -370,20 +318,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				214AC9DC1C91D1EF00E8C447 /* Images.xcassets in Resources */,
 				3E589F191AF042C000D6BCEA /* InfoPlist.strings in Resources */,
-				3E589F1A1AF042C000D6BCEA /* Default.png in Resources */,
-				3E589F1B1AF042C000D6BCEA /* Default@2x.png in Resources */,
-				3E589F1C1AF042C000D6BCEA /* Default-568h@2x.png in Resources */,
+				214D225B1C91CC3D0007D05B /* LaunchScreen.storyboard in Resources */,
 				3E589F1D1AF042C000D6BCEA /* MainStoryboard_iPhone.storyboard in Resources */,
 				3E589F1E1AF042C000D6BCEA /* MainStoryboard_iPad.storyboard in Resources */,
-				3E589F1F1AF042C000D6BCEA /* ios_sample_icon.png in Resources */,
-				3E589F201AF042C000D6BCEA /* ios_sample_icon@2x.png in Resources */,
-				3E589F211AF042C000D6BCEA /* button_secondary_selected.png in Resources */,
-				3E589F221AF042C000D6BCEA /* button_secondary_selected@2x.png in Resources */,
-				3E589F231AF042C000D6BCEA /* button_secondary.png in Resources */,
-				3E589F241AF042C000D6BCEA /* button_secondary@2x.png in Resources */,
-				3E589F251AF042C000D6BCEA /* check.png in Resources */,
-				3E589F261AF042C000D6BCEA /* check@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,19 +331,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				849BE6F616D4352100E03EEC /* InfoPlist.strings in Resources */,
-				849BE6FE16D4352100E03EEC /* Default.png in Resources */,
-				849BE70016D4352100E03EEC /* Default@2x.png in Resources */,
-				849BE70216D4352100E03EEC /* Default-568h@2x.png in Resources */,
 				849BE70516D4352100E03EEC /* MainStoryboard_iPhone.storyboard in Resources */,
 				849BE70816D4352100E03EEC /* MainStoryboard_iPad.storyboard in Resources */,
-				849BE72316D43F5E00E03EEC /* ios_sample_icon.png in Resources */,
-				849BE72516D43F7F00E03EEC /* ios_sample_icon@2x.png in Resources */,
-				849BE74E16D443EC00E03EEC /* button_secondary_selected.png in Resources */,
-				849BE74F16D443EC00E03EEC /* button_secondary_selected@2x.png in Resources */,
-				849BE75016D443EC00E03EEC /* button_secondary.png in Resources */,
-				849BE75116D443EC00E03EEC /* button_secondary@2x.png in Resources */,
-				2D48B18616EE8F0800C83CD2 /* check.png in Resources */,
-				2D48B18716EE8F0800C83CD2 /* check@2x.png in Resources */,
+				214D225A1C91C7F80007D05B /* Images.xcassets in Resources */,
+				214D22581C91C7C90007D05B /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,9 +345,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E589F031AF042C000D6BCEA /* main.m in Sources */,
-				3E589F041AF042C000D6BCEA /* ZZAppDelegate.m in Sources */,
 				3E589F051AF042C000D6BCEA /* FlipsideViewController.swift in Sources */,
+				214D22611C91CE280007D05B /* AppDelegate.swift in Sources */,
 				3E589F061AF042C000D6BCEA /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,9 +355,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				849BE6F816D4352100E03EEC /* main.m in Sources */,
-				849BE6FC16D4352100E03EEC /* ZZAppDelegate.m in Sources */,
 				D57484A41A702C9E00FC9438 /* FlipsideViewController.swift in Sources */,
+				214D22601C91CE280007D05B /* AppDelegate.swift in Sources */,
 				D57484A21A702C8700FC9438 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,6 +394,8 @@
 		3E589F281AF042C000D6BCEA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = Launch;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -494,6 +424,8 @@
 		3E589F291AF042C000D6BCEA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = Launch;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -584,6 +516,8 @@
 		849BE71216D4352100E03EEC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = Launch;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -609,6 +543,8 @@
 		849BE71316D4352100E03EEC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = Launch;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

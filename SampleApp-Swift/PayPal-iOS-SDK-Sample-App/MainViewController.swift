@@ -114,7 +114,7 @@ class MainViewController: UIViewController, PayPalPaymentDelegate, PayPalFutureP
     
     if (payment.processable) {
       let paymentViewController = PayPalPaymentViewController(payment: payment, configuration: payPalConfig, delegate: self)
-      presentViewController(paymentViewController, animated: true, completion: nil)
+      presentViewController(paymentViewController!, animated: true, completion: nil)
     }
     else {
       // This particular payment will always be processable. If, for
@@ -128,20 +128,20 @@ class MainViewController: UIViewController, PayPalPaymentDelegate, PayPalFutureP
   
   // PayPalPaymentDelegate
   
-  func payPalPaymentDidCancel(paymentViewController: PayPalPaymentViewController!) {
+  func payPalPaymentDidCancel(paymentViewController: PayPalPaymentViewController) {
     print("PayPal Payment Cancelled")
     resultText = ""
     successView.hidden = true
-    paymentViewController?.dismissViewControllerAnimated(true, completion: nil)
+    paymentViewController.dismissViewControllerAnimated(true, completion: nil)
   }
   
-  func payPalPaymentViewController(paymentViewController: PayPalPaymentViewController!, didCompletePayment completedPayment: PayPalPayment!) {
+  func payPalPaymentViewController(paymentViewController: PayPalPaymentViewController, didCompletePayment completedPayment: PayPalPayment) {
     print("PayPal Payment Success !")
-    paymentViewController?.dismissViewControllerAnimated(true, completion: { () -> Void in
+    paymentViewController.dismissViewControllerAnimated(true, completion: { () -> Void in
       // send completed confirmaion to your server
       print("Here is your proof of payment:\n\n\(completedPayment.confirmation)\n\nSend this to your server for confirmation and fulfillment.")
       
-      self.resultText = completedPayment!.description
+      self.resultText = completedPayment.description
       self.showSuccess()
     })
   }
@@ -151,21 +151,21 @@ class MainViewController: UIViewController, PayPalPaymentDelegate, PayPalFutureP
   
   @IBAction func authorizeFuturePaymentsAction(sender: AnyObject) {
     let futurePaymentViewController = PayPalFuturePaymentViewController(configuration: payPalConfig, delegate: self)
-    presentViewController(futurePaymentViewController, animated: true, completion: nil)
+    presentViewController(futurePaymentViewController!, animated: true, completion: nil)
   }
   
   
-  func payPalFuturePaymentDidCancel(futurePaymentViewController: PayPalFuturePaymentViewController!) {
+  func payPalFuturePaymentDidCancel(futurePaymentViewController: PayPalFuturePaymentViewController) {
     print("PayPal Future Payment Authorization Canceled")
     successView.hidden = true
-    futurePaymentViewController?.dismissViewControllerAnimated(true, completion: nil)
+    futurePaymentViewController.dismissViewControllerAnimated(true, completion: nil)
   }
   
-  func payPalFuturePaymentViewController(futurePaymentViewController: PayPalFuturePaymentViewController!, didAuthorizeFuturePayment futurePaymentAuthorization: [NSObject : AnyObject]!) {
+  func payPalFuturePaymentViewController(futurePaymentViewController: PayPalFuturePaymentViewController, didAuthorizeFuturePayment futurePaymentAuthorization: [NSObject : AnyObject]) {
     print("PayPal Future Payment Authorization Success!")
     // send authorization to your server to get refresh token.
-    futurePaymentViewController?.dismissViewControllerAnimated(true, completion: { () -> Void in
-      self.resultText = futurePaymentAuthorization!.description
+    futurePaymentViewController.dismissViewControllerAnimated(true, completion: { () -> Void in
+      self.resultText = futurePaymentAuthorization.description
       self.showSuccess()
     })
   }
@@ -175,24 +175,24 @@ class MainViewController: UIViewController, PayPalPaymentDelegate, PayPalFutureP
   @IBAction func authorizeProfileSharingAction(sender: AnyObject) {
     let scopes = [kPayPalOAuth2ScopeOpenId, kPayPalOAuth2ScopeEmail, kPayPalOAuth2ScopeAddress, kPayPalOAuth2ScopePhone]
     let profileSharingViewController = PayPalProfileSharingViewController(scopeValues: NSSet(array: scopes) as Set<NSObject>, configuration: payPalConfig, delegate: self)
-    presentViewController(profileSharingViewController, animated: true, completion: nil)
+    presentViewController(profileSharingViewController!, animated: true, completion: nil)
   }
   
   // PayPalProfileSharingDelegate
   
-  func userDidCancelPayPalProfileSharingViewController(profileSharingViewController: PayPalProfileSharingViewController!) {
+  func userDidCancelPayPalProfileSharingViewController(profileSharingViewController: PayPalProfileSharingViewController) {
     print("PayPal Profile Sharing Authorization Canceled")
     successView.hidden = true
-    profileSharingViewController?.dismissViewControllerAnimated(true, completion: nil)
+    profileSharingViewController.dismissViewControllerAnimated(true, completion: nil)
   }
   
-  func payPalProfileSharingViewController(profileSharingViewController: PayPalProfileSharingViewController!, userDidLogInWithAuthorization profileSharingAuthorization: [NSObject : AnyObject]!) {
+  func payPalProfileSharingViewController(profileSharingViewController: PayPalProfileSharingViewController, userDidLogInWithAuthorization profileSharingAuthorization: [NSObject : AnyObject]) {
     print("PayPal Profile Sharing Authorization Success!")
     
     // send authorization to your server
     
-    profileSharingViewController?.dismissViewControllerAnimated(true, completion: { () -> Void in
-      self.resultText = profileSharingAuthorization!.description
+    profileSharingViewController.dismissViewControllerAnimated(true, completion: { () -> Void in
+      self.resultText = profileSharingAuthorization.description
       self.showSuccess()
     })
 
