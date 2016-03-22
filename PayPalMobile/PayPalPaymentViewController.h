@@ -1,7 +1,7 @@
 //
 //  PayPalPaymentViewController.h
 //
-//  Version 2.14.0
+//  Version 2.14.1
 //
 //  Copyright (c) 2014-2016 PayPal, Inc. All rights reserved.
 //  All rights reserved.
@@ -78,7 +78,7 @@ typedef void (^PayPalPaymentDelegateCompletionBlock)(void);
                                 delegate:(nonnull id<PayPalPaymentDelegate>)delegate;
 
 /// Delegate access
-@property(nonatomic, weak, readonly) id<PayPalPaymentDelegate> paymentDelegate;
+@property(nonatomic, weak, readonly, nullable) id<PayPalPaymentDelegate> paymentDelegate;
 
 /// PayPalPaymentViewControllerState See the state property for context.
 typedef NS_ENUM(NSInteger, PayPalPaymentViewControllerState) {

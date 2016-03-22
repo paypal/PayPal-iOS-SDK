@@ -162,6 +162,21 @@ During development and testing, set the environment to Sandbox or NoNetwork/Mock
 * The [PayPal Developer Docs](https://developer.paypal.com/docs), which cover error codes and server-side integration instructions.
 
 
+## Support
+
+When opening an issue, please include the environment (live or sandbox), SDK version, and a `PayPal-Debug-ID`. The console log may have something like:
+
+```
+PayPal SDK: Request has failed with error: INTERNAL_SERVICE_ERROR - System error. Please try again later. (500) | PayPal Debug-ID: 463acd5lba23c [live, PayPal iOS SDK 2.14.1]
+```
+
+Additionally, information about the types of devices (iPhone 6s Plus, iPhone 5), iOS version, and any non-standard settings would be helpful to provide.
+
+For merchant-specific issues, you should use the [PayPal Merchant Technical Support site](https://www.paypal-techsupport.com) to open an issue.
+
+Please do **not** post your client ID or secret in an issue.
+
+
 ## Usability
 
 User interface appearance and behavior is set within the library itself. For the sake of usability and user experience consistency, apps should not adjust appearance properties or attempt to modify the SDK's behavior beyond the documented methods in the provided headers.

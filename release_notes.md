@@ -1,6 +1,11 @@
 PayPal iOS SDK release notes
 ============================
 
+2.14.1
+------
+* Fix missing nullability headers
+  See [issue #404](https://github.com/paypal/PayPal-iOS-SDK/issues/404)
+
 2.14.0
 ------
 * Fix issue with iOS 9 right to left language support

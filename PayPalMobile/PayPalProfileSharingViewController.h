@@ -1,7 +1,7 @@
 //
 //  PayPalProfileSharingViewController.h
 //
-//  Version 2.14.0
+//  Version 2.14.1
 //
 //  Copyright (c) 2014-2016 PayPal, Inc. All rights reserved.
 //  All rights reserved.
@@ -65,6 +65,6 @@ typedef void (^PayPalProfileSharingDelegateCompletionBlock)(void);
                                     delegate:(nullable id<PayPalProfileSharingDelegate>)delegate;
 
 /// Delegate access
-@property (nonatomic, weak, readonly) id<PayPalProfileSharingDelegate> profileSharingDelegate;
+@property (nonatomic, weak, readonly, nullable) id<PayPalProfileSharingDelegate> profileSharingDelegate;
 
 @end
