@@ -44,8 +44,8 @@ class FlipsideViewController: UIViewController {
     logEnvironment()
     
     // select correct segment
-    var numberOfSegments = environmentSegmentedControl.numberOfSegments
-    while (numberOfSegments > 0) {
+    var numberOfSegments = environmentSegmentedControl.numberOfSegments - 1
+    while (numberOfSegments >= 0) {
       let title = environmentSegmentedControl.titleForSegmentAtIndex(numberOfSegments)
       if title == flipsideDelegate!.environment {
         environmentSegmentedControl.selectedSegmentIndex = numberOfSegments
@@ -53,7 +53,7 @@ class FlipsideViewController: UIViewController {
       }
       numberOfSegments -= 1
     }
-    
+
     acceptCreditCardsSwitch.on = flipsideDelegate!.acceptCreditCards
     
 #if !HAS_CARDIO
