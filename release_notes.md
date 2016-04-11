@@ -1,6 +1,10 @@
 PayPal iOS SDK release notes
 ============================
 
+2.14.2
+------
+* Update card.io to iOS [5.3.2](https://github.com/card-io/card.io-iOS-SDK/releases/tag/5.3.2)
+
 2.14.1
 ------
 * Fix missing nullability headers

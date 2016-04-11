@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name             = 'PayPal-iOS-SDK'
-  spec.version          = '2.14.1'
+  spec.version          = '2.14.2'
   spec.license          = { type: 'BSD', file: 'LICENSE.md' }
   spec.homepage         = 'https://developer.paypal.com/webapps/developer/docs/integration/mobile/mobile-sdk-overview/'
   spec.authors          = { 'PayPal' => 'support@paypal.com' }
@@ -23,6 +23,6 @@ Pod::Spec.new do |spec|
   end
 
   spec.subspec 'CardIO' do |subspec|
-    subspec.dependency       'CardIO', '~> 5.3.1'
+    subspec.dependency       'CardIO', '~> 5.3.2'
   end
 end
