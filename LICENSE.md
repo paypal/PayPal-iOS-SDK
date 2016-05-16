@@ -1,6 +1,6 @@
 The PayPalMobile header files and the PayPal iOS SDK Sample App are released under the BSD License:
 
-    Copyright (c) 2014-2016 PayPal, Inc.
+    Copyright (c) 2014-2016 PayPal Holdings, Inc.
     All rights reserved.
 
     Redistribution and use in source and binary forms, with or without
