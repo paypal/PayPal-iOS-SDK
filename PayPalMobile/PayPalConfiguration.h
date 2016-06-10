@@ -1,7 +1,7 @@
 //
 //  PayPalConfiguration.h
 //
-//  Version 2.14.2
+//  Version 2.14.3
 //
 //  Copyright (c) 2014-2016 PayPal, Inc. All rights reserved.
 //  All rights reserved.
@@ -110,6 +110,10 @@ typedef NS_ENUM(NSInteger, PayPalShippingAddressOption) {
 /// If you will present the SDK's view controller within a popover, then set this property to YES.
 /// Defaults to NO.
 @property(nonatomic, assign, readwrite) BOOL presentingInPopover;
+
+/// If you would prefer to use dialog boxes instead of shake animations.
+/// Defaults to NO.
+@property(nonatomic, assign, readwrite) BOOL disableShakeAnimations;
 
 /// Sandbox credentials can be difficult to type on a mobile device. Setting this flag to YES will
 /// cause the sandboxUserPassword and sandboxUserPin to always be pre-populated into login fields.

@@ -8,7 +8,7 @@ The PayPal iOS SDK makes it easy to add PayPal and credit card payments to mobil
 *This documentation is available in Japanese: [日本語のドキュメント](docs/ja/README.md).*
 
 >### Note
-> There are 4 static libraries that you should link when building your application. `libPayPalMobile.a`, `libCardIO.a`, `libopencv_core.a`, and `libopencv_imgproc.a` are required for all of the SDK functionality.
+> There are 4 static libraries that you should link when building your application. `libPayPalMobile.a`, `libCardIO.a`, `libopencv_core.a', and `libopencv_imgproc.a` are required for all of the SDK functionality.
 >
 > The current version of the PayPal iOS SDK was built using Xcode 7.0+.
 >
@@ -102,8 +102,8 @@ pod 'PayPal-iOS-SDK'
   * `CoreMedia.framework`
   * `MessageUI.framework`
   * `MobileCoreServices.framework`
-  * `SafariServices.framework`
   * `SystemConfiguration.framework`
+  * `SafariServices.framework`
 
 ### With or without CocoaPods:
 
@@ -220,3 +220,10 @@ Depending on your use case, you can now:
 * [Obtain user consent](docs/future_payments_mobile.md) to [create future payments](docs/future_payments_server.md).
 * [Obtain user consent](docs/profile_sharing_mobile.md) to [retrieve customer information](docs/profile_sharing_server.md).
 
+## Contributing
+
+Please read our [contributing guidelines](CONTRIBUTING.md) prior to submitting a Pull Request.
+
+## License
+
+Please refer to this repo's [license file](LICENSE).

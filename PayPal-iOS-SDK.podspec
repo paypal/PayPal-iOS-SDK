@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
   spec.name             = 'PayPal-iOS-SDK'
-  spec.version          = '2.14.2'
-  spec.license          = { type: 'BSD', file: 'LICENSE.md' }
+  spec.version          = '2.14.3'
+  spec.license          = { type: 'BSD', file: 'LICENSE' }
   spec.homepage         = 'https://developer.paypal.com/webapps/developer/docs/integration/mobile/mobile-sdk-overview/'
   spec.authors          = { 'PayPal' => 'support@paypal.com' }
   spec.summary          = 'Accept credit cards and PayPal in your iOS app.'
