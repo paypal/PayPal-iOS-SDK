@@ -1,6 +1,11 @@
 PayPal iOS SDK release notes
 ============================
 
+2.14.4
+------
+* Update localized messages.
+* Fix issue with truncated text in certain table cells. See [issue #367](https://github.com/paypal/PayPal-iOS-SDK/issues/367).
+
 2.14.3
 ------
 * Change layout for 1Password icon to be in the email/phone field
