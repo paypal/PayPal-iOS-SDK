@@ -43,6 +43,8 @@
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>To scan credit cards.</string>
 	<key>UIMainStoryboardFile</key>
 	<string>MainStoryboard_iPhone</string>
 	<key>UIMainStoryboardFile~ipad</key>

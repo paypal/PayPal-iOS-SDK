@@ -1,49 +1,52 @@
 PayPal iOS SDK release notes
 ============================
 
+2.14.5
+------
+* Fix issue with Bitcode when archiving [#443](https://github.com/paypal/PayPal-iOS-SDK/issues/443).
+* If you use card.io to scan credit cards, you should add the key
+  [`NSCameraUsageDescription`](https://developer.apple.com/library/prerelease/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW24)
+  to your app's `Info.plist` and set the value to be a string describing why your app needs to use the camera
+  (e.g. "To scan credit cards."). This string will be displayed when the app initially requests permission to access
+  the camera.
+
 2.14.4
 ------
 * Update localized messages.
-* Fix issue with truncated text in certain table cells. See [issue #367](https://github.com/paypal/PayPal-iOS-SDK/issues/367).
+* Fix issue with truncated text in certain table cells [#367](https://github.com/paypal/PayPal-iOS-SDK/issues/367).
 
 2.14.3
 ------
-* Change layout for 1Password icon to be in the email/phone field
-  See [issue #405](https://github.com/paypal/PayPal-iOS-SDK/issues/405)
-* Allow configuration option to disable shake animations for accessibility
-  See [issue #380](https://github.com/paypal/PayPal-iOS-SDK/issues/380)
-  See `PayPalConfiguration disableShakeAnimations` option
-* Fix issue with missing 1Password data
-  See [issue #427](https://github.com/paypal/PayPal-iOS-SDK/issues/427)
-* Fix issue with network request timeouts
+* Change layout for 1Password icon to be in the email/phone field [#405](https://github.com/paypal/PayPal-iOS-SDK/issues/405).
+* Allow configuration option to disable shake animations for accessibility [#380](https://github.com/paypal/PayPal-iOS-SDK/issues/380).
+  See `PayPalConfiguration disableShakeAnimations` option.
+* Fix issue with missing 1Password data [#427](https://github.com/paypal/PayPal-iOS-SDK/issues/427).
+* Fix issue with network request timeouts.
 
 2.14.2
 ------
-* Update card.io to iOS [5.3.2](https://github.com/card-io/card.io-iOS-SDK/releases/tag/5.3.2)
+* Update card.io to iOS [5.3.2](https://github.com/card-io/card.io-iOS-SDK/releases/tag/5.3.2).
 
 2.14.1
 ------
-* Fix missing nullability headers
-  See [issue #404](https://github.com/paypal/PayPal-iOS-SDK/issues/404)
+* Fix missing nullability headers [#404](https://github.com/paypal/PayPal-iOS-SDK/issues/404).
 
 2.14.0
 ------
-* Fix issue with iOS 9 right to left language support
-  See [issue #389](https://github.com/paypal/PayPal-iOS-SDK/issues/389)
+* Fix issue with iOS 9 right to left language support [#389](https://github.com/paypal/PayPal-iOS-SDK/issues/389).
 
 2.13.2
 ------
-* Fix issue with small dynamic text truncating prices.
-  See [issue #381](https://github.com/paypal/PayPal-iOS-SDK/issues/381)
+* Fix issue with small dynamic text truncating prices [#381](https://github.com/paypal/PayPal-iOS-SDK/issues/381).
 
 2.13.1
 ------
-* Update card.io to 5.3.1
+* Update card.io to 5.3.1.
 
 2.13.0
 ------
-* Add nullability annotations to headers
-* Minor internal code cleanup
+* Add nullability annotations to headers.
+* Minor internal code cleanup.
 
 2.12.9
 ------
@@ -51,16 +54,16 @@ PayPal iOS SDK release notes
 
 2.12.8
 ------
-* Update network code and general code cleanup
+* Update network code and general code cleanup.
 
 2.12.7
 ------
-* Update networking code for iOS 7 to fix potential ClassicURLConnection crash
+* Update networking code for iOS 7 to fix potential ClassicURLConnection crash.
 
 2.12.6
 ------
 * When the wrong PayPal login credentials are used, use shake animation
-  and allow user to login again without having to click on Pay button again
+  and allow user to login again without having to click on Pay button again.
 
 2.12.5
 ------
@@ -73,52 +76,52 @@ PayPal iOS SDK release notes
 
 2.12.4
 ------
-* Split card.io libraries into 3 different libraries to help reduce the size of the individual files. [issue #339](https://github.com/paypal/PayPal-iOS-SDK/issues/339)
+* Split card.io libraries into 3 different libraries to help reduce the size of the individual files [#339](https://github.com/paypal/PayPal-iOS-SDK/issues/339).
   You should link to `libPayPalMobile.a`, `libCardIO.a`, `libopencv_core.a', and `libopencv_imgproc.a` for your app now. See notes in 2.12.2 for more information.
-* Fix issue with iOS 6 API availability with call to initWithBase64EncodedData:options: [issue #351](https://github.com/paypal/PayPal-iOS-SDK/issues/351)
-* Switch to use vendored_libraries in `PayPal-iOS-SDK.podspec` to help some CocoaPod issues
+* Fix issue with iOS 6 API availability with call to initWithBase64EncodedData:options: [issue #351](https://github.com/paypal/PayPal-iOS-SDK/issues/351).
+* Switch to use vendored_libraries in `PayPal-iOS-SDK.podspec` to help some CocoaPod issues.
 
 2.12.3
 ------
-* Fixed long string description text wrapping for iOS9
-* Updated Swift Sample App to Swift 2.0 syntax
-* Fixed cocoapods spec file to unzip libCardIO.a.zip when installing for dependency resolution
-* Parsing enhancement for empty response received from server APIs
+* Fixed long string description text wrapping for iOS9.
+* Updated Swift Sample App to Swift 2.0 syntax.
+* Fixed cocoapods spec file to unzip libCardIO.a.zip when installing for dependency resolution.
+* Parsing enhancement for empty response received from server APIs.
 
 2.12.2
 ------
 * There are now 2 static libraries which you should link to your application:
   - `libPayPalMobile.a` in the `PayPalMobile` directory
   - `libCardIO.a` in the `CardIO` directory. Please unzip the `libCardIO.a.zip` archive.
-* `libPayPalMobile.a` is a required static library which has all the previous PayPal functionality using the REST APIs
+* `libPayPalMobile.a` is a required static library which has all the previous PayPal functionality using the REST APIs.
 * `libCardIO.a` is an optional static library. If you want to allow payments by scanning credit cards, you must also
   link this library. It is currently zipped in a `libCardIO.a.zip` file. Use a standard unzip tool to unzip
   `CardIO\libCardIO.a.zip` to get `libCardIO.a`.
 * If you want the same functionality which you had before in version 2.12.1, link to both `libPayPalMobile.a` and
   `libCardIO.a`. You must use the `libPayPalMobile.a` and `libCardIO.a` from the same SDK.
 * Bitcode enabled the libraries. While the static libraries are larger, the application delivered to users should not
-  be significantly different in size compared to before. [Issue #284](https://github.com/paypal/PayPal-iOS-SDK/issues/284)
+  be significantly different in size compared to before [#284](https://github.com/paypal/PayPal-iOS-SDK/issues/284).
 * You must use Xcode 7.0 with these versions of the SDK. For Xcode 6.4, you can use the 2.11.x libraries but it is
   advised that you upgrade as soon as possible. Xcode 6.4 is not compatible with Bitcode enabled libraries.
 
 2.12.1
 ------
-* Fix [issue #320](https://github.com/paypal/PayPal-iOS-SDK/issues/320) with 2-Factor Authentication flow
-* Add README note for URL schemes which the SDK queries
+* Fix issue with 2-Factor Authentication flow [#320](https://github.com/paypal/PayPal-iOS-SDK/issues/320).
+* Add README note for URL schemes which the SDK queries.
 
 2.12.0
 ------
-* Built using Xcode 7.0
-* Use `SFSafariViewController` via `SafariServices.framework` (if linked) for opening web pages
+* Built using Xcode 7.0.
+* Use `SFSafariViewController` via `SafariServices.framework` (if linked) for opening web pages.
 * Fixed behavior where `retrieve_shipping_address ` is disabled and no `shipping address` is provided from the app,
   so it will not default to the PayPal account `shipping address`.
 
 2.11.5
 ------
-* Note this is the same code as 2.12.1 except built with Xcode 6.4 [issue #327](https://github.com/paypal/PayPal-iOS-SDK/issues/327)
-* Fix [issue #320](https://github.com/paypal/PayPal-iOS-SDK/issues/320) with 2-Factor Authentication flow
-* Add README note for URL schemes which the SDK queries
-* Use `SFSafariViewController` via `SafariServices.framework` (if linked) for opening web pages
+* Note this is the same code as 2.12.1 except built with Xcode 6.4 [#327](https://github.com/paypal/PayPal-iOS-SDK/issues/327).
+* Fix issue with 2-Factor Authentication flow [#320](https://github.com/paypal/PayPal-iOS-SDK/issues/320).
+* Add README note for URL schemes which the SDK queries.
+* Use `SFSafariViewController` via `SafariServices.framework` (if linked) for opening web pages.
 * Fixed behavior where `retrieve_shipping_address ` is disabled and no `shipping address` is provided from the app,
   so it will not default to the PayPal account `shipping address`.
 
@@ -142,15 +145,15 @@ PayPal iOS SDK release notes
 2.11.0
 ------
 * NOTE: version 2.11.0 requires Xcode 6.3+. If you are still using Xcode 6.2, please use version 2.10.2 of this SDK.
-* Update card.io library to 5.0.5. (fixes https://github.com/paypal/PayPal-iOS-SDK/issues/278)
+* Update card.io library to 5.0.5 [#278](https://github.com/paypal/PayPal-iOS-SDK/issues/278).
 * Minor bug fixes.
 
 2.10.2
 ------
-* Fix an iPad display issue. (see https://github.com/paypal/PayPal-iOS-SDK/issues/272)
+* Fix an iPad display issue [#272](https://github.com/paypal/PayPal-iOS-SDK/issues/272).
 * Improve mSDK screen blurring when app is backgrounded.
   NOTE: this change requires that you add one more framework to your project:
-        `Accelerate.framework`
+        `Accelerate.framework`.
 * Minor bug fixes.
 
 2.10.1
@@ -173,7 +176,7 @@ PayPal iOS SDK release notes
 
 2.8.5
 -----
-* Change "Send Payment" button to "Pay". (see https://github.com/paypal/PayPal-iOS-SDK/issues/174)
+* Change "Send Payment" button to "Pay" [#174](https://github.com/paypal/PayPal-iOS-SDK/issues/174).
 * Minor bug fixes.
 * Update card.io library to 5.0.2.
 
@@ -200,7 +203,7 @@ PayPal iOS SDK release notes
 
 2.8.1
 -----
-* Prevent a rare crash. (https://github.com/paypal/PayPal-iOS-SDK/issues/220)
+* Prevent a rare crash [#220](https://github.com/paypal/PayPal-iOS-SDK/issues/220).
 * Update card.io library to 4.0.1.
 
 2.8.0
@@ -220,9 +223,9 @@ PayPal iOS SDK release notes
 
 2.7.0
 -----
-* Add support for Russian Rubles. [issue #223](https://github.com/paypal/PayPal-iOS-SDK/issues/223)
+* Add support for Russian Rubles [#223](https://github.com/paypal/PayPal-iOS-SDK/issues/223).
 * Include public header files for [card.io](https://www.card.io), which is contained inside the PayPal iOS SDK,
-  for apps that use card.io directly. [issue #219](https://github.com/paypal/PayPal-iOS-SDK/issues/219)
+  for apps that use card.io directly [#219](https://github.com/paypal/PayPal-iOS-SDK/issues/219).
 * Minor improvements to Sample App.
 * Prevent a few more potential "duplicate symbol" problems for apps that are also integrating with 1Password.
 * Update card.io library to 3.10.1.
@@ -244,13 +247,13 @@ PayPal iOS SDK release notes
 * Add `presentingInPopover` property to `PayPalConfiguration`.
 * Add a new optional delegate method for each of our view controllers, to allow your app
   to talk with your server while our activity indicator is still visible.
-* Fix an iOS 6 crash. [issue #202](https://github.com/paypal/PayPal-iOS-SDK/issues/202)
+* Fix an iOS 6 crash [#202](https://github.com/paypal/PayPal-iOS-SDK/issues/202).
 * Update card.io library to 3.10.0.
 
 2.4.2
 -----
 * NOTE: version 2.4.2 requires Xcode 6 and iOS 8 SDK. If you are still using Xcode 5, please use version 2.3.2 of this SDK.
-* Correct the number of expected decimal places for the HUF and TWD currencies. [issue #191](https://github.com/paypal/PayPal-iOS-SDK/issues/191)
+* Correct the number of expected decimal places for the HUF and TWD currencies [#191](https://github.com/paypal/PayPal-iOS-SDK/issues/191).
 * Update card.io library to 3.9.0.
 
 2.4.1
@@ -262,9 +265,9 @@ PayPal iOS SDK release notes
 -----
 * NOTE 1: version 2.4.0 requires Xcode 6 and iOS 8 SDK. If you are still using Xcode 5, please use version 2.3.2 of this SDK.
 * NOTE 2: in the `Link Binary With Libraries` section of your project target's Build Phases, add:
-    * `AudioToolbox.framework`
-    * `CoreMedia.framework`
-    * `MobileCoreServices.framework`
+    - `AudioToolbox.framework`
+    - `CoreMedia.framework`
+    - `MobileCoreServices.framework`
 * Official release for iOS 8, built with Xcode 6 GM seed.
 * Support use of the iOS 8 1Password Extension for PayPal logins.
 * Update Sample App icons.
@@ -275,7 +278,7 @@ PayPal iOS SDK release notes
 
 2.3.2
 -----
-* Fix version reporting
+* Fix version reporting.
 
 2.3.1
 -----
@@ -285,7 +288,7 @@ PayPal iOS SDK release notes
 -----
 * Add support for `order` payments.
 * Add `invoiceNumber`, `custom`, and `softDescriptor` as optional properties on `PayPalPayment`.
-* For Single Payments, an individual `PayPalItem` `price` may now be negative (for coupons, etc). [issue #162](https://github.com/paypal/PayPal-iOS-SDK/issues/162)
+* For Single Payments, an individual `PayPalItem` `price` may now be negative (for coupons, etc) [#162](https://github.com/paypal/PayPal-iOS-SDK/issues/162).
 
 2.2.1
 -----
@@ -293,10 +296,10 @@ PayPal iOS SDK release notes
 
 2.2.0
 -----
-* Add Profile Sharing feature. (See `PayPalProfileSharingViewController.h`.)
+* Add Profile Sharing feature (see `PayPalProfileSharingViewController.h`).
 * For PayPal single payments, allow user to choose from app-provided and/or PayPal-account-provided Shipping Address.
 * For PayPal single payments, user will now automatically be offered a choice of funding options (when appropriate).
-* Fix a bug in the `clearAllUserData` method of `PayPalMobile`. (Credit card not being cleared while app remains in memory.)
+* Fix a bug in the `clearAllUserData` method of `PayPalMobile` where the credit card was not being cleared while app remains in memory.
 
 2.1.6
 -----
@@ -304,18 +307,18 @@ PayPal iOS SDK release notes
 
 2.1.5
 -----
-* Fix a very rare problem involving the app caches directory getting cleared. [issue #163](https://github.com/paypal/PayPal-iOS-SDK/issues/163)
+* Fix a very rare problem involving the app caches directory getting cleared [#163](https://github.com/paypal/PayPal-iOS-SDK/issues/163).
 
 2.1.4
 -----
-* Fix some localization issues. [issue #164](https://github.com/paypal/PayPal-iOS-SDK/issues/164)
+* Fix some localization issues [#164](https://github.com/paypal/PayPal-iOS-SDK/issues/164).
 * Update card.io library to 3.8.2.
 
 2.1.3
 -----
 * Fix a crash involving PayPal accounts that have enabled two-factor authentication.
 * Fix an iOS 8 crash.
-* Make the HK dialect of Traditional Chinese the default dialect. (zh-Hant_TW remains available as well.)
+* Make the HK dialect of Traditional Chinese the default dialect. `zh-Hant_TW` remains available as well.
 * Update card.io library to 3.8.0.
 
 2.1.2
@@ -340,7 +343,7 @@ PayPal iOS SDK release notes
 
 2.0.5
 -----
-* Update a Spanish translation. [issue #139](https://github.com/paypal/PayPal-iOS-SDK/issues/139)
+* Update a Spanish translation [#139](https://github.com/paypal/PayPal-iOS-SDK/issues/139).
 
 2.0.4
 -----
@@ -350,8 +353,7 @@ PayPal iOS SDK release notes
 -----
 * For payments using `PayPalPaymentIntentAuthorize`, the `PayPalPayment.confirmation` now includes `authorization_id`.
   [issue #125](https://github.com/paypal/PayPal-iOS-SDK/issues/125#issuecomment-39613855)
-* Correct the handling of currencies HKD, HUF, and TWD.
-  [issue #130](https://github.com/paypal/PayPal-iOS-SDK/issues/130)
+* Correct the handling of currencies HKD, HUF, and TWD [#130](https://github.com/paypal/PayPal-iOS-SDK/issues/130).
 
 2.0.2
 -----
@@ -364,7 +366,7 @@ PayPal iOS SDK release notes
 * A few very minor fixes:
   * Correct the version string returned by the SDK.
   * Tidy up some messages in the console log.
-  * Improve handling of iOS 7 dialects such as "British English."
+  * Improve handling of iOS 7 dialects.
 
 2.0.0
 -----
@@ -385,8 +387,7 @@ PayPal iOS SDK release notes
 
 1.4.6
 -----
-* Update card.io library to 3.4.4,
-  fixes [Issue #83: Crashes when card.io doesn't detect number](https://github.com/paypal/PayPal-iOS-SDK/issues/83)
+* Update card.io library to 3.4.4, fixes [#83: Crashes when card.io doesn't detect number](https://github.com/paypal/PayPal-iOS-SDK/issues/83).
 
 1.4.5
 -----
@@ -395,31 +396,31 @@ PayPal iOS SDK release notes
 1.4.4
 -----
 * Fix a bug that arose when `hideCreditCardButton` is set.
-* Update card.io library to 3.4.3
+* Update card.io library to 3.4.3.
 
 1.4.3
 -----
 * Improve the handling of right-to-left languages (e.g., Hebrew).
-* Update card.io library to 3.4.2
-* Fix [issue #66](https://github.com/paypal/PayPal-iOS-SDK/issues/66)
+* Update card.io library to 3.4.2.
+* Fix [issue #66](https://github.com/paypal/PayPal-iOS-SDK/issues/66).
 
 1.4.2
 -----
-* Fix [issue #60](https://github.com/paypal/PayPal-iOS-SDK/issues/60)
+* Fix [issue #60](https://github.com/paypal/PayPal-iOS-SDK/issues/60).
 
 1.4.1
 -----
-* Fix a problem with the 64-bit library
+* Fix a problem with the 64-bit library.
 
 1.4.0
 -----
-* Make 64-bit compatible
-* Require iOS 6.0 or greater
-* Update card.io library to 3.4.0
+* Make 64-bit compatible.
+* Require iOS 6.0 or greater.
+* Update card.io library to 3.4.0.
 
 1.3.6
 -----
-* Fix a problem with repeat purchase resulting in 52003 error on Sandbox
+* Fix a problem with repeat purchase resulting in 52003 error on Sandbox.
 
 1.3.5
 -----
@@ -441,7 +442,7 @@ PayPal iOS SDK release notes
 1.3.2-beta
 ----------
 
-* Better reposting of 1.3.1-beta
+* Better reposting of 1.3.1-beta.
 
 1.3.1-beta
 ----------
@@ -464,28 +465,28 @@ PayPal iOS SDK release notes
 * Eliminate the final "Complete" screen.
    * Your app's payPalPaymentDidComplete: method will now be called as soon as the payment has completed.
    * The PayPalTransactionDidSucceedNotification is no longer necessary and has been deprecated.
-* Additional localization: ko (Korean)
-* Update card.io library to 3.2.3
+* Additional localization: `ko` (Korean).
+* Update card.io library to 3.2.3.
 
 1.1.1
 -----
 
-* Additional localizations: es_MX, pt_BR
-* Update card.io library to 3.2.1
+* Additional localizations: `es_MX`, `pt_BR`.
+* Update card.io library to 3.2.1.
 * Fix small bugs.
 
 1.1.0
 -----
 
-* Update the required C++ Standard Library from `libstdc++` to `libc++`
+* Update the required C++ Standard Library from `libstdc++` to `libc++`.
    * NOTE: this will probably require a corresponding change to your app's `Other Linker Flags`, from `-lstdc++` to `-lc++`.
-   * (If you still need `libstdc++` for a component other than card.io, you should be able to specify BOTH `-lstdc++` AND `-lc++`.)
+   * If you still need `libstdc++` for a component other than card.io, you should be able to specify BOTH `-lstdc++` AND `-lc++`.
 * Add a new dependency: include SystemConfiguration.framework in your app's required libraries.
 * Add translations of all strings into ~20 languages, in addition to American English.
    * Translation choice is controlled by a new `languageOrLocale` property of `PayPalPaymentViewController`.
    * NOTE: Default language, if not set by your app, will now be based upon the device's current language setting.
-* Clarify library behavior if you pass `nil` for `payerId`. (See `PayPalPaymentViewController.h` for details.)
-* Update card.io library to 3.2.0
+* Clarify library behavior if you pass `nil` for `payerId` (see `PayPalPaymentViewController.h` for details).
+* Update card.io library to 3.2.0.
 * Fix small bugs.
 
 1.0.5
@@ -509,7 +510,7 @@ PayPal iOS SDK release notes
 
 * Update card.io library to 3.0.9.
     * Fixes [issue #10](https://github.com/paypal/PayPal-iOS-SDK/issues/10) in which the scanned card image obscured manual entry fields on iPad in landscape.
-* Add `PayPalPayment` convenience contructor.
+* Add `PayPalPayment` convenience constructor.
 * Fix small bugs.
 * Add BSD license.
 
