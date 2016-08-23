@@ -7,3 +7,5 @@
 
 ### Issue Description
 > Please include as many details (logs, steps to reproduce, screenshots) as you can to help us reproduce this issue faster.
+
+> If this is a live issue or a merchant account specific question, please contact [PayPal Merchant Technical Support](https://www.paypal-techsupport.com/app/ask).
