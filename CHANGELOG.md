@@ -1,6 +1,17 @@
 PayPal iOS SDK release notes
 ============================
 
+2.14.6
+------
+* Fix issue with localization not being correctly looked up [#449](https://github.com/paypal/PayPal-iOS-SDK/issues/449).
+  For iOS 9, the SDK will use the best matching language based on `NSBundle.preferredLocalizationsFromArray` and what
+  is translated in the SDK.
+* If you use card.io to scan credit cards, you should add the key
+  [`NSCameraUsageDescription`](https://developer.apple.com/library/prerelease/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW24)
+  to your app's `Info.plist` and set the value to be a string describing why your app needs to use the camera
+  (e.g. "To scan credit cards."). This string will be displayed when the app initially requests permission to access
+  the camera.
+
 2.14.5
 ------
 * Fix issue with Bitcode when archiving [#443](https://github.com/paypal/PayPal-iOS-SDK/issues/443).
