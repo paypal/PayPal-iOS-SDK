@@ -1,7 +1,7 @@
 //
 //  PayPalMobile.h
 //
-//  Version 2.14.7
+//  Version 2.15.0
 //
 //  Copyright (c) 2014-2016 PayPal, Inc. All rights reserved.
 //  All rights reserved.
