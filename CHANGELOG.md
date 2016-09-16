@@ -1,6 +1,10 @@
 PayPal iOS SDK release notes
 ============================
 
+2.15.1
+------
+* Update to card.io 5.4.1.
+
 2.15.0
 ------
 * Update to card.io 5.4.0 to help avoid API name collisions [#456](https://github.com/paypal/PayPal-iOS-SDK/issues/456).
