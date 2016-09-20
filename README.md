@@ -1,6 +1,6 @@
 [Braintree v.zero](https://www.braintreepayments.com/v.zero) is the easiest way to accept PayPal, credit cards, and many other payment methods. It is the recommended payment acceptance solution for these [supported countries](https://www.braintreepayments.com/country-selection). Braintree Payments is a PayPal company which processes many different payment methods including PayPal.
 
-* [Braintree iOS SDK](https://github.com/braintree/braintree_ios)
+[Braintree iOS SDK](https://github.com/braintree/braintree_ios)
 
 PayPal iOS SDK
 ==============
