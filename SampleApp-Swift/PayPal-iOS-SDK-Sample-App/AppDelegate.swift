@@ -12,10 +12,10 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window : UIWindow?
 
-     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
      
         //TODO: - Enter your credentials
-        PayPalMobile .initializeWithClientIdsForEnvironments([PayPalEnvironmentProduction: "YOUR_CLIENT_ID_FOR_PRODUCTION",
+        PayPalMobile .initializeWithClientIds(forEnvironments: [PayPalEnvironmentProduction: "YOUR_CLIENT_ID_FOR_PRODUCTION",
                                                                  PayPalEnvironmentSandbox: "YOUR_CLIENT_ID_FOR_SANDBOX"])
         return true
     }

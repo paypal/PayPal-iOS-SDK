@@ -9,7 +9,6 @@ import UIKit
 
 protocol FlipsideViewControllerDelegate {
   
-  var acceptCreditCards: Bool { get set }
   var environment: String { get set }
   var resultText: String {get set}
 }
@@ -17,7 +16,6 @@ protocol FlipsideViewControllerDelegate {
 class FlipsideViewController: UIViewController {
   
   @IBOutlet weak var environmentSegmentedControl: UISegmentedControl!
-  @IBOutlet weak var acceptCreditCardsSwitch: UISwitch!
   @IBOutlet weak var payResultLabel: UILabel!
   @IBOutlet weak var payResultTextView: UITextView!
   
@@ -27,7 +25,7 @@ class FlipsideViewController: UIViewController {
     super.viewDidLoad()
     
     // Do any additional setup after loading the view.
-    preferredContentSize = CGSizeMake(320.0, 480.0)
+    preferredContentSize = CGSize(width: 320.0, height: 480.0)
   }
   
   override func didReceiveMemoryWarning() {
@@ -36,52 +34,39 @@ class FlipsideViewController: UIViewController {
   }
   
   func logEnvironment() {
-    print("Environment: \(flipsideDelegate?.environment). Accept credit cards? \(flipsideDelegate?.acceptCreditCards)")
+    print("Environment: \(flipsideDelegate?.environment).")
   }
   
-  override func viewWillAppear(animated: Bool) {
+  override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     logEnvironment()
     
     // select correct segment
     var numberOfSegments = environmentSegmentedControl.numberOfSegments - 1
     while (numberOfSegments >= 0) {
-      let title = environmentSegmentedControl.titleForSegmentAtIndex(numberOfSegments)
+      let title = environmentSegmentedControl.titleForSegment(at: numberOfSegments)
       if title == flipsideDelegate!.environment {
         environmentSegmentedControl.selectedSegmentIndex = numberOfSegments
         break
       }
       numberOfSegments -= 1
     }
-
-    acceptCreditCardsSwitch.on = flipsideDelegate!.acceptCreditCards
-    
-#if !HAS_CARDIO
-    acceptCreditCardsSwitch.enabled = false
-#endif
     
     let resultText = flipsideDelegate!.resultText
     if !resultText.isEmpty {
       print("\(resultText)")
-      payResultTextView.text = resultText.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+      payResultTextView.text = resultText.trimmingCharacters(in: CharacterSet.whitespaces)
     } else {
-      payResultTextView.hidden = true
-      payResultLabel.hidden = true
+      payResultTextView.isHidden = true
+      payResultLabel.isHidden = true
     }
     payResultTextView.layer.cornerRadius = 8.0
   }
-  
-  
-  
-  @IBAction func environmentChanged(sender: AnyObject) {
-    flipsideDelegate?.environment = environmentSegmentedControl.titleForSegmentAtIndex(environmentSegmentedControl.selectedSegmentIndex)!.lowercaseString
+
+
+  @IBAction func environmentChanged(_ sender: AnyObject) {
+    flipsideDelegate?.environment = environmentSegmentedControl.titleForSegment(at: environmentSegmentedControl.selectedSegmentIndex)!.lowercased()
     logEnvironment()
   }
-  
-  
-  @IBAction func switchChanged(sender: AnyObject) {
-    flipsideDelegate?.acceptCreditCards = acceptCreditCardsSwitch.on
-    logEnvironment()
-  }
-  
+
 }

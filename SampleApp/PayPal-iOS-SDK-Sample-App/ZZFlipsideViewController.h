@@ -13,8 +13,6 @@
 
 @protocol ZZFlipsideViewControllerDelegate
 
-- (BOOL)acceptCreditCards;
-- (void)setAcceptCreditCards:(BOOL)processCreditCards;
 - (void)setPayPalEnvironment:(NSString *)environment;
 
 @property(nonatomic, strong, readwrite) NSString *environment;

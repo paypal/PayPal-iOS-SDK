@@ -12,27 +12,10 @@ class MainViewController: UIViewController, PayPalPaymentDelegate, PayPalFutureP
   var environment:String = PayPalEnvironmentNoNetwork {
     willSet(newEnvironment) {
       if (newEnvironment != environment) {
-        PayPalMobile.preconnectWithEnvironment(newEnvironment)
+        PayPalMobile.preconnect(withEnvironment: newEnvironment)
       }
     }
   }
-
-#if HAS_CARDIO
-  // You should use the PayPal-iOS-SDK+card-Sample-App target to enable this setting.
-  // For your apps, you will need to link to the libCardIO and dependent libraries. Please read the README.md
-  // for more details.
-  var acceptCreditCards: Bool = true {
-    didSet {
-      payPalConfig.acceptCreditCards = acceptCreditCards
-    }
-  }
-#else
-  var acceptCreditCards: Bool = false {
-    didSet {
-      payPalConfig.acceptCreditCards = acceptCreditCards
-    }
-  }
-#endif
 
   var resultText = "" // empty
   var payPalConfig = PayPalConfiguration() // default
@@ -44,13 +27,13 @@ class MainViewController: UIViewController, PayPalPaymentDelegate, PayPalFutureP
     
     // Do any additional setup after loading the view.
     title = "PayPal SDK Demo"
-    successView.hidden = true
+    successView.isHidden = true
     
     // Set up payPalConfig
-    payPalConfig.acceptCreditCards = acceptCreditCards;
+    payPalConfig.acceptCreditCards = false
     payPalConfig.merchantName = "Awesome Shirts, Inc."
-    payPalConfig.merchantPrivacyPolicyURL = NSURL(string: "https://www.paypal.com/webapps/mpp/ua/privacy-full")
-    payPalConfig.merchantUserAgreementURL = NSURL(string: "https://www.paypal.com/webapps/mpp/ua/useragreement-full")
+    payPalConfig.merchantPrivacyPolicyURL = URL(string: "https://www.paypal.com/webapps/mpp/ua/privacy-full")
+    payPalConfig.merchantUserAgreementURL = URL(string: "https://www.paypal.com/webapps/mpp/ua/useragreement-full")
     
     // Setting the languageOrLocale property is optional.
     //
@@ -63,26 +46,26 @@ class MainViewController: UIViewController, PayPalPaymentDelegate, PayPalFutureP
     //
     // For full details, including a list of available languages and locales, see PayPalPaymentViewController.h.
     
-    payPalConfig.languageOrLocale = NSLocale.preferredLanguages()[0] 
+    payPalConfig.languageOrLocale = Locale.preferredLanguages[0] 
     
     // Setting the payPalShippingAddressOption property is optional.
     //
     // See PayPalConfiguration.h for details.
     
-    payPalConfig.payPalShippingAddressOption = .PayPal;
+    payPalConfig.payPalShippingAddressOption = .payPal;
     
     print("PayPal iOS SDK Version: \(PayPalMobile.libraryVersion())")
     
   }
   
-  override func viewWillAppear(animated: Bool) {
+  override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    PayPalMobile.preconnectWithEnvironment(environment)
+    PayPalMobile.preconnect(withEnvironment: environment)
   }
   
   
   // MARK: Single Payment
-  @IBAction func buyClothingAction(sender: AnyObject) {
+  @IBAction func buyClothingAction(_ sender: AnyObject) {
     // Remove our last completed payment, just for demo purposes.
     resultText = ""
     
@@ -98,23 +81,23 @@ class MainViewController: UIViewController, PayPalPaymentDelegate, PayPalFutureP
     let item3 = PayPalItem(name: "Long-sleeve plaid shirt (mustache not included)", withQuantity: 1, withPrice: NSDecimalNumber(string: "37.99"), withCurrency: "USD", withSku: "Hip-00291")
     
     let items = [item1, item2, item3]
-    let subtotal = PayPalItem.totalPriceForItems(items)
+    let subtotal = PayPalItem.totalPrice(forItems: items)
     
     // Optional: include payment details
     let shipping = NSDecimalNumber(string: "5.99")
     let tax = NSDecimalNumber(string: "2.50")
     let paymentDetails = PayPalPaymentDetails(subtotal: subtotal, withShipping: shipping, withTax: tax)
     
-    let total = subtotal.decimalNumberByAdding(shipping).decimalNumberByAdding(tax)
+    let total = subtotal.adding(shipping).adding(tax)
     
-    let payment = PayPalPayment(amount: total, currencyCode: "USD", shortDescription: "Hipster Clothing", intent: .Sale)
+    let payment = PayPalPayment(amount: total, currencyCode: "USD", shortDescription: "Hipster Clothing", intent: .sale)
     
     payment.items = items
     payment.paymentDetails = paymentDetails
     
     if (payment.processable) {
       let paymentViewController = PayPalPaymentViewController(payment: payment, configuration: payPalConfig, delegate: self)
-      presentViewController(paymentViewController!, animated: true, completion: nil)
+      present(paymentViewController!, animated: true, completion: nil)
     }
     else {
       // This particular payment will always be processable. If, for
@@ -128,16 +111,16 @@ class MainViewController: UIViewController, PayPalPaymentDelegate, PayPalFutureP
   
   // PayPalPaymentDelegate
   
-  func payPalPaymentDidCancel(paymentViewController: PayPalPaymentViewController) {
+  func payPalPaymentDidCancel(_ paymentViewController: PayPalPaymentViewController) {
     print("PayPal Payment Cancelled")
     resultText = ""
-    successView.hidden = true
-    paymentViewController.dismissViewControllerAnimated(true, completion: nil)
+    successView.isHidden = true
+    paymentViewController.dismiss(animated: true, completion: nil)
   }
   
-  func payPalPaymentViewController(paymentViewController: PayPalPaymentViewController, didCompletePayment completedPayment: PayPalPayment) {
+  func payPalPaymentViewController(_ paymentViewController: PayPalPaymentViewController, didComplete completedPayment: PayPalPayment) {
     print("PayPal Payment Success !")
-    paymentViewController.dismissViewControllerAnimated(true, completion: { () -> Void in
+    paymentViewController.dismiss(animated: true, completion: { () -> Void in
       // send completed confirmaion to your server
       print("Here is your proof of payment:\n\n\(completedPayment.confirmation)\n\nSend this to your server for confirmation and fulfillment.")
       
@@ -149,22 +132,22 @@ class MainViewController: UIViewController, PayPalPaymentDelegate, PayPalFutureP
   
   // MARK: Future Payments
   
-  @IBAction func authorizeFuturePaymentsAction(sender: AnyObject) {
+  @IBAction func authorizeFuturePaymentsAction(_ sender: AnyObject) {
     let futurePaymentViewController = PayPalFuturePaymentViewController(configuration: payPalConfig, delegate: self)
-    presentViewController(futurePaymentViewController!, animated: true, completion: nil)
+    present(futurePaymentViewController!, animated: true, completion: nil)
   }
   
   
-  func payPalFuturePaymentDidCancel(futurePaymentViewController: PayPalFuturePaymentViewController) {
+  func payPalFuturePaymentDidCancel(_ futurePaymentViewController: PayPalFuturePaymentViewController) {
     print("PayPal Future Payment Authorization Canceled")
-    successView.hidden = true
-    futurePaymentViewController.dismissViewControllerAnimated(true, completion: nil)
+    successView.isHidden = true
+    futurePaymentViewController.dismiss(animated: true, completion: nil)
   }
   
-  func payPalFuturePaymentViewController(futurePaymentViewController: PayPalFuturePaymentViewController, didAuthorizeFuturePayment futurePaymentAuthorization: [NSObject : AnyObject]) {
+  func payPalFuturePaymentViewController(_ futurePaymentViewController: PayPalFuturePaymentViewController, didAuthorizeFuturePayment futurePaymentAuthorization: [AnyHashable: Any]) {
     print("PayPal Future Payment Authorization Success!")
     // send authorization to your server to get refresh token.
-    futurePaymentViewController.dismissViewControllerAnimated(true, completion: { () -> Void in
+    futurePaymentViewController.dismiss(animated: true, completion: { () -> Void in
       self.resultText = futurePaymentAuthorization.description
       self.showSuccess()
     })
@@ -172,26 +155,26 @@ class MainViewController: UIViewController, PayPalPaymentDelegate, PayPalFutureP
   
   // MARK: Profile Sharing
   
-  @IBAction func authorizeProfileSharingAction(sender: AnyObject) {
+  @IBAction func authorizeProfileSharingAction(_ sender: AnyObject) {
     let scopes = [kPayPalOAuth2ScopeOpenId, kPayPalOAuth2ScopeEmail, kPayPalOAuth2ScopeAddress, kPayPalOAuth2ScopePhone]
     let profileSharingViewController = PayPalProfileSharingViewController(scopeValues: NSSet(array: scopes) as Set<NSObject>, configuration: payPalConfig, delegate: self)
-    presentViewController(profileSharingViewController!, animated: true, completion: nil)
+    present(profileSharingViewController!, animated: true, completion: nil)
   }
   
   // PayPalProfileSharingDelegate
   
-  func userDidCancelPayPalProfileSharingViewController(profileSharingViewController: PayPalProfileSharingViewController) {
+  func userDidCancel(_ profileSharingViewController: PayPalProfileSharingViewController) {
     print("PayPal Profile Sharing Authorization Canceled")
-    successView.hidden = true
-    profileSharingViewController.dismissViewControllerAnimated(true, completion: nil)
+    successView.isHidden = true
+    profileSharingViewController.dismiss(animated: true, completion: nil)
   }
   
-  func payPalProfileSharingViewController(profileSharingViewController: PayPalProfileSharingViewController, userDidLogInWithAuthorization profileSharingAuthorization: [NSObject : AnyObject]) {
+  func payPalProfileSharingViewController(_ profileSharingViewController: PayPalProfileSharingViewController, userDidLogInWithAuthorization profileSharingAuthorization: [AnyHashable: Any]) {
     print("PayPal Profile Sharing Authorization Success!")
     
     // send authorization to your server
     
-    profileSharingViewController.dismissViewControllerAnimated(true, completion: { () -> Void in
+    profileSharingViewController.dismiss(animated: true, completion: { () -> Void in
       self.resultText = profileSharingAuthorization.description
       self.showSuccess()
     })
@@ -201,13 +184,13 @@ class MainViewController: UIViewController, PayPalPaymentDelegate, PayPalFutureP
   
   // MARK: - Navigation
   // In a storyboard-based application, you will often want to do a little preparation before navigation
-  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     // Get the new view controller using segue.destinationViewController.
     // Pass the selected object to the new view controller.
     
     if segue.identifier == "pushSettings" {
       // [segue destinationViewController] setDelegate:(id)self];
-      if let flipSideViewController = segue.destinationViewController as? FlipsideViewController {
+      if let flipSideViewController = segue.destination as? FlipsideViewController {
         flipSideViewController.flipsideDelegate = self
       }
     }
@@ -217,7 +200,7 @@ class MainViewController: UIViewController, PayPalPaymentDelegate, PayPalFutureP
   // MARK: Helpers
   
   func showSuccess() {
-    successView.hidden = false
+    successView.isHidden = false
     successView.alpha = 1.0
     UIView.beginAnimations(nil, context: nil)
     UIView.setAnimationDuration(0.5)

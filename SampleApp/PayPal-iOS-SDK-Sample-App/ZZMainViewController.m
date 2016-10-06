@@ -27,28 +27,13 @@
 
 @implementation ZZMainViewController
 
-- (BOOL)acceptCreditCards {
-  return self.payPalConfig.acceptCreditCards;
-}
-
-- (void)setAcceptCreditCards:(BOOL)acceptCreditCards {
-  self.payPalConfig.acceptCreditCards = acceptCreditCards;
-}
-
 - (void)viewDidLoad {
   [super viewDidLoad];
   self.title = @"PayPal SDK Demo";
 
   // Set up payPalConfig
   _payPalConfig = [[PayPalConfiguration alloc] init];
-#if HAS_CARDIO
-  // You should use the PayPal-iOS-SDK+card-Sample-App target to enable this setting.
-  // For your apps, you will need to link to the libCardIO and dependent libraries. Please read the README.md
-  // for more details.
-  _payPalConfig.acceptCreditCards = YES;
-#else
   _payPalConfig.acceptCreditCards = NO;
-#endif
   _payPalConfig.merchantName = @"Awesome Shirts, Inc.";
   _payPalConfig.merchantPrivacyPolicyURL = [NSURL URLWithString:@"https://www.paypal.com/webapps/mpp/ua/privacy-full"];
   _payPalConfig.merchantUserAgreementURL = [NSURL URLWithString:@"https://www.paypal.com/webapps/mpp/ua/useragreement-full"];
@@ -148,9 +133,6 @@
     // empty, this payment wouldn't be processable, and you'd want
     // to handle that here.
   }
-
-  // Update payPalConfig re accepting credit cards.
-  self.payPalConfig.acceptCreditCards = self.acceptCreditCards;
   
   PayPalPaymentViewController *paymentViewController = [[PayPalPaymentViewController alloc] initWithPayment:payment
                                                                                               configuration:self.payPalConfig

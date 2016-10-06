@@ -1,7 +1,7 @@
 //
 //  PayPalPayment.h
 //
-//  Version 2.15.1
+//  Version 2.16.0
 //
 //  Copyright (c) 2014-2016 PayPal, Inc. All rights reserved.
 //  All rights reserved.
@@ -205,6 +205,9 @@ typedef NS_ENUM(NSInteger, PayPalPaymentIntent) {
 
 /// Optional text which will appear on the customer's credit card statement. (up to 22 characters)
 @property (nullable, nonatomic, copy, readwrite) NSString *softDescriptor;
+
+/// Optional third-party receiver for single payments. When specified, payments will be sent to this receiver, instead of the account of the provided client_id.
+@property (nullable, nonatomic, copy, readwrite) NSString *payeeEmail;
 
 /// Optional Build Notation code ("BN code"), obtained from partnerprogram@paypal.com,
 /// for your tracking purposes.

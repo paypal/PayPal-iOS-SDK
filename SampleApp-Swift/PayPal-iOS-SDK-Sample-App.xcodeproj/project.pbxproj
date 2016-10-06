@@ -7,35 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		214AC9DC1C91D1EF00E8C447 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 214D22591C91C7F80007D05B /* Images.xcassets */; };
 		214D22581C91C7C90007D05B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 214D22571C91C7C90007D05B /* LaunchScreen.storyboard */; };
 		214D225A1C91C7F80007D05B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 214D22591C91C7F80007D05B /* Images.xcassets */; };
-		214D225B1C91CC3D0007D05B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 214D22571C91C7C90007D05B /* LaunchScreen.storyboard */; };
 		214D22601C91CE280007D05B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D225F1C91CE280007D05B /* AppDelegate.swift */; };
-		214D22611C91CE280007D05B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D225F1C91CE280007D05B /* AppDelegate.swift */; };
-		3E589F051AF042C000D6BCEA /* FlipsideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57484A31A702C9E00FC9438 /* FlipsideViewController.swift */; };
-		3E589F061AF042C000D6BCEA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57484A11A702C8700FC9438 /* MainViewController.swift */; };
-		3E589F081AF042C000D6BCEA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849BE72E16D440B100E03EEC /* AudioToolbox.framework */; };
-		3E589F091AF042C000D6BCEA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849BE72C16D4407D00E03EEC /* AVFoundation.framework */; };
-		3E589F0A1AF042C000D6BCEA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849BE6EF16D4352100E03EEC /* CoreGraphics.framework */; };
-		3E589F0B1AF042C000D6BCEA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5709F2F1884CDBF00CCD3CA /* CoreLocation.framework */; };
-		3E589F0C1AF042C000D6BCEA /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849BE72F16D440B100E03EEC /* CoreMedia.framework */; };
-		3E589F0D1AF042C000D6BCEA /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849BE73016D440B100E03EEC /* CoreVideo.framework */; };
-		3E589F0E1AF042C000D6BCEA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849BE6ED16D4352100E03EEC /* Foundation.framework */; };
-		3E589F0F1AF042C000D6BCEA /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849BE73216D440B100E03EEC /* MessageUI.framework */; };
-		3E589F101AF042C000D6BCEA /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849BE73316D440B200E03EEC /* MobileCoreServices.framework */; };
-		3E589F111AF042C000D6BCEA /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849BE73416D440B200E03EEC /* OpenGLES.framework */; };
-		3E589F121AF042C000D6BCEA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849BE73516D440B200E03EEC /* QuartzCore.framework */; };
-		3E589F131AF042C000D6BCEA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849BE73616D440B200E03EEC /* Security.framework */; };
-		3E589F141AF042C000D6BCEA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5463463178F5A2800A2D5F6 /* SystemConfiguration.framework */; };
-		3E589F151AF042C000D6BCEA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849BE6EB16D4352100E03EEC /* UIKit.framework */; };
-		3E589F161AF042C000D6BCEA /* libPayPalMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 849BE72616D4401C00E03EEC /* libPayPalMobile.a */; };
-		3E589F171AF042C000D6BCEA /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 849BE73116D440B100E03EEC /* libxml2.dylib */; };
-		3E589F191AF042C000D6BCEA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 849BE6F416D4352100E03EEC /* InfoPlist.strings */; };
-		3E589F1D1AF042C000D6BCEA /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849BE70316D4352100E03EEC /* MainStoryboard_iPhone.storyboard */; };
-		3E589F1E1AF042C000D6BCEA /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849BE70616D4352100E03EEC /* MainStoryboard_iPad.storyboard */; };
 		3E589FD51AF9632F00D6BCEA /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E589FD41AF9632F00D6BCEA /* Accelerate.framework */; };
-		3E589FD61AF9633700D6BCEA /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E589FD41AF9632F00D6BCEA /* Accelerate.framework */; };
 		3EC3966819FEBCA20044C28F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849BE73316D440B200E03EEC /* MobileCoreServices.framework */; };
 		3ED93D8119C7814400478314 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849BE6EF16D4352100E03EEC /* CoreGraphics.framework */; };
 		849BE6EC16D4352100E03EEC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849BE6EB16D4352100E03EEC /* UIKit.framework */; };
@@ -53,9 +28,6 @@
 		849BE74716D440D700E03EEC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849BE73516D440B200E03EEC /* QuartzCore.framework */; };
 		849BE74816D440D700E03EEC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849BE73616D440B200E03EEC /* Security.framework */; };
 		849BE74916D440D700E03EEC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849BE72C16D4407D00E03EEC /* AVFoundation.framework */; };
-		A5F043FB1BD6AB6D000560EC /* libCardIO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F043F81BD6AB6D000560EC /* libCardIO.a */; };
-		A5F043FC1BD6AB6D000560EC /* libopencv_core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F043F91BD6AB6D000560EC /* libopencv_core.a */; };
-		A5F043FD1BD6AB6D000560EC /* libopencv_imgproc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F043FA1BD6AB6D000560EC /* libopencv_imgproc.a */; };
 		D5463464178F5A2800A2D5F6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5463463178F5A2800A2D5F6 /* SystemConfiguration.framework */; };
 		D5709F301884CDBF00CCD3CA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5709F2F1884CDBF00CCD3CA /* CoreLocation.framework */; };
 		D57484A21A702C8700FC9438 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57484A11A702C8700FC9438 /* MainViewController.swift */; };
@@ -66,7 +38,6 @@
 		214D22571C91C7C90007D05B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		214D22591C91C7F80007D05B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		214D225F1C91CE280007D05B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3E589F2A1AF042C000D6BCEA /* PayPal-iOS-SDK-Sample-App copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PayPal-iOS-SDK-Sample-App copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E589F2E1AF0433E00D6BCEA /* PayPal-iOS-SDK+cardio-Sample-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PayPal-iOS-SDK+cardio-Sample-App-Info.plist"; sourceTree = "<group>"; };
 		3E589FD41AF9632F00D6BCEA /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		3E7AF6B419773AB300A4CF5E /* PayPalFuturePaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PayPalFuturePaymentViewController.h; path = ../PayPalMobile/PayPalFuturePaymentViewController.h; sourceTree = "<group>"; };
@@ -106,33 +77,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3E589F071AF042C000D6BCEA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A5F043FB1BD6AB6D000560EC /* libCardIO.a in Frameworks */,
-				3E589FD61AF9633700D6BCEA /* Accelerate.framework in Frameworks */,
-				3E589F081AF042C000D6BCEA /* AudioToolbox.framework in Frameworks */,
-				3E589F091AF042C000D6BCEA /* AVFoundation.framework in Frameworks */,
-				3E589F0A1AF042C000D6BCEA /* CoreGraphics.framework in Frameworks */,
-				3E589F0B1AF042C000D6BCEA /* CoreLocation.framework in Frameworks */,
-				3E589F0C1AF042C000D6BCEA /* CoreMedia.framework in Frameworks */,
-				3E589F0D1AF042C000D6BCEA /* CoreVideo.framework in Frameworks */,
-				3E589F0E1AF042C000D6BCEA /* Foundation.framework in Frameworks */,
-				3E589F0F1AF042C000D6BCEA /* MessageUI.framework in Frameworks */,
-				3E589F101AF042C000D6BCEA /* MobileCoreServices.framework in Frameworks */,
-				3E589F111AF042C000D6BCEA /* OpenGLES.framework in Frameworks */,
-				A5F043FC1BD6AB6D000560EC /* libopencv_core.a in Frameworks */,
-				3E589F121AF042C000D6BCEA /* QuartzCore.framework in Frameworks */,
-				3E589F131AF042C000D6BCEA /* Security.framework in Frameworks */,
-				3E589F141AF042C000D6BCEA /* SystemConfiguration.framework in Frameworks */,
-				3E589F151AF042C000D6BCEA /* UIKit.framework in Frameworks */,
-				3E589F161AF042C000D6BCEA /* libPayPalMobile.a in Frameworks */,
-				3E589F171AF042C000D6BCEA /* libxml2.dylib in Frameworks */,
-				A5F043FD1BD6AB6D000560EC /* libopencv_imgproc.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		849BE6E516D4352100E03EEC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -174,7 +118,6 @@
 			isa = PBXGroup;
 			children = (
 				849BE6E816D4352100E03EEC /* PayPal-iOS-SDK-Sample-App.app */,
-				3E589F2A1AF042C000D6BCEA /* PayPal-iOS-SDK-Sample-App copy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -249,23 +192,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3E589F011AF042C000D6BCEA /* PayPal-iOS-SDK+cardio-Sample-App */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3E589F271AF042C000D6BCEA /* Build configuration list for PBXNativeTarget "PayPal-iOS-SDK+cardio-Sample-App" */;
-			buildPhases = (
-				3E589F021AF042C000D6BCEA /* Sources */,
-				3E589F071AF042C000D6BCEA /* Frameworks */,
-				3E589F181AF042C000D6BCEA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "PayPal-iOS-SDK+cardio-Sample-App";
-			productName = "PayPal-iOS-SDK-Sample-App";
-			productReference = 3E589F2A1AF042C000D6BCEA /* PayPal-iOS-SDK-Sample-App copy.app */;
-			productType = "com.apple.product-type.application";
-		};
 		849BE6E716D4352100E03EEC /* PayPal-iOS-SDK-Sample-App */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 849BE71116D4352100E03EEC /* Build configuration list for PBXNativeTarget "PayPal-iOS-SDK-Sample-App" */;
@@ -294,6 +220,11 @@
 				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = PayPal;
+				TargetAttributes = {
+					849BE6E716D4352100E03EEC = {
+						LastSwiftMigration = 0800;
+					};
+				};
 			};
 			buildConfigurationList = 849BE6E316D4352000E03EEC /* Build configuration list for PBXProject "PayPal-iOS-SDK-Sample-App" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -308,24 +239,11 @@
 			projectRoot = "";
 			targets = (
 				849BE6E716D4352100E03EEC /* PayPal-iOS-SDK-Sample-App */,
-				3E589F011AF042C000D6BCEA /* PayPal-iOS-SDK+cardio-Sample-App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3E589F181AF042C000D6BCEA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				214AC9DC1C91D1EF00E8C447 /* Images.xcassets in Resources */,
-				3E589F191AF042C000D6BCEA /* InfoPlist.strings in Resources */,
-				214D225B1C91CC3D0007D05B /* LaunchScreen.storyboard in Resources */,
-				3E589F1D1AF042C000D6BCEA /* MainStoryboard_iPhone.storyboard in Resources */,
-				3E589F1E1AF042C000D6BCEA /* MainStoryboard_iPad.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		849BE6E616D4352100E03EEC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -341,16 +259,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3E589F021AF042C000D6BCEA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3E589F051AF042C000D6BCEA /* FlipsideViewController.swift in Sources */,
-				214D22611C91CE280007D05B /* AppDelegate.swift in Sources */,
-				3E589F061AF042C000D6BCEA /* MainViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		849BE6E416D4352100E03EEC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -391,65 +299,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		3E589F281AF042C000D6BCEA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = Launch;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "PayPal-iOS-SDK-Sample-App/PayPal-iOS-SDK-Sample-App-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
-				INFOPLIST_FILE = "PayPal-iOS-SDK-Sample-App/PayPal-iOS-SDK+cardio-Sample-App-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../PayPalMobile\"",
-					"\"$(SRCROOT)/../CardIO\"",
-				);
-				OTHER_LDFLAGS = (
-					"-lc++",
-					"-ObjC",
-				);
-				OTHER_SWIFT_FLAGS = "-DHAS_CARDIO";
-				PRODUCT_NAME = "PayPal-iOS-SDK-Sample-App copy";
-				SWIFT_OBJC_BRIDGING_HEADER = "PayPal-iOS-SDK-Sample-App/PayPal-iOS-SDK-Sample-App-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		3E589F291AF042C000D6BCEA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = Launch;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "PayPal-iOS-SDK-Sample-App/PayPal-iOS-SDK-Sample-App-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = "";
-				INFOPLIST_FILE = "PayPal-iOS-SDK-Sample-App/PayPal-iOS-SDK+cardio-Sample-App-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../PayPalMobile\"",
-					"\"$(SRCROOT)/../CardIO\"",
-				);
-				OTHER_LDFLAGS = (
-					"-lc++",
-					"-ObjC",
-				);
-				OTHER_SWIFT_FLAGS = "-DHAS_CARDIO";
-				PRODUCT_NAME = "PayPal-iOS-SDK-Sample-App copy";
-				SWIFT_OBJC_BRIDGING_HEADER = "PayPal-iOS-SDK-Sample-App/PayPal-iOS-SDK-Sample-App-Bridging-Header.h";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
 		849BE70F16D4352100E03EEC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -536,6 +385,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PayPal-iOS-SDK-Sample-App/PayPal-iOS-SDK-Sample-App-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -562,6 +412,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PayPal-iOS-SDK-Sample-App/PayPal-iOS-SDK-Sample-App-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -569,15 +420,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3E589F271AF042C000D6BCEA /* Build configuration list for PBXNativeTarget "PayPal-iOS-SDK+cardio-Sample-App" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3E589F281AF042C000D6BCEA /* Debug */,
-				3E589F291AF042C000D6BCEA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		849BE6E316D4352000E03EEC /* Build configuration list for PBXProject "PayPal-iOS-SDK-Sample-App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

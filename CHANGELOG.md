@@ -1,6 +1,11 @@
 PayPal iOS SDK release notes
 ============================
 
+2.16.0
+------
+* Add support for third-party receivers [#140](https://github.com/paypal/PayPal-iOS-SDK/issues/140). Available as an optional property, `PayPalPayment.payeeEmail`. This property is only available for PayPal payments, not Direct Credit Card (DCC) payments.
+* Direct Credit Card (DCC) payments are now deprecated in this SDK.  Please use [Braintree Payments](https://www.braintreepayments.com/), a PayPal Company, which is the easiest way to accept PayPal, credit cards, and many other payment methods.
+
 2.15.1
 ------
 * Update to card.io 5.4.1.

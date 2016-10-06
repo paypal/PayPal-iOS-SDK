@@ -12,7 +12,6 @@
 @interface ZZMainViewController : UIViewController <PayPalPaymentDelegate, PayPalFuturePaymentDelegate, PayPalProfileSharingDelegate, ZZFlipsideViewControllerDelegate, UIPopoverControllerDelegate>
 
 @property(nonatomic, strong, readwrite) NSString *environment;
-@property(nonatomic, assign, readwrite) BOOL acceptCreditCards;
 @property(nonatomic, strong, readwrite) NSString *resultText;
 
 @end
