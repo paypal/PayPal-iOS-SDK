@@ -119,7 +119,7 @@ Your mobile integration requires different `client_id` values for each environme
 
 Your server integrations for verifying or creating payments will also require the corresponding `client_secret` for each `client_id`.
 
-You can obtain these PayPal API credentials by visiting the [Applications page on the PayPal Developer site](https://developer.paypal.com/webapps/developer/applications) and logging in with your PayPal account.
+You can obtain these PayPal API credentials by visiting the [Applications page on the PayPal Developer site](https://developer.paypal.com/developer/applications/) and logging in with your PayPal account.
 
 ### Sandbox
 
