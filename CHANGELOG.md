@@ -1,6 +1,10 @@
 PayPal iOS SDK release notes
 ============================
 
+2.16.1
+------
+* Improve network code reliability.
+
 2.16.0
 ------
 * Add support for third-party receivers [#140](https://github.com/paypal/PayPal-iOS-SDK/issues/140). Available as an optional property, `PayPalPayment.payeeEmail`. This property is only available for PayPal payments, not Direct Credit Card (DCC) payments.
