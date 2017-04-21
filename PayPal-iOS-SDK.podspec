@@ -1,14 +1,14 @@
 Pod::Spec.new do |spec|
   spec.name             = 'PayPal-iOS-SDK'
-  spec.version          = '2.16.3'
+  spec.version          = '2.17.0'
   spec.license          = { type: 'BSD', file: 'LICENSE' }
   spec.homepage         = 'https://developer.paypal.com/webapps/developer/docs/integration/mobile/mobile-sdk-overview/'
   spec.authors          = { 'PayPal' => 'support@paypal.com' }
   spec.summary          = 'Accept credit cards and PayPal in your iOS app.'
   spec.description      = 'The PayPal iOS SDK provides a software library that makes it easy for an iOS developer to accept both credit cards and PayPal directly within their mobile app.'
   spec.source           = { :git => 'https://github.com/paypal/PayPal-iOS-SDK.git', :tag => "#{spec.version}" }
-  spec.platform         = :ios, '6.1'
-  spec.ios.deployment_target = '6.1'
+  spec.platform         = :ios, '7.0'
+  spec.ios.deployment_target = '7.0'
   spec.requires_arc     = false
 
   spec.default_subspec = 'Core', 'CardIO'

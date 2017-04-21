@@ -12,11 +12,7 @@ The PayPal iOS SDK makes it easy to add PayPal payments to mobile apps.
 >### Note
 > There are 4 static libraries that you should link when building your application. `libPayPalMobile.a`, `libCardIO.a`, `libopencv_core.a', and `libopencv_imgproc.a` are required for all of the SDK functionality.
 >
-> The current version of the PayPal iOS SDK was built using Xcode 7.0+.
->
-> If you are still using Xcode 6.4, you may experience link errors (duplicate symbols). If you can't upgrade from Xcode 6.4, please use version **2.11.x** of this SDK.
->
-> If you are still using Xcode 6.2, you may experience link errors (duplicate symbols). If you can't upgrade from Xcode 6.2, please use version **2.10.2** of this SDK.
+> The current version of the PayPal iOS SDK was built using Xcode 8.3.2.
 
 ## Contents
 
@@ -70,8 +66,8 @@ Your customer logs in to PayPal and consents to PayPal sharing information with 
 
 ## Requirements
 
-* Xcode 7 and iOS SDK 9
-* iOS 6.0+ target deployment
+* Xcode 8 and iOS SDK 10
+* iOS 7.0+ target deployment
 * armv7, armv7s, and arm64 devices, and the simulator (not armv6)
 * iPhone and iPad of all sizes and resolutions
 
@@ -81,14 +77,14 @@ Your customer logs in to PayPal and consents to PayPal sharing information with 
 ### If you use [CocoaPods](http://cocoapods.org), then add these lines to your podfile:
 
 ```ruby
-platform :ios, '6.0'
+platform :ios, '7.0'
 pod 'PayPal-iOS-SDK'
 ```
 
 ### If you don't use CocoaPods, then:
 
 1. Clone or download the SDK, which consists of header files, license acknowledgements, release notes, and a static library. It also includes a sample app.
-    * **As of version 2.12.0, the SDK requires Xcode 7 and iOS 8 SDK.**
+    * **As of version 2.17.0, the SDK requires Xcode 8 and iOS 10 SDK.**
 2. Add the `PayPalMobile` directory (containing several .h files and libPayPalMobile.a) to your Xcode project. We recommend checking "Copy items..." and selecting "Create groups...".
 3. In your project's **Build Settings** (in the `TARGETS` section, not the `PROJECTS` section):
   * add `-lc++ -ObjC` to `Other Linker Flags`
