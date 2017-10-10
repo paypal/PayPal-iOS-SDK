@@ -1,6 +1,11 @@
 PayPal iOS SDK release notes
 ============================
 
+2.18.0
+------
+* Fix text field first responder animation issue in iOS 11 [#548](https://github.com/paypal/PayPal-iOS-SDK/issues/548).
+* Fix memory retain issue cycle during initialization [#538](https://github.com/paypal/PayPal-iOS-SDK/issues/538).
+
 2.17.0
 ------
 * Add documentation to use string initializer for NSDecimalNumber [#520](https://github.com/paypal/PayPal-iOS-SDK/issues/520).
