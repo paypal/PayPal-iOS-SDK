@@ -1,7 +1,7 @@
+**Important**: PayPal Mobile SDKs are now Deprecated and only existing integrations are supported. For all new integrations, use [Braintree Direct](https://www.braintreepayments.com/products/braintree-direct) in [supported countries](https://www.braintreepayments.com/country-selection). In other countries, use [Express Checkout](https://developer.paypal.com/docs/accept-payments/express-checkout/ec-braintree-sdk/get-started/) and choose the Braintree SDK integration option.
+
 PayPal iOS SDK
 ==============
-
-Those building new integrations should consider using [Braintree Payments](https://www.braintreepayments.com/), a PayPal Company, which is the easiest way to accept PayPal, credit cards, and many other payment methods.
 
 The PayPal iOS SDK makes it easy to add PayPal payments to mobile apps.
 
